@@ -1,0 +1,106 @@
+@if (isOnEligiblePage()
+&& isDynamicShow
+&& configuration.showLogo
+&& configuration.logoPath) {
+  <app-logo-screen [imagePath]="configuration.logoPath"/>
+}
+
+<div
+  class="show_trigger"
+  (mouseenter)="onShowHeader()"
+  (pointerenter)="onShowHeader()"
+  (touchstart)="onShowHeader()"
+></div>
+
+@if (isOnEligiblePage()) {
+  <nav
+    class="navbar fixed-top header px-4"
+    [class.visible]="!isDynamicShow || showHeader()"
+    [class.hidden]="isDynamicShow && !showHeader()"
+    (mouseenter)="onMouseEnter()"
+    (mouseleave)="onMouseLeave()"
+    (pointerenter)="onMouseEnter()"
+    (pointerleave)="onMouseLeave()"
+  >
+    <div class="container-fluid d-flex align-items-center" style="height: 110px">
+      @if (mediaBreakpoint() !== 'xs') {
+        <!--        <img [src]="'images/appIcon.png'" class="logo" alt="Logo" />-->
+        @if (configuration.showLogo && configuration.logoPath) {
+          <img [src]=configuration.logoPath class="logo" alt="Logo"/>
+        }
+        @if (configuration.showTitle && configuration.title) {
+          <h1 class="title m-0">{{ configuration.title }}</h1>
+        }
+        <!--        <h1 class="title m-0">{{ title }}</h1>-->
+      }
+
+      <!--      <div class="flex-grow-1"></div>-->
+      <div style="width: 10em"></div>
+
+      <div class="nav-container d-none d-md-flex gap-3">
+        @for (link of configuration.links; track link) {
+          <a class="btn btn-link" [routerLink]="[link.navigationString]" routerLinkActive="active">
+            {{ link.textString }}
+          </a>
+        }
+        <!--        <a class="btn btn-link" [routerLink]="['/about-me']" routerLinkActive="active">-->
+        <!--          {{ T.aboutMe_anchor | text }}-->
+        <!--        </a>-->
+        <!--        <a class="btn btn-link" [routerLink]="['/services']" routerLinkActive="active">-->
+        <!--          {{ T.services_anchor | text }}-->
+        <!--        </a> -->
+        <!--        <a class="btn btn-link" [routerLink]="['/contact']" routerLinkActive="active">-->
+        <!--          {{ T.contact_anchor | text }}-->
+        <!--        </a>-->
+      </div>
+
+      <div class="flex-grow-1"></div>
+    </div>
+  </nav>
+
+  <div class="menu-button d-md-none">
+    <i class="bi bi-list"></i>
+  </div>
+}
+
+@if (!isOnEligiblePage()) {
+  <div class="position-fixed top-0 end-0 p-3">
+    <div class="dropdown">
+      <button
+        class="btn btn-outline-dark dropdown-toggle"
+        type="button"
+        id="mobileMenuButton"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="mobileMenuButton">
+        @if (configuration.links.length > 0) {
+          @for (link of configuration.links; track link) {
+            <li>
+              <a class="dropdown-item" [routerLink]="[link.navigationString]">
+                {{ link.textString }}
+              </a>
+            </li>
+          }
+        }
+        <!--        <li>-->
+        <!--          <a class="dropdown-item" [routerLink]="['/about-me']">-->
+        <!--            {{ T.aboutMe_anchor | text }}-->
+        <!--          </a>-->
+        <!--        </li>-->
+        <!--        <li>-->
+        <!--          <a class="dropdown-item" [routerLink]="['/services']">-->
+        <!--            {{ T.services_anchor | text }}-->
+        <!--          </a>-->
+        <!--        </li>-->
+        <!--        <li>-->
+        <!--          <a class="dropdown-item" [routerLink]="['/contact']">-->
+        <!--            {{ T.contact_anchor | text }}-->
+        <!--          </a>-->
+        <!--        </li>-->
+      </ul>
+    </div>
+  </div>
+}

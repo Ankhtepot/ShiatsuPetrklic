@@ -1,0 +1,56 @@
+//:host {
+//  display: block;
+//  margin-top: 210px;
+//}
+
+.content {
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  margin: 150px auto;
+  border-radius: 20px;
+  box-shadow: 1px -1px 49px 34px rgba(255,255,255,0.8);
+  -webkit-box-shadow: 1px -1px 49px 34px rgba(255,255,255,0.8);
+  -moz-box-shadow: 1px -1px 49px 34px rgba(255,255,255,0.8);
+  z-index: 20;
+}
+
+@media (max-width: 500px) {
+  .content {
+    margin-top: 120px // Smaller shift on mobile to keep more space at the bottom
+  }
+}
+
+.profile-section {
+
+  img {
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
+    float: left; // Make the image float left
+    margin-right: 20px; // Space between the image and the text
+    margin-bottom: 10px; // Space below the image
+  }
+
+  .text-header {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: "Pacifico", cursive;
+  }
+  //image centers on media width max 600px
+  @media (max-width: 600px) {
+    img {
+      width: 100%;
+      height: auto;
+      float: none; // Remove float to center the image
+      margin-right: 0; // Remove margin to center the image
+    }
+  }
+
+  p {
+    clear: both; // Clear the float to allow text to wrap properly
+  }
+}

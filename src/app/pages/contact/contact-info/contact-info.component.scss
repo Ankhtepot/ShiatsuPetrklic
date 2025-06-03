@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 10px; */ /* Commented out as requested */
+  min-height: 48px; /* Adjust this value to standardize the height */
+
+  .label {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+
+    .text-icon {
+      display: flex;
+      align-items: center;
+
+      mat-icon {
+        margin-left: 5px;
+        vertical-align: middle;
+      }
+    }
+
+    .colon {
+      margin-left: 5px;
+    }
+  }
+
+  .value-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding-left: 10px;
+
+    .value {
+      word-wrap: break-word;
+      display: flex;
+      align-items: center;
+      flex: 1; /* Ensure value takes up remaining space */
+
+      button {
+        margin-left: 10px; /* Adjust margin as needed */
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        mat-icon {
+          font-size: 18px; /* Adjust the icon size */
+        }
+      }
+    }
+  }
+}

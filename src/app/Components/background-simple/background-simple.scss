@@ -1,0 +1,11 @@
+.tiled-background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  background-size: auto; // or remove entirely
+  z-index: -1;
+  pointer-events: none; // Optional: make sure it doesn't interfere with user interaction
+}

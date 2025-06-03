@@ -1,0 +1,27 @@
+<div class="container d-flex flex-column gap-2">
+  <div class="d-flex align-items-center" [ngStyle]="{ 'width': labelWidth() }">
+    <span class="d-flex align-items-center me-2">
+      <span>{{ label() }}</span>
+      @if (icon() !== unassignedIcon) {
+        <i class="bi bi-{{ icon() }} ms-2"></i>
+      }
+    </span>
+    <span class="colon">:</span>
+  </div>
+
+  <div class="value-wrapper">
+    <div class="value d-flex align-items-center gap-2">
+      <span>{{ value() }}</span>
+
+      @if (canBeCopied()) {
+        <button
+          type="button"
+          class="btn btn-outline-secondary btn-sm"
+          (click)="copyToClipboard()"
+        >
+          <i class="bi bi-clipboard"></i>
+        </button>
+      }
+    </div>
+  </div>
+</div>

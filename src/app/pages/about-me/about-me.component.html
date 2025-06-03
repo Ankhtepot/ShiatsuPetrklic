@@ -1,0 +1,28 @@
+<div class="card content p-4">
+  <div class="profile-section">
+    <p>
+      <img
+        [src]="profileImagePath"
+        alt="Profile Image"
+        class="img-fluid mb-3"
+        style="max-width: 200px;"
+      />
+      {{ T.about_me_intro | text }}
+      <br><br>
+
+      <span [innerHTML]="T.about_me_title1 | text" class="fw-bold fs-5 d-block text-header"></span>
+      {{ T.about_me_part1 | text }}
+      <br><br>
+
+      <span [innerHTML]="T.about_me_title2 | text" class="fw-bold fs-5 d-block text-header"></span>
+      {{ T.about_me_part2 | text }}
+      <br><br>
+
+      <span [innerHTML]="T.about_me_title3 | text" class="fw-bold fs-5 d-block text-header"></span>
+      {{ T.about_me_part3 | text }}
+    </p>
+  </div>
+</div>
+
+<div style="height: 100px"></div>
+

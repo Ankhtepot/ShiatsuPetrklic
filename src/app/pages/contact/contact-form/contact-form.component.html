@@ -1,0 +1,79 @@
+<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
+  <h2>{{ T.write_me | text }}</h2>
+
+  <div class="mb-3">
+    <label for="name" class="form-label">{{ T.input_name | text }}</label>
+    <input
+      id="name"
+      name="meno"
+      [(ngModel)]="contact.name"
+      #name="ngModel"
+      required
+      minlength="3"
+      class="form-control"
+      [ngClass]="{ 'is-invalid': name.invalid && name.touched }"
+    />
+    @if (name.errors?.['required'] && name.touched) {
+      <div class="invalid-feedback">
+        {{ T.input_name_required | text }}
+      </div>
+    }
+    @if (name.errors?.['minlength'] && name.touched) {
+      <div class="invalid-feedback">
+        {{ T.input_name_length | text }}
+      </div>
+    }
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">{{ T.input_email | text }}</label>
+    <input
+      id="email"
+      type="email"
+      name="email"
+      [(ngModel)]="contact.email"
+      #email="ngModel"
+      required
+      email
+      class="form-control"
+      [ngClass]="{ 'is-invalid': email.invalid && email.touched }"
+    />
+    @if (email.errors?.['required'] && email.touched) {
+      <div class="invalid-feedback">
+        {{ T.input_email_required | text }}
+      </div>
+    }
+    @if (email.errors?.['email'] && email.touched) {
+      <div class="invalid-feedback">
+        {{ T.input_email_invalid | text }}
+      </div>
+    }
+  </div>
+
+  <div class="mb-3">
+    <label for="message" class="form-label">{{ T.input_message | text }}</label>
+    <textarea
+      id="message"
+      name="message"
+      [(ngModel)]="contact.message"
+      #message="ngModel"
+      required
+      class="form-control"
+      [ngClass]="{ 'is-invalid': message.invalid && message.touched }"
+      rows="4"
+    ></textarea>
+    @if (message.errors?.['minlength'] && message.touched) {
+      <div class="invalid-feedback">
+        {{ T.input_message_required | text }}
+      </div>
+    }
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-primary w-100"
+    [disabled]="!contactForm.valid"
+  >
+    {{ T.button_send | text }}
+  </button>
+</form>
