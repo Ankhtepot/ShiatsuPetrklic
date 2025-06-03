@@ -1,0 +1,15 @@
+@mixin blurred-background($color1, $color2, $border-radius: 250px, $padding: 2rem) {
+  $opacity: 0.8;
+
+  padding: $padding;
+  border-radius: $border-radius;
+  background: linear-gradient(
+      135deg,
+      rgba($color1, $opacity),
+      rgba($color2, $opacity)
+  );
+  box-shadow: 1px -1px 49px 34px rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 1px -1px 49px 34px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: 1px -1px 49px 34px rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+}

@@ -1,68 +1,21 @@
-@use "../../../styles/colors" as *;
-
-:host {
-  display: block;
-  margin-top: 210px;
-}
+@use "../../../styles/index" as styles;
 
 .contact-container {
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.6);
-}
+  padding: 2rem 1rem;
 
-.map-container {
-  margin-top: 20px;
-}
 
-h2 {
-  color: $header-color;
-  margin-bottom: 1.5em;
-}
+  .row {
+    @include styles.blurred-background(styles.$neutral-light, styles.$neutral-soft, 100px, 2rem);
+  }
 
-//.contact-info-grid {
-//  display: grid;
-//  grid-template-columns: auto 1fr;
-//  grid-gap: 5px 10px;
-//  margin-bottom: 20px;
-//}
+  h2 {
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
 
-//.label {
-//  font-weight: bold;
-//  text-align: right;
-//  padding-right: 10px;
-//  display: flex;
-//  align-items: center;
-//  justify-content: flex-end;
-//
-//  .text-icon {
-//    display: flex;
-//    align-items: center;
-//
-//    mat-icon {
-//      margin-left: 5px;
-//      vertical-align: middle;
-//    }
-//  }
-//
-//  .colon {
-//    display: inline-block;
-//    width: 10px; /* Adjust this width as needed */
-//  }
-//}
-//
-//.value {
-//  word-wrap: break-word;
-//  display: flex;
-//  align-items: center;
-//}
-
-.mat-divider {
-  border-width: 3px; /* Increase the thickness here */
-  border-color: $header-color;//rgba(0, 0, 0, 0.12); /* You can also customize the color */
-  border-style: solid;
-  border-radius: 2px;
-}
-
-mat-icon {
-
+  .map-container {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  }
 }

@@ -1,54 +1,42 @@
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* padding: 10px; */ /* Commented out as requested */
-  min-height: 48px; /* Adjust this value to standardize the height */
+@use "../../../../styles/colors" as *;
+
+.contact-info-container {
+  font-size: 1rem;
+  flex-wrap: wrap;
 
   .label {
-    font-weight: bold;
+    font-weight: 500;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    flex-shrink: 0;
-
-    .text-icon {
-      display: flex;
-      align-items: center;
-
-      mat-icon {
-        margin-left: 5px;
-        vertical-align: middle;
-      }
-    }
+    white-space: nowrap;
 
     .colon {
-      margin-left: 5px;
+      margin-left: 0.25rem;
+      font-weight: bold;
+    }
+
+    i.bi {
+      font-size: 1.2rem;
+      color: $primary;
+      margin-left: 0.5rem;
     }
   }
 
-  .value-wrapper {
-    position: relative;
+  .value {
     display: flex;
     align-items: center;
-    flex: 1;
-    padding-left: 10px;
+    gap: 0.5rem;
 
-    .value {
-      word-wrap: break-word;
-      display: flex;
-      align-items: center;
-      flex: 1; /* Ensure value takes up remaining space */
+    span {
+      font-weight: 500;
+    }
 
-      button {
-        margin-left: 10px; /* Adjust margin as needed */
-        background: none;
-        border: none;
-        cursor: pointer;
+    .btn {
+      padding: 0.25rem 0.5rem;
+      line-height: 1;
 
-        mat-icon {
-          font-size: 18px; /* Adjust the icon size */
-        }
+      i {
+        font-size: 1rem;
       }
     }
   }
