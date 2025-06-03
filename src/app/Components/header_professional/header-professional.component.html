@@ -39,7 +39,7 @@
 
       <div class="nav-container d-none d-md-flex gap-3">
         @for (link of configuration.links; track link) {
-          <a class="btn btn-link" [routerLink]="[link.navigationString]" routerLinkActive="active">
+          <a class="btn btn-link" [routerLink]="link.navigationString" routerLinkActive="active">
             {{ link.textString }}
           </a>
         }
@@ -70,7 +70,7 @@
         @if (configuration.links.length > 0) {
           @for (link of configuration.links; track link) {
             <li>
-              <a class="dropdown-item" [routerLink]="['/', langService.current, link.navigationString]">
+              <a class="dropdown-item" [routerLink]="link.navigationString">
                 {{ link.textString }}
               </a>
             </li>

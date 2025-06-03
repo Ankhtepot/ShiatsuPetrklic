@@ -12,7 +12,6 @@ import {T} from '../../shared/constants/text.tokens';
 import {Router, RouterModule} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import {LogoScreenComponent} from './logo-screen/logo-screen.component';
-import {LangService} from '../../services/language.service';
 
 const showTime = 2000;
 
@@ -38,14 +37,12 @@ export interface HeaderProfessionalConfiguration {
   imports: [CommonModule, LogoScreenComponent, RouterModule]
 })
 export class HeaderProfessionalComponent implements OnDestroy {
-  // @Input() title: string = '<Shiatsu Brno>';
   @Input() configuration: HeaderProfessionalConfiguration = {
     links: []
   };
 
   public showHeader = signal(true);
   public mediaBreakpoint = signal('');
-  public langService = inject(LangService);
 
   private screenService = inject(ScreenService);
   private router = inject(Router);

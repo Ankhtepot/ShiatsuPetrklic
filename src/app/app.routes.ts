@@ -2,6 +2,8 @@ import {ExtraOptions, Routes} from '@angular/router';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import {HomeComponent} from './pages/home/home.component';
+import {ServicesComponent} from './pages/services/services.component';
 
 export const routerOptions: ExtraOptions = {
   onSameUrlNavigation: 'reload',
@@ -12,8 +14,10 @@ export const routerOptions: ExtraOptions = {
 
 // Nested routes under language prefix
 const localizedRoutes: Routes = [
+  { path: 'home', component: HomeComponent },
   { path: 'about-me', component: AboutMeComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'services', component: ServicesComponent },
   { path: 'not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: 'not-found' }
 ];

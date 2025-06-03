@@ -12,8 +12,9 @@ const SUPPORTED_LANGUAGES = Object.values(ELanguage);
 type Lang = ELanguage;
 
 @Injectable({ providedIn: 'root' })
-export class LangService {
+export class LanguageService {
   private langSignal = signal<Lang>(ELanguage.Cs);
+  readonly language = computed(() => this.langSignal());
 
   private translations = signal<Map<T, string>>(new Map());
   readonly t = computed(() => this.translations());
@@ -24,11 +25,11 @@ export class LangService {
     this.loadTranslations(this.langSignal());
   }
 
-  setLang(lang: Lang) {
-    if (SUPPORTED_LANGUAGES.includes(lang)) {
-      this.langSignal.set(lang);
-      document.documentElement.lang = lang;
-      this.loadTranslations(lang);
+  setLang(language: Lang) {
+    if (SUPPORTED_LANGUAGES.includes(language)) {
+      this.langSignal.set(language);
+      document.documentElement.lang = language;
+      this.loadTranslations(language);
     }
   }
 
@@ -41,21 +42,30 @@ export class LangService {
     return this.langSignal();
   }
 
-  private loadTranslations(lang: Lang) {
-    if (this.loadedLanguages.has(lang)) {
-      this.translations.set(this.loadedLanguages.get(lang)!);
+  getText(key: T): string {
+    const current = this.translations().get(key);
+    if (current) return current;
+
+    const fallbackMap = this.loadedLanguages.get(ELanguage.Cs);
+    const fallback = fallbackMap?.get(key);
+    return fallback ?? key.toString();
+  }
+
+  private loadTranslations(language: Lang) {
+    if (this.loadedLanguages.has(language)) {
+      this.translations.set(this.loadedLanguages.get(language)!);
     } else {
-      this.fetchTranslations(lang).then(map => this.translations.set(map));
+      this.fetchTranslations(language).then(map => this.translations.set(map));
     }
   }
 
-  private async fetchTranslations(lang: Lang): Promise<Map<T, string>> {
-    if (this.loadedLanguages.has(lang)) {
-      return this.loadedLanguages.get(lang)!;
+  private async fetchTranslations(language: Lang): Promise<Map<T, string>> {
+    if (this.loadedLanguages.has(language)) {
+      return this.loadedLanguages.get(language)!;
     }
 
     const data = await firstValueFrom(
-      this.http.get<Record<string, string>>(`/languages/${lang}.json`)
+      this.http.get<Record<string, string>>(`/languages/${language}.json`)
     );
 
     const map = new Map<T, string>();
@@ -65,7 +75,7 @@ export class LangService {
       }
     }
 
-    this.loadedLanguages.set(lang, map);
+    this.loadedLanguages.set(language, map);
     return map;
   }
 }
