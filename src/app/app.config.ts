@@ -23,7 +23,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes, withRouterConfig(routerOptions)),
     ScreenService,
     {
-      provide: APP_INITIALIZER,
+      provide: APP_INITIALIZER, // Leaving this as APP_INITIALIZER to ensure translations are loaded before the app starts, even deprecated, its cleanest way to do it for now
       useFactory: preloadTranslations,
       deps: [LangService],
       multi: true
