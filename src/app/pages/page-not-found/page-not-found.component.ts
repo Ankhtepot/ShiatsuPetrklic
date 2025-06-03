@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {T} from "../../services/text.service";
 import {TextPipe} from '../../pipes/text.pipe';
 import {RouterModule} from '@angular/router';
+import {T} from '../../shared/constants/text.tokens';
 
 @Component({
   selector: 'app-page-not-found',

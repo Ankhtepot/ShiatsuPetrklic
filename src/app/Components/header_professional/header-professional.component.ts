@@ -8,10 +8,11 @@ import {
   inject
 } from '@angular/core';
 import {ScreenService} from '../../services/screen.service';
-import {T} from '../../services/text.service';
+import {T} from '../../shared/constants/text.tokens';
 import {Router, RouterModule} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import {LogoScreenComponent} from './logo-screen/logo-screen.component';
+import {LangService} from '../../services/language.service';
 
 const showTime = 2000;
 
@@ -44,11 +45,16 @@ export class HeaderProfessionalComponent implements OnDestroy {
 
   public showHeader = signal(true);
   public mediaBreakpoint = signal('');
+  public langService = inject(LangService);
 
   private screenService = inject(ScreenService);
   private router = inject(Router);
 
   private hideHeaderTimer: any;
+
+  constructor() {
+    this.onShowHeader(); // Still valid to call here
+  }
 
   // ✅ Define effects directly inside the class — in injection context
   private _scrollUpEffect = effect(() => {
@@ -77,10 +83,6 @@ export class HeaderProfessionalComponent implements OnDestroy {
   private _mediaBreakpointEffect = effect(() => {
     this.mediaBreakpoint.set(this.screenService.mediaBreakpoint());
   });
-
-  constructor() {
-    this.onShowHeader(); // Still valid to call here
-  }
 
   @HostListener('window:wheel', ['$event'])
   onWindowWheel(event: WheelEvent) {

@@ -1,5 +1,5 @@
 import { Component, InputSignal, input } from '@angular/core';
-import { T } from "../../../services/text.service";
+import { T } from '../../../shared/constants/text.tokens';
 import {CommonModule} from '@angular/common';
 
 const unassignedIcon = 'unassigned-icon';

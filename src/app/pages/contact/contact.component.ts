@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {T, TextService} from "../../services/text.service";
+import {TextService} from "../../services/text.service";
+import {T} from "../../shared/constants/text.tokens";
 import {CommonModule} from '@angular/common';
 import {ContactFormComponent} from './contact-form/contact-form.component';
 import {ContactInfoComponent} from './contact-info/contact-info.component';

@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {T} from "../../../services/text.service";
+import {T} from '../../../shared/constants/text.tokens';
 import { FormsModule, NgForm} from "@angular/forms";
 import {TextPipe} from '../../../pipes/text.pipe';
 import {CommonModule} from '@angular/common';

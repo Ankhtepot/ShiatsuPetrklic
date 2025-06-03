@@ -43,15 +43,6 @@
             {{ link.textString }}
           </a>
         }
-        <!--        <a class="btn btn-link" [routerLink]="['/about-me']" routerLinkActive="active">-->
-        <!--          {{ T.aboutMe_anchor | text }}-->
-        <!--        </a>-->
-        <!--        <a class="btn btn-link" [routerLink]="['/services']" routerLinkActive="active">-->
-        <!--          {{ T.services_anchor | text }}-->
-        <!--        </a> -->
-        <!--        <a class="btn btn-link" [routerLink]="['/contact']" routerLinkActive="active">-->
-        <!--          {{ T.contact_anchor | text }}-->
-        <!--        </a>-->
       </div>
 
       <div class="flex-grow-1"></div>
@@ -79,27 +70,12 @@
         @if (configuration.links.length > 0) {
           @for (link of configuration.links; track link) {
             <li>
-              <a class="dropdown-item" [routerLink]="[link.navigationString]">
+              <a class="dropdown-item" [routerLink]="['/', langService.current, link.navigationString]">
                 {{ link.textString }}
               </a>
             </li>
           }
         }
-        <!--        <li>-->
-        <!--          <a class="dropdown-item" [routerLink]="['/about-me']">-->
-        <!--            {{ T.aboutMe_anchor | text }}-->
-        <!--          </a>-->
-        <!--        </li>-->
-        <!--        <li>-->
-        <!--          <a class="dropdown-item" [routerLink]="['/services']">-->
-        <!--            {{ T.services_anchor | text }}-->
-        <!--          </a>-->
-        <!--        </li>-->
-        <!--        <li>-->
-        <!--          <a class="dropdown-item" [routerLink]="['/contact']">-->
-        <!--            {{ T.contact_anchor | text }}-->
-        <!--          </a>-->
-        <!--        </li>-->
       </ul>
     </div>
   </div>

@@ -1,5 +1,6 @@
-import {Injectable, Pipe, PipeTransform} from '@angular/core';
-import {TextService, T} from "../services/text.service";
+import { Injectable, Pipe, PipeTransform } from '@angular/core';
+import {TextService} from '../services/text.service';
+import {T} from '../shared/constants/text.tokens';
 
 export enum ETextStyle {
   Header = 'header',
@@ -9,15 +10,13 @@ export enum ETextStyle {
   standalone: true,
   name: 'text'
 })
-
 @Injectable({ providedIn: 'root' })
 export class TextPipe implements PipeTransform {
+  constructor(private textService: TextService) {}
 
-  constructor(private textService: TextService) {
-  }
+  transform(key: T, ...args: unknown[]): string {
+    const text = this.textService.get(key);
 
-  transform(value: T, ...args: unknown[]): string {
-    const text : string = this.textService.get(value);
     if (args.length > 0) {
       switch (args[0]) {
         case ETextStyle.Header:

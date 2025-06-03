@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Category, ImageSize, ImagesService} from "../../services/images.service";
-import {T} from "../../services/text.service";
+import {T} from '../../shared/constants/text.tokens';
 import {ETextStyle, TextPipe} from "../../pipes/text.pipe";
 import {CommonModule} from '@angular/common';
 
