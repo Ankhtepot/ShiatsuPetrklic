@@ -54,6 +54,7 @@ export class HeaderProfessionalComponent implements OnDestroy {
   }
 
   // ✅ Define effects directly inside the class — in injection context
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   private _scrollUpEffect = effect(() => {
     if (!this.isDynamicShow) return;
     if (this.screenService.scrolledUp()) {
@@ -62,6 +63,7 @@ export class HeaderProfessionalComponent implements OnDestroy {
     }
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   private _scrollDownEffect = effect(() => {
     if (!this.isDynamicShow) return;
     if (this.screenService.scrolledDown()) {
@@ -70,6 +72,7 @@ export class HeaderProfessionalComponent implements OnDestroy {
     }
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   private _scrollToTopEffect = effect(() => {
     if (!this.isDynamicShow) return;
     if (this.screenService.scrolledToTop()) {
@@ -77,6 +80,7 @@ export class HeaderProfessionalComponent implements OnDestroy {
     }
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   private _mediaBreakpointEffect = effect(() => {
     this.mediaBreakpoint.set(this.screenService.mediaBreakpoint());
   });
