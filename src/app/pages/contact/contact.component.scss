@@ -1,6 +1,7 @@
 @use "../../../styles/index" as styles;
 
 .contact-container {
+  color: styles.$text-on-orange;
   padding: 13em 2em 5em 2em;
 
   .row {

@@ -27,6 +27,9 @@ export interface HeaderProfessionalConfiguration {
   showTitle?: boolean;
   title?: string;
   logoPath?: string;
+  textColor?: string;
+  backgroundGradientStart?: string;
+  backgroundGradientEnd?: string;
 }
 
 @Component({
@@ -51,6 +54,15 @@ export class HeaderProfessionalComponent implements OnDestroy {
 
   constructor() {
     this.onShowHeader(); // Still valid to call here
+    if (!this.configuration.textColor) {
+      this.configuration.textColor = '#000'; // Default text color
+    }
+    if (!this.configuration.backgroundGradientStart) {
+      this.configuration.backgroundGradientStart = '#fff'; // Default gradient start
+    }
+    if (!this.configuration.backgroundGradientEnd) {
+      this.configuration.backgroundGradientEnd = '#f0f0f0'; // Default gradient end
+    }
   }
 
   // ✅ Define effects directly inside the class — in injection context
@@ -124,4 +136,18 @@ export class HeaderProfessionalComponent implements OnDestroy {
 
 
   protected readonly T = T;
+
+  backgroundStyle() {
+    const gradient = this.configuration.backgroundGradientStart && this.configuration.backgroundGradientEnd
+      ? `linear-gradient(to bottom, ${this.configuration.backgroundGradientStart}, ${this.configuration.backgroundGradientEnd})`
+      : 'linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.50))'; // Default gradient if not provided
+
+    return {
+      'background-image': gradient
+    };
+  }
+
+  textColor() {
+    return {'color': (this.configuration.textColor || '#000')}; // Default text color if not provided
+  }
 }

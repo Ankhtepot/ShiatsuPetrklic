@@ -6,6 +6,7 @@ import {
 } from './Components/header_professional/header-professional.component';
 import {BackgroundTiledComponent} from './Components/background-tiled/background-tiled.component';
 import {NavigationLinkService} from './services/navigation-link.service';
+import {AppColors} from '../styles/colors.gen';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,9 @@ export class AppComponent {
     showTitle: true,
     title: 'Shiatsu Brno',
     logoPath: 'images/appIcon.png',
-    dynamicShow: false
+    dynamicShow: false,
+    textColor: AppColors.textOnOrange,
+    backgroundGradientStart: `rgba(255, 140, 0, 1)`,
+    backgroundGradientEnd: `rgba(255, 140, 0, 0.5)`,
   }));
 }

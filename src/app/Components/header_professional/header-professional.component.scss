@@ -8,7 +8,6 @@ $background-color: 255;
   top: 0;
   left: 0;
   z-index: 1000;
-  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.50));
   height: auto;
   font-family: "Cactus Classical Serif", serif;
 
@@ -17,7 +16,6 @@ $background-color: 255;
   }
 
   .title {
-    color: white;
     margin-left: 3.5em;
     margin-right: 2em;
     font-family: inherit;
@@ -41,7 +39,6 @@ $background-color: 255;
   }
 
   a {
-    color: white;
     text-decoration: none;
     font-family: inherit;
     font-weight: 300;
@@ -58,7 +55,6 @@ $background-color: 255;
 
     &:hover {
       background-color: rgba($background-color, $background-color, $background-color, 0.4);
-      color: white;
     }
   }
 
@@ -82,14 +78,12 @@ $background-color: 255;
   }
 
   a.active {
-    color: white;
     background-color: rgba($background-color, $background-color, $background-color, 0.2);
     transition: color 0.3s;
     font-weight: bold;
 
     &:hover {
       background-color: rgba($background-color, $background-color, $background-color, 0.6);
-      color: white;
     }
   }
 }

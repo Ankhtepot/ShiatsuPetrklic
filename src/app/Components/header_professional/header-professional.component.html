@@ -17,6 +17,7 @@
     class="navbar fixed-top header px-4"
     [class.visible]="!isDynamicShow || showHeader()"
     [class.hidden]="isDynamicShow && !showHeader()"
+    [ngStyle]="backgroundStyle()"
     (mouseenter)="onMouseEnter()"
     (mouseleave)="onMouseLeave()"
     (pointerenter)="onMouseEnter()"
@@ -24,22 +25,23 @@
   >
     <div class="container-fluid d-flex align-items-center" style="height: 110px">
       @if (mediaBreakpoint() !== 'xs') {
-        <!--        <img [src]="'images/appIcon.png'" class="logo" alt="Logo" />-->
         @if (configuration.showLogo && configuration.logoPath) {
           <img [src]=configuration.logoPath class="logo" alt="Logo"/>
         }
         @if (configuration.showTitle && configuration.title) {
-          <h1 class="title m-0">{{ configuration.title }}</h1>
+          <h1 class="title m-0" [ngStyle]="textColor()">{{ configuration.title }}</h1>
         }
-        <!--        <h1 class="title m-0">{{ title }}</h1>-->
       }
 
-      <!--      <div class="flex-grow-1"></div>-->
       <div style="width: 10em"></div>
 
       <div class="nav-container d-none d-md-flex gap-3">
         @for (link of configuration.links; track link) {
-          <a class="btn btn-link" [routerLink]="link.navigationString" routerLinkActive="active">
+          <a
+            class="btn btn-link"
+            [ngStyle]="textColor()"
+            [routerLink]="link.navigationString"
+            routerLinkActive="active">
             {{ link.textString }}
           </a>
         }
@@ -70,7 +72,10 @@
         @if (configuration.links.length > 0) {
           @for (link of configuration.links; track link) {
             <li>
-              <a class="dropdown-item" [routerLink]="link.navigationString">
+              <a
+                class="dropdown-item"
+                [ngStyle]="textColor()"
+                [routerLink]="link.navigationString">
                 {{ link.textString }}
               </a>
             </li>
