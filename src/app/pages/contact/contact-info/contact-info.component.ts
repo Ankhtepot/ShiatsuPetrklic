@@ -1,6 +1,7 @@
-import { Component, InputSignal, input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { T } from '../../../shared/constants/text.tokens';
 import {CommonModule} from '@angular/common';
+import {TextPipe} from '../../../pipes/text.pipe';
 
 const unassignedIcon = 'unassigned-icon';
 
@@ -9,18 +10,17 @@ const unassignedIcon = 'unassigned-icon';
   templateUrl: './contact-info.component.html',
   styleUrls: ['./contact-info.component.scss'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule, TextPipe]
 })
 export class ContactInfoComponent {
-  label: InputSignal<string> = input<string>('label');
-  value: InputSignal<string> = input<string>('value');
-  icon: InputSignal<string> = input<string>(unassignedIcon);
-  labelWidth: InputSignal<string> = input<string>('150px');
-  canBeCopied: InputSignal<boolean> = input<boolean>(false);
-  copyText: InputSignal<string> = input<string>('Copy');
-  successCopyMessage: InputSignal<string> = input<string>('copied into the Clipboard!');
-
-  isHovered = false;
+  readonly label = input<string>('label');
+  readonly value = input<string>('value');
+  readonly icon = input<string>(unassignedIcon);
+  readonly labelWidth = input<string>('150px');
+  readonly canBeCopied = input<boolean>(false);
+  readonly copyText = input<string>('Copy');
+  readonly successCopyMessage = input<string>('copied into the Clipboard!');
+  readonly isValueHyperlink = input<boolean>(false);
 
   protected readonly T = T;
   protected readonly unassignedIcon = unassignedIcon;

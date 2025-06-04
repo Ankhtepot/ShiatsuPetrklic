@@ -3,6 +3,7 @@
   "home_anchor": "Domů",
   "services_anchor": "Služby",
   "contact_anchor": "Kontakt",
+  "contact_information": "Kontaktní informace",
   "services_header": "Co nabízím",
   "about_me_intro": "Jsem kreativní bytost, která miluje tvořit🤎 🎨🖌️ Vesmír a duše jsou mým nekonečným zdrojem inspirace. Každé dílo, které vytvořím, je odrazem mého vnitřního světa. \n\nJsem (TVŮR)KYNĚ",
   "about_me_title1": "Fotografka 📸",
@@ -30,5 +31,6 @@
   "phone_value": "+420 775 915 121",
   "email_label": "Email",
   "email_value": "shiatsu@napismi.cz",
-  "value_copied": "bylo zkopírováno do paměti"
+  "value_copied": "bylo zkopírováno do paměti",
+  "navigate_to_webpage": "Přejít na webovou stránku"
 }

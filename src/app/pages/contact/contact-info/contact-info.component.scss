@@ -10,16 +10,17 @@
     align-items: center;
     white-space: nowrap;
 
-    .colon {
-      margin-left: 0.25rem;
-      font-weight: bold;
-    }
 
     i.bi {
       font-size: 1.2rem;
       color: $primary;
       margin-left: 0.5rem;
     }
+  }
+
+  .colon {
+    margin-left: 0.25rem;
+    font-weight: bold;
   }
 
   .value {

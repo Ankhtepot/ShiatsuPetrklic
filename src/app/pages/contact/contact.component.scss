@@ -1,8 +1,7 @@
 @use "../../../styles/index" as styles;
 
 .contact-container {
-  padding: 2rem 1rem;
-
+  padding: 13em 2em 5em 2em;
 
   .row {
     @include styles.blurred-background(styles.$neutral-light, styles.$neutral-soft, 100px, 2rem);

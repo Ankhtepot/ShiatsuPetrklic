@@ -17,16 +17,16 @@
 
     <!-- Right Column: Contact Info -->
     <div class="col-12 col-md-6">
-      <h2>Contact Information</h2>
+      <h2>{{ T.contact_information | text }}</h2>
       <div>
+        <!-- address -->
         <app-contact-info
           [label]="getText(T.address_label)"
           [value]="getText(T.address_value)"
           [icon]="'geo-alt'"
-          [canBeCopied]="false"
           [labelWidth]="labelWidth"
         ></app-contact-info>
-
+        <!-- phone -->
         <app-contact-info
           [label]="getText(T.phone_label)"
           [value]="getText(T.phone_value)"
@@ -35,7 +35,7 @@
           [successCopyMessage]="getText(T.value_copied)"
           [labelWidth]="labelWidth"
         ></app-contact-info>
-
+        <!-- email -->
         <app-contact-info
           [label]="getText(T.email_label)"
           [value]="getText(T.email_value)"
@@ -44,10 +44,26 @@
           [successCopyMessage]="getText(T.value_copied)"
           [labelWidth]="labelWidth"
         ></app-contact-info>
+        <!-- Facebook -->
+        <app-contact-info
+          label='Facebook'
+          [value]="'https://www.facebook.com/Vessago/'"
+          [icon]="'facebook'"
+          [isValueHyperlink]="true"
+          [labelWidth]="labelWidth"
+        ></app-contact-info>
+        <!-- Instagram -->
+        <app-contact-info
+          label='Instagram'
+          [value]="'https://www.instagram.com/petr_klicz/'"
+          [icon]="'instagram'"
+          [isValueHyperlink]="true"
+          [labelWidth]="labelWidth"
+        ></app-contact-info>
 
         <div class="map-container mt-3">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019209368291!2d-122.41941508468142!3d37.77492977975945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085817cba0c7e3d%3A0xf3c54e24a116eb0!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1549582762335"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.9183654032804!2d16.592320676860048!3d49.20210817138084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47129446dfe3322f%3A0x580baaf9e0f1f23b!2zSmFuYSBVaHJhIDE3Ny8xOSwgNjAyIDAwIEJybm8tc3TFmWVkLVZldmXFmcOt!5e0!3m2!1scs!2scz!4v1749007050147!5m2!1scs!2scz"
             width="100%"
             height="250"
             style="border:0"

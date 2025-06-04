@@ -1,14 +1,20 @@
 <div class="contact-info-container d-flex flex-row align-items-center flex-wrap gap-2">
-  <div class="label d-flex align-items-center">
+  <div class="label d-flex align-items-center" [ngStyle]="{ width: labelWidth() }">
     <span>{{ label() }}</span>
     @if (icon() !== unassignedIcon) {
       <i class="bi bi-{{ icon() }} ms-2"></i>
     }
-    <span class="colon">:</span>
   </div>
+  <span class="colon">:</span>
 
   <div class="value d-flex align-items-center gap-2">
-    <span>{{ value() }}</span>
+    @if (isValueHyperlink()) {
+      <a [attr.href]="value()" target="_blank" rel="noopener noreferrer">
+        <span>{{ T.navigate_to_webpage | text }}</span>
+      </a>
+    } @else {
+      <span>{{ value() }}</span>
+    }
     @if (canBeCopied()) {
       <button
         type="button"

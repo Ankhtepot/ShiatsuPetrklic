@@ -1,7 +1,9 @@
 export enum T {
+  contact_information = 'contact_information',
   aboutMe_anchor = 'aboutMe_anchor',
-  services_anchor = 'services_anchor',
   contact_anchor = 'contact_anchor',
+  services_anchor = 'services_anchor',
+  home_anchor = 'home_anchor',
   services_header = 'services_header',
   about_me_intro = 'about_me_intro',
   about_me_title1 = 'about_me_title1',
@@ -30,5 +32,5 @@ export enum T {
   email_label = 'email_label',
   email_value = 'email_value',
   value_copied = 'value_copied',
-  home_anchor = 'home_anchor',
+  navigate_to_webpage = 'navigate_to_webpage',
 }
