@@ -1,0 +1,44 @@
+<div class="mb-5">
+  <!-- address -->
+  <app-contact-item
+    [label]="getText(T.address_label)"
+    [value]="getText(T.address_value)"
+    [icon]="'geo-alt'"
+    [labelWidth]="labelWidth"
+  ></app-contact-item>
+  <!-- phone -->
+  <app-contact-item
+    [label]="getText(T.phone_label)"
+    [value]="getText(T.phone_value)"
+    [icon]="'telephone'"
+    [canBeCopied]="true"
+    [successCopyMessage]="getText(T.value_copied)"
+    [labelWidth]="labelWidth"
+  ></app-contact-item>
+  <!-- email -->
+  <app-contact-item
+    [label]="getText(T.email_label)"
+    [value]="getText(T.email_value)"
+    [icon]="'envelope'"
+    [canBeCopied]="true"
+    [successCopyMessage]="getText(T.value_copied)"
+    [labelWidth]="labelWidth"
+  ></app-contact-item>
+  <!-- Facebook -->
+  <app-contact-item
+    label='Facebook'
+    [value]="'https://www.facebook.com/Vessago/'"
+    [icon]="'facebook'"
+    [isValueHyperlink]="true"
+    [labelWidth]="labelWidth"
+  ></app-contact-item>
+  <!-- Instagram -->
+  <app-contact-item
+    label='Instagram'
+    [value]="'https://www.instagram.com/petr_klicz/'"
+    [icon]="'instagram'"
+    [isValueHyperlink]="true"
+    [labelWidth]="labelWidth"
+  ></app-contact-item>
+
+</div>

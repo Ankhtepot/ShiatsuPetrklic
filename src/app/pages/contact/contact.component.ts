@@ -3,15 +3,15 @@ import {TextService} from "../../services/text.service";
 import {T} from "../../shared/constants/text.tokens";
 import {CommonModule} from '@angular/common';
 import {ContactFormComponent} from './contact-form/contact-form.component';
-import {ContactInfoComponent} from './contact-info/contact-info.component';
 import {TextPipe} from '../../pipes/text.pipe';
+import {ContactInformationComponent} from './contact-information.component/contact-information.component';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
   standalone: true,
-  imports: [CommonModule, ContactFormComponent, ContactInfoComponent, TextPipe]
+  imports: [CommonModule, ContactFormComponent, ContactInformationComponent, TextPipe]
 })
 export class ContactComponent {
   protected readonly T = T;

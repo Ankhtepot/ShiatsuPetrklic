@@ -1,18 +1,18 @@
 import { Component, input } from '@angular/core';
-import { T } from '../../../shared/constants/text.tokens';
+import { T } from '../../../../shared/constants/text.tokens';
 import {CommonModule} from '@angular/common';
-import {TextPipe} from '../../../pipes/text.pipe';
+import {TextPipe} from '../../../../pipes/text.pipe';
 
 const unassignedIcon = 'unassigned-icon';
 
 @Component({
-  selector: 'app-contact-info',
-  templateUrl: './contact-info.component.html',
-  styleUrls: ['./contact-info.component.scss'],
+  selector: 'app-contact-item',
+  templateUrl: './contact-item.component.html',
+  styleUrls: ['./contact-item.component.scss'],
   standalone: true,
   imports: [CommonModule, TextPipe]
 })
-export class ContactInfoComponent {
+export class ContactItemComponent {
   readonly label = input<string>('label');
   readonly value = input<string>('value');
   readonly icon = input<string>(unassignedIcon);
