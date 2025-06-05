@@ -16,7 +16,7 @@ import {AppColors} from '../styles/colors.gen';
   standalone: true
 })
 export class AppComponent {
-  backgroundImagePath = signal<string | undefined>('images/textures/texture_orange_hairy_blanket.png');
+  backgroundImagePath = signal<string | undefined>('images/textures/texture_orange_hairy_blanket4.png');
   links = inject(NavigationLinkService).headerLinks;
 
   headerConfiguration = computed<HeaderProfessionalConfiguration>(() => ({

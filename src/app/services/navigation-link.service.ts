@@ -21,19 +21,20 @@ export class NavigationLinkService {
   private text = inject(TextService);
 
   public getPageLink(page: EPages): string {
-    const lang = this.lang.current;
-    switch (page) {
-      case EPages.Home:
-        return `/${lang}/${EPages.Home}`;
-      case EPages.AboutMe:
-        return `/${lang}/${EPages.AboutMe}`;
-      case EPages.Services:
-        return `/${lang}/${EPages.Services}`;
-      case EPages.Contact:
-        return `/${lang}/${EPages.Contact}`;
-      default:
-        throw new Error(`Unknown page: ${page}`);
-    }
+    // const lang = this.lang.current;
+    return `/${this.lang.current}/${page}`;
+    // switch (page) {
+    //   case EPages.Home:
+    //     return `/${lang}/${EPages.Home}`;
+    //   case EPages.AboutMe:
+    //     return `/${lang}/${EPages.AboutMe}`;
+    //   case EPages.Services:
+    //     return `/${lang}/${EPages.Services}`;
+    //   case EPages.Contact:
+    //     return `/${lang}/${EPages.Contact}`;
+    //   default:
+    //     throw new Error(`Unknown page: ${page}`);
+    // }
   }
 
   readonly headerLinks = computed<HeaderLinkConfiguration[]>(() => {
@@ -41,7 +42,8 @@ export class NavigationLinkService {
     return [
       {
         navigationString: this.getPageLink(EPages.Home),
-        textString: this.text.get(T.home_anchor)
+        textString: 'bi-house-door-fill',
+        isIcon: true
       },
       {
         navigationString: this.getPageLink(EPages.AboutMe),

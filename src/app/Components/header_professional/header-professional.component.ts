@@ -18,6 +18,7 @@ const showTime = 2000;
 export interface HeaderLinkConfiguration {
   navigationString: string;
   textString: string;
+  isIcon?: boolean; // Optional property to indicate if the link is an icon
 }
 
 export interface HeaderProfessionalConfiguration {

@@ -42,7 +42,11 @@
             [ngStyle]="textColor()"
             [routerLink]="link.navigationString"
             routerLinkActive="active">
-            {{ link.textString }}
+            @if (link.isIcon) {
+              <i class="bi" [class]="link.textString"></i>
+            } @else {
+              <span class="text">{{ link.textString }}</span>
+            }
           </a>
         }
       </div>
@@ -76,7 +80,11 @@
                 class="dropdown-item"
                 [ngStyle]="textColor()"
                 [routerLink]="link.navigationString">
-                {{ link.textString }}
+                @if (link.isIcon) {
+                  <i class="bi" [class]="link.textString"></i>
+                } @else {
+                  <span class="text">{{ link.textString }}</span>
+                }
               </a>
             </li>
           }
