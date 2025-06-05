@@ -2,14 +2,14 @@
   <!-- address -->
   <app-contact-item
     [label]="getText(T.address_label)"
-    [value]="getText(T.address_value)"
+    [value]="StringConstants.ADDRESS"
     [icon]="'geo-alt'"
     [labelWidth]="labelWidth"
   ></app-contact-item>
   <!-- phone -->
   <app-contact-item
     [label]="getText(T.phone_label)"
-    [value]="getText(T.phone_value)"
+    [value]="StringConstants.PHONE"
     [icon]="'telephone'"
     [canBeCopied]="true"
     [successCopyMessage]="getText(T.value_copied)"
@@ -18,7 +18,7 @@
   <!-- email -->
   <app-contact-item
     [label]="getText(T.email_label)"
-    [value]="getText(T.email_value)"
+    [value]="StringConstants.EMAIL"
     [icon]="'envelope'"
     [canBeCopied]="true"
     [successCopyMessage]="getText(T.value_copied)"
@@ -27,7 +27,7 @@
   <!-- Facebook -->
   <app-contact-item
     label='Facebook'
-    [value]="'https://www.facebook.com/Vessago/'"
+    [value]="StringConstants.FACEBOOK"
     [icon]="'facebook'"
     [isValueHyperlink]="true"
     [labelWidth]="labelWidth"
@@ -35,7 +35,7 @@
   <!-- Instagram -->
   <app-contact-item
     label='Instagram'
-    [value]="'https://www.instagram.com/petr_klicz/'"
+    [value]="StringConstants.INSTAGRAM"
     [icon]="'instagram'"
     [isValueHyperlink]="true"
     [labelWidth]="labelWidth"

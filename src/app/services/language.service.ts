@@ -64,8 +64,9 @@ export class LanguageService {
       return this.loadedLanguages.get(language)!;
     }
 
+    const baseHref = document.getElementsByTagName('base')[0]?.href || '';
     const data = await firstValueFrom(
-      this.http.get<Record<string, string>>(`/languages/${language}.json`)
+      this.http.get<Record<string, string>>(`${baseHref}languages/${language}.json`)
     );
 
     const map = new Map<T, string>();

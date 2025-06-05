@@ -20,9 +20,10 @@ export class ImagesService {
   };
 
   profileImages: ImageData[] = [
-    new ImageData('Profile photo 1', 'assets/images/profile_images/dance.jpg'),
-    new ImageData('Profile photo 2', 'assets/images/profile_images/greeting.jpg'),
-    new ImageData('Profile photo 3', 'assets/images/profile_images/leaning_on_wall.jpg'),
+    new ImageData('Profile photo 1', 'images/profile-photos/profile.jpg'),
+    new ImageData('Profile photo 2', 'images/profile-photos/profile_2025.jpg'),
+    new ImageData('Profile photo 3', 'images/profile-photos/profile_tube.jpg'),
+    new ImageData('Profile photo 4', 'images/profile-photos/profile_sitting.jpg'),
   ]
 
   constructor() { }

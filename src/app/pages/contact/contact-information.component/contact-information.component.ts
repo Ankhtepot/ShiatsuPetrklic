@@ -3,6 +3,8 @@ import {TextService} from '../../../services/text.service';
 import {T} from '../../../shared/constants/text.tokens';
 import {CommonModule} from '@angular/common';
 import {ContactItemComponent} from './contact-item/contact-item.component';
+import {StringConstants} from '../../../shared/constants/string.constants';
+
 
 @Component({
   selector: 'app-contact-information',
@@ -21,4 +23,5 @@ export class ContactInformationComponent {
   }
 
   protected readonly T = T;
+  protected readonly StringConstants = StringConstants;
 }

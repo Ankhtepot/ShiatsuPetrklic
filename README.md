@@ -29,7 +29,12 @@ ng generate --help
 ## Building
 
 To build the project run:
+for this project, you can use the following command:
 
+```bash
+ng build --base-href=/shiatsu-brno/
+```
+general build command:
 ```bash
 ng build
 ```
@@ -67,3 +72,43 @@ Run as follows:
 npm run watch:colors
 ``` 
 
+## Deploying to Production
+
+Command to deploy the application to production:
+
+```bash
+ng deploy --base-href=/shiatsu-brno/
+```
+
+Changes in angular.json file:
+```json
+...
+"architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "src/main.ts",
+            "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "outputPath": "dist/shiatsu-brno", <-- THIS IS THE OUTPUT DIRECTORY
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "1MB", <--- SET MAXIMUM WARNING SIZE
+                  "maximumError": "2MB" <--- SET MAXIMUM ERROR SIZE
+                },
+...
+```

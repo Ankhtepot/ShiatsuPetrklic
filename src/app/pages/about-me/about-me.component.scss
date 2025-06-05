@@ -26,9 +26,11 @@
 .profile-section {
 
   img {
-    width: 300px;
-    height: 500px;
-    object-fit: cover;
+    max-width: 300px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
     float: left; // Make the image float left
     margin-right: 20px; // Space between the image and the text
     margin-bottom: 10px; // Space below the image
