@@ -27,11 +27,8 @@
   "input_message_required": "Pole \"Zpráva\" je povinné.",
   "button_send": "Odeslat",
   "address_label": "Adresa",
-  "address_value": "Petr Závodný, 602 00, Brno",
   "phone_label": "Telefon",
-  "phone_value": "+420 775 915 121",
   "email_label": "Email",
-  "email_value": "shiatsu@napismi.cz",
   "value_copied": "bylo zkopírováno do paměti",
   "navigate_to_webpage": "Přejít na webovou stránku"
 }
