@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@use "styles/index" as styles;
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: styles.$text-on-orange !important;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  color: styles.$text-on_text_background !important;
+  font-weight: bold !important;
+}
+
+h2 {
+  font-family: "Pacifico", cursive;
+  color: styles.$text-on_text_background !important;
+  font-weight: bold !important;
+}
+
+h3 {
+  font-family: "Pacifico", cursive;
+  color: styles.$text-on_text_background !important;
+  font-weight: bold !important;
+}

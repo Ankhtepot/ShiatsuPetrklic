@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "deploy": "ng build --base-href=/ShiatsuPetrklic/ && npx angular-cli-ghpages --dir=dist/shiatsu-brno/browser",
     "watch:colors": "node watch-scss-colors.js"
   },
   "private": true,

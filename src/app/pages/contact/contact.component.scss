@@ -1,11 +1,11 @@
 @use "../../../styles/index" as styles;
 
 .contact-container {
-  color: styles.$text-on-orange;
+  color: styles.$text-on-text_background;
   padding: 13em 2em 5em 2em;
 
   .row {
-    @include styles.blurred-background(styles.$neutral-light, styles.$neutral-soft, 100px, 2rem);
+    @include styles.frosted-glass();
   }
 
   h2 {

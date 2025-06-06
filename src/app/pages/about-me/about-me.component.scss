@@ -1,20 +1,14 @@
-//:host {
-//  display: block;
-//  margin-top: 210px;
-//}
+@use "../../../styles/index" as styles;
 
 .content {
+  @include styles.frosted-glass(); // sets background, blur, radius, shadow
   position: relative;
   max-width: 800px;
   width: 100%;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.8);
   margin: 150px auto;
-  border-radius: 20px;
-  box-shadow: 1px -1px 49px 34px rgba(255,255,255,0.8);
-  -webkit-box-shadow: 1px -1px 49px 34px rgba(255,255,255,0.8);
-  -moz-box-shadow: 1px -1px 49px 34px rgba(255,255,255,0.8);
   z-index: 20;
+  color: styles.$text-on-orange;
 }
 
 @media (max-width: 500px) {
@@ -37,10 +31,11 @@
   }
 
   .text-header {
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: 500;
     margin-bottom: 10px;
     font-family: "Pacifico", cursive;
+    color: styles.$text-on-text_background;
   }
   //image centers on media width max 600px
   @media (max-width: 600px) {
