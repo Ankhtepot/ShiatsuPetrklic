@@ -1,21 +1,7 @@
 @use "../../../styles/index" as styles;
 
-.contact-container {
-  color: styles.$text-on-text_background;
-  padding: 13em 2em 5em 2em;
-
-  .row {
-    @include styles.frosted-glass();
-  }
-
-  h2 {
-    margin-bottom: 1rem;
-    font-weight: bold;
-  }
-
-  .map-container {
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  }
+.map-container {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }

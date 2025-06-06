@@ -78,7 +78,7 @@ $background-color: 255;
   }
 
   a.active {
-    background-color: rgba($background-color, $background-color, $background-color, 0.2);
+    background-color: rgba($background-color, $background-color, $background-color, 0.4);
     transition: color 0.3s;
     font-weight: bold;
 

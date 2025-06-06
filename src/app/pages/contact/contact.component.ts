@@ -5,13 +5,14 @@ import {CommonModule} from '@angular/common';
 import {ContactFormComponent} from './contact-form/contact-form.component';
 import {TextPipe} from '../../pipes/text.pipe';
 import {ContactInformationComponent} from './contact-information.component/contact-information.component';
+import {ContentCardComponent} from '../../Components/content-card/content-card.component';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
   standalone: true,
-  imports: [CommonModule, ContactFormComponent, ContactInformationComponent, TextPipe]
+  imports: [CommonModule, ContactFormComponent, ContactInformationComponent, TextPipe, ContentCardComponent]
 })
 export class ContactComponent {
   protected readonly T = T;

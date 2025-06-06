@@ -1,25 +1,23 @@
-<div class="container contact-container">
-  <div class="row g-4">
+<app-content-card [width]="'80%'">
+  <div class="row g-4 align-items-stretch">
     <!-- Left Column: Contact Form -->
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-5">
       <app-contact-form></app-contact-form>
     </div>
 
-    <!-- Divider for larger screens -->
-    <div class="d-none d-md-flex justify-content-center align-items-center col-auto px-0">
+    <!-- Divider -->
+    <div class="d-none d-md-flex justify-content-center align-items-center col-md-1 px-0">
       <div style="width: 1px; background-color: #ccc; height: 100%;"></div>
     </div>
-
-    <!-- Divider for smaller screens -->
     <div class="d-md-none col-12">
-      <hr/>
+      <hr />
     </div>
 
     <!-- Right Column: Contact Info -->
     <div class="col-12 col-md-6">
       <h2>{{ T.contact_information | text }}</h2>
-      <app-contact-information [labelWidth]="labelWidth"/>
-      <h2>{{ T.how_to_find_me | text}}</h2>
+      <app-contact-information [labelWidth]="labelWidth" />
+      <h2>{{ T.how_to_find_me | text }}</h2>
       <div class="map-container mt-3">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.9183654032804!2d16.592320676860048!3d49.20210817138084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47129446dfe3322f%3A0x580baaf9e0f1f23b!2zSmFuYSBVaHJhIDE3Ny8xOSwgNjAyIDAwIEJybm8tc3TFmWVkLVZldmXFmcOt!5e0!3m2!1scs!2scz!4v1749007050147!5m2!1scs!2scz"
@@ -33,4 +31,4 @@
       </div>
     </div>
   </div>
-</div>
+</app-content-card>
