@@ -28,12 +28,6 @@ ng generate --help
 
 ## Building
 
-To build the project run:
-for this project, you can use the following command:
-
-```bash
-ng build --base-href=/shiatsu-brno/
-```
 general build command:
 ```bash
 ng build
@@ -74,10 +68,10 @@ npm run watch:colors
 
 ## Deploying to Production
 
-Command to deploy the application to production:
+Command to deploy the application to production, this will build the project and push it to the specified remote repository:
 
 ```bash
-ng deploy --base-href=/shiatsu-brno/
+npm run deploy
 ```
 
 Changes in angular.json file:
@@ -111,4 +105,18 @@ Changes in angular.json file:
                   "maximumError": "2MB" <--- SET MAXIMUM ERROR SIZE
                 },
 ...
+```
+Changes in package.json file:
+```json
+...
+"scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "deploy": "ng build --base-href=/ShiatsuPetrklic/ && npx angular-cli-ghpages --dir=dist/shiatsu-brno/browser", <-- This is the deploy command
+    "watch:colors": "node watch-scss-colors.js" <-- This is the command to watch colors
+  },
+... 
 ```
