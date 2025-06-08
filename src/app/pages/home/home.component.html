@@ -21,6 +21,8 @@
     <h2 class="mt-4">{{ T.home_purpose_title | text }}</h2>
     <p>{{ T.home_purpose_text | text }}</p>
 
+    <app-quote-strip [quotes]="testimonials()" />
+
     <h3 class="mt-4">{{ T.home_benefits_title | text }}</h3>
     <ul class="list-unstyled">
       <li>• {{ T.home_benefits_1 | text }}</li>

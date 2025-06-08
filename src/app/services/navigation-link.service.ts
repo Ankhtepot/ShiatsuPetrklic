@@ -21,8 +21,9 @@ export class NavigationLinkService {
   private lang = inject(LanguageService);
   private text = inject(TextService);
 
-  public getPageLink(page: EPages): string {
-    return `/${this.lang.current}/${page}`;
+  public getPageLink(page: EPages, anchor?: string): string {
+    const baseUrl = `/${this.lang.current}/${page}`;
+    return anchor ? `${baseUrl}#${anchor}` : baseUrl;
   }
 
   readonly headerLinks = computed<HeaderLinkConfiguration[]>(() => {
