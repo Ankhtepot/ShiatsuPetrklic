@@ -9,37 +9,37 @@ export enum ELanguage {
 }
 
 const SUPPORTED_LANGUAGES = Object.values(ELanguage);
-type Lang = ELanguage;
+type Language = ELanguage;
 
 @Injectable({ providedIn: 'root' })
 export class LanguageService {
-  private langSignal = signal<Lang>(ELanguage.Cs);
-  readonly language = computed(() => this.langSignal());
+  readonly languageSignal = signal<Language>(ELanguage.Cs);
+  readonly language = computed(() => this.languageSignal());
 
   private translations = signal<Map<T, string>>(new Map());
   readonly t = computed(() => this.translations());
 
-  private loadedLanguages = new Map<Lang, Map<T, string>>();
+  private loadedLanguages = new Map<Language, Map<T, string>>();
 
   constructor(private http: HttpClient) {
-    this.loadTranslations(this.langSignal());
+    this.loadTranslations(this.languageSignal());
   }
 
-  setLang(language: Lang) {
+  setLang(language: Language) {
     if (SUPPORTED_LANGUAGES.includes(language)) {
-      this.langSignal.set(language);
+      this.languageSignal.set(language);
       document.documentElement.lang = language;
       this.loadTranslations(language);
     }
   }
 
   async loadInitialLanguage(): Promise<void> {
-    const map = await this.fetchTranslations(this.langSignal());
+    const map = await this.fetchTranslations(this.languageSignal());
     this.translations.set(map);
   }
 
-  get current(): Lang {
-    return this.langSignal();
+  get current(): Language {
+    return this.languageSignal();
   }
 
   getText(key: T): string {
@@ -51,7 +51,7 @@ export class LanguageService {
     return fallback ?? key.toString();
   }
 
-  private loadTranslations(language: Lang) {
+  private loadTranslations(language: Language) {
     if (this.loadedLanguages.has(language)) {
       this.translations.set(this.loadedLanguages.get(language)!);
     } else {
@@ -59,7 +59,7 @@ export class LanguageService {
     }
   }
 
-  private async fetchTranslations(language: Lang): Promise<Map<T, string>> {
+  private async fetchTranslations(language: Language): Promise<Map<T, string>> {
     if (this.loadedLanguages.has(language)) {
       return this.loadedLanguages.get(language)!;
     }

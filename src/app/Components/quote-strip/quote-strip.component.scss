@@ -1,0 +1,51 @@
+.quote-strip {
+  background-color: #b95c1b;
+  color: #fff;
+  width: 100%;
+  padding: 1rem 2rem;
+  position: relative;
+  transition: opacity 0.4s ease-in-out;
+
+  &.fade-out {
+    opacity: 0;
+  }
+
+  .blockquote {
+    font-style: italic;
+    border-left: 4px solid #fff;
+    padding-left: 1rem;
+    margin-left: 1rem;
+
+    .blockquote-footer {
+      color: #ffd8b0; // warm bright accent color for contrast on dark orange
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+
+    .quote-mark {
+      font-size: 2rem;
+      vertical-align: text-top;
+      line-height: 1;
+      padding: 0 0.2rem;
+      color: #fff2d5; // or another highlight tone
+    }
+
+    .read-more-wrapper {
+      margin-top: 0.5rem;
+      button {
+        color: #fff;
+        text-decoration: underline;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        pointer-events: none;
+      }
+    }
+
+    &:hover .read-more-wrapper button {
+      opacity: 1;
+      pointer-events: auto;
+      transition-delay: 1s;
+    }
+  }
+}
