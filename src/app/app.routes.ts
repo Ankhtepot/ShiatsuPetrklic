@@ -4,6 +4,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { ContactComponent } from './pages/contact/contact.component';
 import {HomeComponent} from './pages/home/home.component';
 import {ServicesComponent} from './pages/services/services.component';
+import {TestimonialsComponent} from './pages/testimonials.component/testimonials.component';
 
 export const routerOptions: ExtraOptions = {
   onSameUrlNavigation: 'reload',
@@ -18,6 +19,7 @@ const localizedRoutes: Routes = [
   { path: 'about-me', component: AboutMeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'services', component: ServicesComponent },
+  { path: 'testimonials', component: TestimonialsComponent },
   { path: 'not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: 'not-found' }
 ];

@@ -6,15 +6,17 @@
       {{ T.home_intro | text }}
     </p>
 
-<!--    <blockquote class="blockquote mt-4 mb-4">-->
-<!--      <p>{{ T.home_quote_text | text }}</p>-->
-<!--      <footer class="blockquote-footer">{{ T.home_quote_source | text }}</footer>-->
-<!--    </blockquote>-->
-    <app-quote-strip [quote]="{
+    <!--    <blockquote class="blockquote mt-4 mb-4">-->
+    <!--      <p>{{ T.home_quote_text | text }}</p>-->
+    <!--      <footer class="blockquote-footer">{{ T.home_quote_source | text }}</footer>-->
+    <!--    </blockquote>-->
+    <app-quote-strip
+      [quote]="{
       csText: T.home_quote_text | text,
       enText: 'translate and paste in home.component.html',
       author: T.home_quote_source | text
-    }"/>
+    }"
+    />
 
     <h2 class="mt-4">{{ T.home_purpose_title | text }}</h2>
     <p>{{ T.home_purpose_text | text }}</p>

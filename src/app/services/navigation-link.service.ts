@@ -6,6 +6,7 @@ import { TextService } from './text.service';
 export enum EPages {
   Home = 'home',
   AboutMe = 'about-me',
+  Testimonials = 'testimonials',
   Services = 'services',
   Contact = 'contact'
 }
@@ -21,20 +22,7 @@ export class NavigationLinkService {
   private text = inject(TextService);
 
   public getPageLink(page: EPages): string {
-    // const lang = this.lang.current;
     return `/${this.lang.current}/${page}`;
-    // switch (page) {
-    //   case EPages.Home:
-    //     return `/${lang}/${EPages.Home}`;
-    //   case EPages.AboutMe:
-    //     return `/${lang}/${EPages.AboutMe}`;
-    //   case EPages.Services:
-    //     return `/${lang}/${EPages.Services}`;
-    //   case EPages.Contact:
-    //     return `/${lang}/${EPages.Contact}`;
-    //   default:
-    //     throw new Error(`Unknown page: ${page}`);
-    // }
   }
 
   readonly headerLinks = computed<HeaderLinkConfiguration[]>(() => {
@@ -48,6 +36,10 @@ export class NavigationLinkService {
       {
         navigationString: this.getPageLink(EPages.AboutMe),
         textString: this.text.get(T.aboutMe_anchor)
+      },
+      {
+        navigationString: this.getPageLink(EPages.Testimonials),
+        textString: this.text.get(T.testimonials_anchor)
       },
       {
         navigationString: this.getPageLink(EPages.Services),

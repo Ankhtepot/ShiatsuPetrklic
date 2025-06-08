@@ -2,9 +2,11 @@
   background-color: #b95c1b;
   color: #fff;
   width: 100%;
-  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); // soft depth
+  transition: box-shadow 0.3s ease;
   position: relative;
-  transition: opacity 0.4s ease-in-out;
+  padding: 1.25rem 1.5rem;
 
   &.fade-out {
     opacity: 0;
@@ -14,7 +16,6 @@
     font-style: italic;
     border-left: 4px solid #fff;
     padding-left: 1rem;
-    margin-left: 1rem;
 
     .blockquote-footer {
       color: #ffd8b0; // warm bright accent color for contrast on dark orange
