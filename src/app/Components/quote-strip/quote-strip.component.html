@@ -16,7 +16,7 @@
       {{ currentQuote().author }}
       @if (isUsingEllipsis) {
         <div class="read-more-wrapper" (click)="navigateToReadWhole()">
-          <button class="btn btn-link">Read more</button>
+          <button class="btn btn-link">{{ T.read_more | text }}</button>
         </div>
       }
     </footer>

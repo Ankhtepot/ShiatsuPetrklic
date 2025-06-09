@@ -11,12 +11,14 @@ import {CommonModule} from '@angular/common';
 import {Router} from '@angular/router';
 import {QuoteData} from '../../Models/quote-data';
 import {LanguageService} from '../../services/language.service';
-import {cutAtLastWholeWord} from '../../shared/Extensions/string-extensions';
+import {cutAtLastWholeWord} from '../../shared/utilities/string-extensions';
+import {T} from '../../shared/constants/text.tokens';
+import {TextPipe} from '../../pipes/text.pipe';
 
 @Component({
   selector: 'app-quote-strip',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TextPipe],
   templateUrl: './quote-strip.component.html',
   styleUrls: ['./quote-strip.component.scss']
 })
@@ -121,4 +123,6 @@ export class QuoteStripComponent implements OnInit, OnDestroy {
       () => el.classList.remove('highlight-pulse'
       ), 1000);
   }
+
+  protected readonly T = T;
 }

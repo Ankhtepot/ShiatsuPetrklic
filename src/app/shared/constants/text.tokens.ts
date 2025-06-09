@@ -50,10 +50,11 @@ export enum T {
   phone_label = 'phone_label',
   p404_Message = 'p404_Message',
   p404_Title = 'p404_Title',
+  read_more = 'read_more',
   services_anchor = 'services_anchor',
   services_header = 'services_header',
   testimonials_anchor = 'testimonials_anchor',
   testimonials_header = 'testimonials_header',
   value_copied = 'value_copied',
-  write_me = 'write_me'
+  write_me = 'write_me',
 }
