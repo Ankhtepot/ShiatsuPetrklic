@@ -2,10 +2,10 @@ import {
   Component,
   Input,
   signal,
-  computed,
   OnInit,
   OnDestroy,
-  inject
+  inject,
+  ViewChild, ElementRef
 } from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {Router} from '@angular/router';
@@ -21,25 +21,24 @@ import {cutAtLastWholeWord} from '../../shared/Extensions/string-extensions';
   styleUrls: ['./quote-strip.component.scss']
 })
 export class QuoteStripComponent implements OnInit, OnDestroy {
+  @Input() id?: string; // for static quote
   @Input() quote?: QuoteData;         // for static quote
   @Input() quotes: QuoteData[] = [];  // for dynamic mode
+  @ViewChild('quoteStripEl') quoteStripEl!: ElementRef;
 
   private router = inject(Router);
   private languageService = inject(LanguageService);
   private intervalId: any;
 
   isUsingEllipsis = false;
+  fadeTime = 400; // ms
 
   currentQuote = signal<QuoteData>({
     csText: 'empty',
     enText: 'empty',
     author: 'unknown',
   });
-  fadingOut = signal(false);
-
-  readonly changeAfter = computed(() =>
-    this.currentQuote()?.changeAfter ?? 10000
-  );
+  readonly fadeState = signal<'visible' | 'fading-out' | 'fading-in'>('visible');
 
   ngOnInit(): void {
     if (this.quote) {
@@ -54,12 +53,6 @@ export class QuoteStripComponent implements OnInit, OnDestroy {
     clearInterval(this.intervalId);
   }
 
-  loadInitialQuote() {
-    if (this.quotes.length > 0) {
-      this.currentQuote.set(this.quotes[0]);
-    }
-  }
-
   getLocalizedText(): string {
     const quote = this.currentQuote();
     if (!quote) return '';
@@ -70,6 +63,13 @@ export class QuoteStripComponent implements OnInit, OnDestroy {
     return this.textWithEllipsis(text);
   }
 
+  get fadeOutClass() {
+    return this.fadeState() === 'fading-out';
+  }
+
+  get fadeInClass() {
+    return this.fadeState() === 'fading-in';
+  }
 
   startRotation(): void {
     if (this.quotes.length <= 1) return;
@@ -79,17 +79,21 @@ export class QuoteStripComponent implements OnInit, OnDestroy {
     const delay = this.currentQuote()?.changeAfter ?? 10000;
 
     this.intervalId = setInterval(() => {
-      this.fadingOut.set(true);
-
-      setTimeout(() => {
-        currentIndex = (currentIndex + 1) % this.quotes.length;
-        this.currentQuote.set(this.quotes[currentIndex]);
-        this.fadingOut.set(false);
-      }, 400);
-    }, delay);
+        this.fadeState.set('fading-out');
+        setTimeout(() => {
+          currentIndex = (currentIndex + 1) % this.quotes.length;
+          this.currentQuote.set(this.quotes[currentIndex]);
+          this.fadeState.set('fading-in');
+          setTimeout(() => this.fadeState.set('visible'), this.fadeTime);
+        }, this.fadeTime);
+      }, delay);
   }
 
-  textWithEllipsis(text: string): string {
+  textWithEllipsis(text
+                     :
+                     string
+  ):
+    string {
     const limit = this.currentQuote()?.lengthBeforeEllipsis ?? Number.MAX_SAFE_INTEGER;
 
     if (text.length <= limit) {
@@ -101,10 +105,20 @@ export class QuoteStripComponent implements OnInit, OnDestroy {
     return cutAtLastWholeWord(text, limit);
   }
 
-  navigateToReadWhole(): void {
-    const url = this.currentQuote()?.readWholeUrl;
+  navigateToReadWhole()
+    :
+    void {
+    const url = this.currentQuote()?.testimonialsFragment;
     if (url) {
       this.router.navigate(['/cs/testimonials'], {fragment: url});
     }
+  }
+
+  highlight(): void {
+    const el = this.quoteStripEl.nativeElement as HTMLElement;
+    el.classList.add('highlight-pulse');
+    setTimeout(
+      () => el.classList.remove('highlight-pulse'
+      ), 1000);
   }
 }

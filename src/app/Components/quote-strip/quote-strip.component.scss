@@ -1,3 +1,5 @@
+@use '../../../../src/styles/colors' as *;
+
 .quote-strip {
   background-color: #b95c1b;
   color: #fff;
@@ -8,8 +10,18 @@
   position: relative;
   padding: 1.25rem 1.5rem;
 
-  &.fade-out {
+  p,
+  footer {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .fade-out {
     opacity: 0;
+  }
+
+  .fade-in {
+    opacity: 1;
   }
 
   .blockquote {
@@ -22,6 +34,11 @@
       font-size: 1.1rem;
       font-weight: 600;
       margin-top: 0.5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+
     }
 
     .quote-mark {
@@ -33,20 +50,46 @@
     }
 
     .read-more-wrapper {
-      margin-top: 0.5rem;
       button {
-        color: #fff;
-        text-decoration: underline;
+        background: $deep-navy;
+        border: 1px solid #ffd8b0;
+        color: #ffd8b0;
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 0.2rem 0.6rem;
+        border-radius: 6px;
         opacity: 0;
-        transition: opacity 0.3s ease-in-out;
+        transition: opacity 0.4s ease, background-color 0.3s ease;
         pointer-events: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(255, 216, 176, 0.2);
+        }
       }
     }
 
     &:hover .read-more-wrapper button {
       opacity: 1;
       pointer-events: auto;
-      transition-delay: 1s;
+      transition-delay: 0.1s;
     }
   }
+
+}
+
+@keyframes backgroundPulse {
+  0% {
+    background-color: #b95c1b;
+  }
+  50% {
+    background-color: #ffd8b0; // light orange
+  }
+  100% {
+    background-color: #b95c1b;
+  }
+}
+
+.quote-strip.highlight-pulse {
+  animation: backgroundPulse 1s ease-in-out;
 }

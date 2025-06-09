@@ -1,16 +1,24 @@
 <div
+  #quoteStripEl
   class="quote-strip"
-  [class.fade-out]="fadingOut()"
+  [attr.id]="id"
 >
   <blockquote class="blockquote m-0">
-    <p><span class="quote-mark">❝</span>{{ getLocalizedText() }}<span class="quote-mark">❞</span></p>
-    <footer class="blockquote-footer">
+    <p
+      [class.fade-in]="fadeInClass"
+      [class.fade-out]="fadeOutClass"
+    ><span class="quote-mark">❝</span>{{ getLocalizedText() }}<span class="quote-mark">❞</span></p>
+    <footer
+      class="blockquote-footer"
+      [class.fade-in]="fadeInClass"
+      [class.fade-out]="fadeOutClass"
+    >
       {{ currentQuote().author }}
+      @if (isUsingEllipsis) {
+        <div class="read-more-wrapper" (click)="navigateToReadWhole()">
+          <button class="btn btn-link">Read more</button>
+        </div>
+      }
     </footer>
-    @if (isUsingEllipsis) {
-      <div class="read-more-wrapper" (click)="navigateToReadWhole()">
-        <button class="btn btn-link">Read more</button>
-      </div>
-    }
   </blockquote>
 </div>

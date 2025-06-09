@@ -18,5 +18,5 @@ export class HomeComponent {
   protected readonly T = T;
   private navigationLinkService = inject(NavigationLinkService);
 
-  testimonials = signal(getTestimonials(this.navigationLinkService));
+  testimonials = signal(getTestimonials());
 }

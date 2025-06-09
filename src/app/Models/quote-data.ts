@@ -4,5 +4,5 @@ export interface QuoteData {
   author: string;
   changeAfter?: number;
   lengthBeforeEllipsis?: number;
-  readWholeUrl?: string;
+  testimonialsFragment?: string;
 }

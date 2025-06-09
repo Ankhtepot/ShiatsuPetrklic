@@ -3,9 +3,10 @@
     <div class="testimonial-column left">
       @for (quote of testimonials; let i = $index; track quote) {
         @if (i % 2 === 0) {
-          <a class="testimonial-anchor" [attr.id]="'testimonial-anchor-' + (i + 1)">
-            <app-quote-strip [quote]="quote"></app-quote-strip>
-          </a>
+          <app-quote-strip
+            [quote]="quote"
+            [id]="'testimonial-anchor-' + (i + 1)">
+          </app-quote-strip>
         }
       }
     </div>
@@ -17,12 +18,11 @@
     <div class="testimonial-column right">
       @for (quote of testimonials; let i = $index; track quote) {
         @if (i % 2 === 1) {
-          <a
-            class="testimonial-anchor"
-            [ngClass]="{ 'offset-first': i === 1 }"
-            [attr.id]="'testimonial-anchor-' + (i + 1)">
-            <app-quote-strip [quote]="quote"></app-quote-strip>
-          </a>
+          <app-quote-strip
+            [quote]="quote"
+            [id]="'testimonial-anchor-' + (i + 1)"
+            [ngClass]="{ 'offset-first': i === 1 }">
+          </app-quote-strip>
         }
       }
     </div>
