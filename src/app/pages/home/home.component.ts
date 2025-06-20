@@ -1,4 +1,4 @@
-import {Component, signal} from '@angular/core';
+import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {TextPipe} from '../../pipes/text.pipe';
 import {T} from '../../shared/constants/text.tokens';
@@ -17,5 +17,7 @@ import {randomizeArray} from '../../shared/utilities/randomize';
 export class HomeComponent {
   protected readonly T = T;
 
-  testimonials = signal(randomizeArray(getTestimonials()));
+  get randomizedTestimonials() {
+    return randomizeArray(getTestimonials());
+  }
 }
