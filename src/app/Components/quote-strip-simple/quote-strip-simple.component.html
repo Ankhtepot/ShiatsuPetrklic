@@ -1,0 +1,20 @@
+<div
+  class="quote-strip"
+  [attr.id]="id"
+  [ngStyle]="backgroundStyle()"
+>
+  <blockquote
+    class="blockquote m-0"
+    [ngStyle]="verticalMarkStyle()"
+  >
+    <span class="quote-mark" [ngStyle]="quoteMarkStyle()">❝</span>
+    {{ getLocalizedText() }}
+    <span class="quote-mark" [ngStyle]="quoteMarkStyle()">❞</span>
+    <footer
+      class="blockquote-footer"
+      [ngStyle]="footerStyle()"
+    >
+      {{ quote.author }}
+    </footer>
+  </blockquote>
+</div>

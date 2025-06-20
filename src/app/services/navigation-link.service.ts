@@ -31,8 +31,7 @@ export class NavigationLinkService {
     return [
       {
         navigationString: this.getPageLink(EPages.Home),
-        textString: 'bi-house-door-fill',
-        isIcon: true
+        textString: 'Úvod',
       },
       {
         navigationString: this.getPageLink(EPages.AboutMe),

@@ -1,6 +1,7 @@
 <app-content-card>
   <div class="text-section" style="text-align: center">
     <h1 class="fw-bold">{{ T.home_title_1 | text }}</h1>
+    <h1 class="fw-bold">•</h1>
     <h1 class="fw-bold">{{ T.home_title_2 | text }}</h1>
 
     <p class="lead">
@@ -13,12 +14,13 @@
       {{ T.home_intro | text }}
     </p>
     <br>
-    <app-quote-strip
+    <app-quote-strip-simple
       [quote]="{
       csText: T.home_quote_text | text,
       enText: 'translate and paste in home.component.html',
       author: T.home_quote_source | text
     }"
+      [colorConfiguration]="quoteColorConfiguration"
     />
     <br>
     <p class="lead">{{ T.about_me_part2_2 | text }}</p>
@@ -26,7 +28,7 @@
     <app-quote-strip [quotes]="randomizedTestimonials" />
     <br>
     <h3 class="mt-4">{{ T.home_benefits_title | text }}</h3>
-    <div class="center">
+    <div class="list-wrapper">
       <ul class="benefits-list">
         <li>• {{ T.home_benefits_1 | text }}</li>
         <li>• {{ T.home_benefits_2 | text }}</li>

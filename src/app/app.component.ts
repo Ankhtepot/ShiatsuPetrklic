@@ -23,7 +23,7 @@ export class AppComponent {
     links: this.links(),
     showLogo: true,
     showTitle: true,
-    title: 'Shiatsu Petrklic',
+    title: 'Shiatsu Petrklíč',
     logoPath: 'images/appIcon.png',
     dynamicShow: false,
     textColor: AppColors.textOnOrange,

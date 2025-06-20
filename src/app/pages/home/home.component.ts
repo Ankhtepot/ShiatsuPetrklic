@@ -6,16 +6,29 @@ import {ContentCardComponent} from '../../Components/content-card/content-card.c
 import {QuoteStripComponent} from '../../Components/quote-strip/quote-strip.component';
 import {getTestimonials} from '../../shared/data/testimonials';
 import {randomizeArray} from '../../shared/utilities/randomize';
+import {
+  QuoteColorConfiguration,
+  QuoteStripSimpleComponent
+} from '../../Components/quote-strip-simple/quote-strip-simple.component';
+import {AppColors} from '../../../styles/colors.gen';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, TextPipe, ContentCardComponent, QuoteStripComponent],
+  imports: [CommonModule, TextPipe, ContentCardComponent, QuoteStripComponent, QuoteStripSimpleComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
   protected readonly T = T;
+
+  quoteColorConfiguration: QuoteColorConfiguration = {
+    backgroundColor: AppColors.glassWhiteSoft,
+    textColor: '#555555',
+    quoteMarkColor: '#777',
+    footerColor: '#888888',
+    verticalMarkColor: '#cccccc',
+  };
 
   get randomizedTestimonials() {
     return randomizeArray(getTestimonials());

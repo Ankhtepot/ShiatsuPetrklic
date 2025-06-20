@@ -12,6 +12,7 @@ export const AppColors = {
   deepNavy: '#1a237e',
   orangeGradientStart: '#ff8c00',
   orangeGradientEnd: '#ffb464',
+  orangeSoft: '#ffd8b0',
   glassWhite: 'rgba(255, 255, 255, 0.75)',
   glassWhiteStrong: 'rgba(255, 255, 255, 0.9)',
   glassWhiteSoft: 'rgba(255, 255, 255, 0.6)',

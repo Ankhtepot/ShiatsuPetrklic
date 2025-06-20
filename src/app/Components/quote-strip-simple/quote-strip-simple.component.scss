@@ -1,0 +1,49 @@
+@use '../../../../src/styles/colors' as *;
+
+$quote-bg-default: $text-on-text_background;
+$quote-text-default: $neutral-soft;
+$quote-mark-default: $neutral-soft;
+$quote-footer-default: $orange-soft;
+
+.quote-strip {
+  background-color: $quote-bg-default;
+  color: $quote-text-default;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); // soft depth
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  padding: 1.25rem 1.5rem;
+
+  p,
+  footer {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .blockquote {
+    font-style: italic;
+    border-left: 4px solid $quote-footer-default;
+    padding-left: 1rem;
+
+    .blockquote-footer {
+      color: $quote-footer-default;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+
+    }
+
+    .quote-mark {
+      font-size: 2rem;
+      vertical-align: text-top;
+      line-height: 1;
+      padding: 0 0.2rem;
+      color: $quote-mark-default;
+    }
+  }
+}
