@@ -71,5 +71,6 @@
   "pricing_shiatsu_row_3_description": "Shiatsu předplacené 4 a více ošetření",
   "pricing_shiatsu_row_3_price": "například 4.800 Kč (1.200 Kč/1 ošetření)",
   "contact_form_success_message": "Děkuji za váš zájem. Vaše zpráva byla úspěšně odeslána. Odpovím vám co nejdříve.",
-  "contact_form_error_message": "Omlouvám se, ale došlo k chybě při odesílání vaší zprávy. Zkuste to prosím znovu později."
+  "contact_form_error_message": "Omlouvám se, ale došlo k chybě při odesílání vaší zprávy. Zkuste to prosím znovu později.",
+  "button_sending": "Odesílám..."
 }
