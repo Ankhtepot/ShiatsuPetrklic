@@ -61,4 +61,13 @@ export enum T {
   testimonials_header = 'testimonials_header',
   value_copied = 'value_copied',
   write_me = 'write_me',
+  pricing_anchor = 'pricing_anchor',
+  pricing_table_header_1 = 'pricing_table_header_1',
+  pricing_table_header_2 = 'pricing_table_header_2',
+  pricing_shiatsu_row_1_description = 'pricing_shiatsu_row_1_description',
+  pricing_shiatsu_row_1_price = 'pricing_shiatsu_row_1_price',
+  pricing_shiatsu_row_2_description = 'pricing_shiatsu_row_2_description',
+  pricing_shiatsu_row_2_price = 'pricing_shiatsu_row_2_price',
+  pricing_shiatsu_row_3_description = 'pricing_shiatsu_row_3_description',
+  pricing_shiatsu_row_3_price = 'pricing_shiatsu_row_3_price',
 }

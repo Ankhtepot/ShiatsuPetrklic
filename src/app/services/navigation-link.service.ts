@@ -7,6 +7,7 @@ export enum EPages {
   Home = 'home',
   AboutMe = 'about-me',
   Testimonials = 'testimonials',
+  Pricing = 'pricing',
   Services = 'services',
   Contact = 'contact'
 }
@@ -31,7 +32,7 @@ export class NavigationLinkService {
     return [
       {
         navigationString: this.getPageLink(EPages.Home),
-        textString: 'Úvod',
+        textString: this.text.get(T.home_anchor),
       },
       {
         navigationString: this.getPageLink(EPages.AboutMe),
@@ -42,9 +43,13 @@ export class NavigationLinkService {
         textString: this.text.get(T.testimonials_anchor)
       },
       {
-        navigationString: this.getPageLink(EPages.Services),
-        textString: this.text.get(T.services_anchor)
+        navigationString: this.getPageLink(EPages.Pricing),
+        textString: this.text.get(T.pricing_anchor)
       },
+      // {
+      //   navigationString: this.getPageLink(EPages.Services),
+      //   textString: this.text.get(T.services_anchor)
+      // },
       {
         navigationString: this.getPageLink(EPages.Contact),
         textString: this.text.get(T.contact_anchor)

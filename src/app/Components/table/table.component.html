@@ -1,0 +1,38 @@
+<div class="table-responsive soft-table-wrapper">
+  <table class="table table-bordered text-center align-middle soft-table">
+    @if (data.headers && data.headers?.length) {
+      <thead>
+      <tr
+        [ngClass]="{
+            'text-start': data.headerPosition === EHeaderPosition.Left,
+            'text-center': !data.headerPosition || data.headerPosition === EHeaderPosition.Center,
+            'text-end': data.headerPosition === EHeaderPosition.Right
+          }"
+      >
+        @for (header of data.headers; track header) {
+          <th>{{ header }}</th>
+        }
+        @if (data.headers.length < columnCount()) {
+          @for (_ of Array(columnCount() - data.headers.length); track $index) {
+            <th></th>
+          }
+        }
+      </tr>
+      </thead>
+    }
+    <tbody>
+      @for (row of data.rows; track row) {
+        <tr>
+          @for (cell of row; track cell) {
+            <td>{{ cell }}</td>
+          }
+          @if (row.length < columnCount()) {
+            @for (_ of Array(columnCount() - row.length); track $index) {
+              <td></td>
+            }
+          }
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
