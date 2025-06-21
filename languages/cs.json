@@ -1,6 +1,6 @@
 {
   "aboutMe_anchor": "O mně",
-  "home_anchor": "Domů",
+  "home_anchor": "Úvod",
   "how_to_find_me": "Kde mě najdete",
   "services_anchor": "Služby",
   "contact_anchor": "Kontakt",
@@ -60,5 +60,14 @@
   "navigate_to_webpage": "Přejít na webovou stránku",
   "testimonials_anchor": "Reference",
   "testimonials_header": "Napsali o mně",
-  "read_more": "Přečíst si více"
+  "read_more": "Přečíst si více",
+  "pricing_anchor": "Ceník",
+  "pricing_table_header_1": "Služba",
+  "pricing_table_header_2": "Cena",
+  "pricing_shiatsu_row_1_description": "Shiatsu jednotlivé ošetření",
+  "pricing_shiatsu_row_1_price": "1.500 Kč",
+  "pricing_shiatsu_row_2_description": "Shiatsu předplacené 2 ošetření",
+  "pricing_shiatsu_row_2_price": "2.700 Kč (1.350 Kč/1 ošetření)",
+  "pricing_shiatsu_row_3_description": "Shiatsu předplacené 4 a více ošetření",
+  "pricing_shiatsu_row_3_price": "například 4.800 Kč (1.200 Kč/1 ošetření)"
 }
