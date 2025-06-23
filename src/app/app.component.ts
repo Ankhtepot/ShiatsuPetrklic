@@ -1,12 +1,10 @@
 import {Component, computed, inject, signal} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
-import {
-  HeaderProfessionalComponent,
-  HeaderProfessionalConfiguration
-} from './Components/header_professional/header-professional.component';
+import {HeaderProfessionalComponent} from './Components/header_professional/header-professional.component';
 import {BackgroundTiledComponent} from './Components/background-tiled/background-tiled.component';
 import {NavigationLinkService} from './services/navigation-link.service';
 import {AppColors} from '../styles/colors.gen';
+import {HeaderProfessionalConfiguration} from './Components/header_professional/models';
 
 @Component({
   selector: 'app-root',

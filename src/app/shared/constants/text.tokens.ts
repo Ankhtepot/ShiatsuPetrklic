@@ -17,6 +17,7 @@ export enum T {
   about_me_part4_2 = 'about_me_part4_2',
   address_label = 'address_label',
   button_send = 'button_send',
+  button_sending = 'button_sending',
   contact_information = 'contact_information',
   contact_anchor = 'contact_anchor',
   email_label = 'email_label',
@@ -70,4 +71,6 @@ export enum T {
   pricing_shiatsu_row_2_price = 'pricing_shiatsu_row_2_price',
   pricing_shiatsu_row_3_description = 'pricing_shiatsu_row_3_description',
   pricing_shiatsu_row_3_price = 'pricing_shiatsu_row_3_price',
+  contact_form_success_message = 'contact_form_success_message',
+  contact_form_error_message = 'contact_form_error_message',
 }

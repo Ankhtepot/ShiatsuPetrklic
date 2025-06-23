@@ -72,8 +72,12 @@
   <button
     type="submit"
     class="btn btn-primary w-100"
-    [disabled]="!contactForm.valid"
+    [disabled]="!contactForm.valid || sending()"
   >
-    {{ T.button_send | text }}
+    @if (sending(); as loading) {
+      {{ T.button_sending | text }}
+    } @else {
+      {{ T.button_send | text }}
+    }
   </button>
 </form>
