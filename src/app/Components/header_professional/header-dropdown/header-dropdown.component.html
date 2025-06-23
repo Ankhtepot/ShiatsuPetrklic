@@ -1,0 +1,52 @@
+<div class="dropdown" [class.show]="dropdownOpen()">
+  <button
+    class="btn btn-outline-light dropdown-toggle d-flex align-items-center gap-2"
+    type="button"
+    (click)="toggleDropdown()"
+    [attr.aria-expanded]="dropdownOpen()"
+  >
+    @if (displayItem().imageUrl) {
+      <img [src]="displayItem().imageUrl" alt="icon" class="dropdown-image" />
+    }
+
+    @if (displayItem().icon && displayItem().iconPosition !== 'right' && !displayItem().imageUrl) {
+      <i class="bi" [class]="displayItem().icon"></i>
+    }
+
+    @if (displayItem().text.trim()) {
+      <span>{{ displayItem().text }}</span>
+    }
+
+    @if (displayItem().icon && displayItem().iconPosition === 'right' && !displayItem().imageUrl) {
+      <i class="bi" [class]="displayItem().icon"></i>
+    }
+  </button>
+
+  <ul class="dropdown-menu dropdown-menu-end" [class.show]="dropdownOpen()">
+    @for (action of configuration.actions; track action) {
+      <li>
+        <button
+          class="dropdown-item d-flex align-items-center gap-2"
+          type="button"
+          (click)="selectItem(action)"
+        >
+          @if (action.imageUrl) {
+            <img [src]="action.imageUrl" alt="icon" class="dropdown-image" />
+          }
+
+          @if (action.icon && action.iconPosition !== 'right' && !action.imageUrl) {
+            <i class="bi" [class]="action.icon"></i>
+          }
+
+          @if (action.text.trim()) {
+            <span>{{ action.text }}</span>
+          }
+
+          @if (action.icon && action.iconPosition === 'right' && !action.imageUrl) {
+            <i class="bi" [class]="action.icon"></i>
+          }
+        </button>
+      </li>
+    }
+  </ul>
+</div>

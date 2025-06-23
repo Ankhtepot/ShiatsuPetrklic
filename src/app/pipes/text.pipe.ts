@@ -1,6 +1,6 @@
 import { Injectable, Pipe, PipeTransform } from '@angular/core';
-import {TextService} from '../services/text.service';
-import {T} from '../shared/constants/text.tokens';
+import { TextService } from '../services/text.service';
+import { T } from '../shared/constants/text.tokens';
 
 export enum ETextStyle {
   Header = 'header',
@@ -8,7 +8,8 @@ export enum ETextStyle {
 
 @Pipe({
   standalone: true,
-  name: 'text'
+  name: 'text',
+  pure: false // ✅ makes it rerun on every change detection
 })
 @Injectable({ providedIn: 'root' })
 export class TextPipe implements PipeTransform {

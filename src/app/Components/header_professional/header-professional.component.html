@@ -52,6 +52,13 @@
       </div>
 
       <div class="flex-grow-1"></div>
+
+      @if (configuration.dropdownsConfigurations && configuration.dropdownsConfigurations.length > 0) {
+        @for (dropdownConfiguration of configuration.dropdownsConfigurations; track dropdownConfiguration) {
+          <app-professional-header-dropdown [configuration]="dropdownConfiguration"/>
+        }
+      }
+
     </div>
   </nav>
 

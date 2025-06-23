@@ -1,0 +1,32 @@
+@use '../../../../../src/styles/colors' as *;
+
+.dropdown-image {
+  width: 20px;
+  height: 14px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.menu-button {
+  position: fixed;
+  top: 1.4em;
+  left: 1.3em;
+  //padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  z-index: 1001;
+
+  i.bi {
+    font-size: 2rem;
+    color: $header-color;
+    pointer-events: none;
+  }
+}

@@ -8,7 +8,7 @@ import {TextService} from '../../services/text.service';
 
 @Component({
   selector: 'app-pricing',
-  imports: [CommonModule, ContentCardComponent, PricingTableComponent, TextPipe],
+  imports: [CommonModule, ContentCardComponent, PricingTableComponent],
   templateUrl: './pricing.component.html',
   styleUrls: ['./pricing.component.scss'],
   standalone: true

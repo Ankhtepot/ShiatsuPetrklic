@@ -2,6 +2,8 @@ import { Injectable, computed, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 import { T } from '../shared/constants/text.tokens';
+import { StorageService, EStorageKey } from './storage.service';
+import { Router, UrlSegment } from '@angular/router';
 
 export enum ELanguage {
   Cs = 'cs',
@@ -21,22 +23,40 @@ export class LanguageService {
 
   private loadedLanguages = new Map<Language, Map<T, string>>();
 
-  constructor(private http: HttpClient) {
-    this.loadTranslations(this.languageSignal());
+  constructor(
+    private http: HttpClient,
+    private storage: StorageService,
+    private router: Router
+  ) {
+    const storedLang = this.storage.get(EStorageKey.Language);
+    const initialLang = storedLang.success && SUPPORTED_LANGUAGES.includes(storedLang.value as Language)
+      ? storedLang.value as Language
+      : ELanguage.Cs;
+
+    this.languageSignal.set(initialLang);
+    document.documentElement.lang = initialLang;
+    // ⛔️ Do not fetch translations here; wait for loadInitialLanguage() from APP_INITIALIZER
   }
 
   setLang(language: Language) {
-    if (SUPPORTED_LANGUAGES.includes(language)) {
-      this.languageSignal.set(language);
-      document.documentElement.lang = language;
-      this.loadTranslations(language);
+    if (!SUPPORTED_LANGUAGES.includes(language)) return;
+
+    this.storage.set(EStorageKey.Language, language);
+    this.languageSignal.set(language);
+    document.documentElement.lang = language;
+    this.loadTranslations(language);
+
+    // Replace current :lang segment in the URL
+    const tree = this.router.parseUrl(this.router.url);
+    const segments = tree.root.children['primary']?.segments;
+
+    if (segments && segments.length > 0) {
+      segments[0] = new UrlSegment(language, {}); // replace old lang with new
+      const newUrl = '/' + segments.map(s => s.path).join('/');
+      this.router.navigateByUrl(newUrl);
     }
   }
 
-  async loadInitialLanguage(): Promise<void> {
-    const map = await this.fetchTranslations(this.languageSignal());
-    this.translations.set(map);
-  }
 
   get current(): Language {
     return this.languageSignal();
@@ -49,6 +69,11 @@ export class LanguageService {
     const fallbackMap = this.loadedLanguages.get(ELanguage.Cs);
     const fallback = fallbackMap?.get(key);
     return fallback ?? key.toString();
+  }
+
+  async loadInitialLanguage(): Promise<void> {
+    const map = await this.fetchTranslations(this.languageSignal());
+    this.translations.set(map);
   }
 
   private loadTranslations(language: Language) {
