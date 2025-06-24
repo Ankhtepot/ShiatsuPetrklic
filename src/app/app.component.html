@@ -1,4 +1,7 @@
 <app-background-tiled [imagePath]="backgroundImagePath()"></app-background-tiled>
 <app-header-professional [configuration]="headerConfiguration()"/>
+@if (showConstruction()) {
+  <app-in-construction/>
+}
 <router-outlet></router-outlet>
 

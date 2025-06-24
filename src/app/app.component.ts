@@ -9,10 +9,11 @@ import {
   HeaderProfessionalConfiguration
 } from './Components/header_professional/models';
 import {ELanguage, LanguageService} from './services/language.service';
+import {InConstructionComponent} from './Components/in-construction/in-construction.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderProfessionalComponent, BackgroundTiledComponent],
+  imports: [RouterOutlet, HeaderProfessionalComponent, BackgroundTiledComponent, InConstructionComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true
@@ -20,6 +21,8 @@ import {ELanguage, LanguageService} from './services/language.service';
 export class AppComponent {
   backgroundImagePath = signal<string | undefined>('images/textures/texture_orange_hairy_blanket4.png');
   links = inject(NavigationLinkService).headerLinks;
+
+  showConstruction = signal(true);
 
   private languageService = inject(LanguageService);
 

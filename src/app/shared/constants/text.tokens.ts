@@ -73,4 +73,5 @@ export enum T {
   pricing_shiatsu_row_3_price = 'pricing_shiatsu_row_3_price',
   contact_form_success_message = 'contact_form_success_message',
   contact_form_error_message = 'contact_form_error_message',
+  in_construction = 'in_construction',
 }
