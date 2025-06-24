@@ -27,9 +27,10 @@ export class AppComponent {
     // language dropdown
     {
       selectedIndex: this.languageService.current === ELanguage.Cs ? 0 : 1,
+      hideTextInButton: true,
       actions: [
-        {text: '', action: () => this.languageService.setLang(ELanguage.Cs), imageUrl: 'images/flags/cz.webp'},
-        {text: '', action: () => this.languageService.setLang(ELanguage.En), imageUrl: 'images/flags/gb.webp'},]
+        {text: 'Česky', action: () => this.languageService.setLang(ELanguage.Cs), imageUrl: 'images/flags/cz.webp'},
+        {text: 'English', action: () => this.languageService.setLang(ELanguage.En), imageUrl: 'images/flags/gb.webp'},]
     }
   ];
 

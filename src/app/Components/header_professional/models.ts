@@ -14,6 +14,7 @@ export interface HeaderProfessionalDropdownAction {
 
 export interface HeaderProfessionalDropdownActionsConfiguration {
   selectedIndex: number;
+  hideTextInButton?: boolean; // Optional property to control text visibility in dropdown
   actions: HeaderProfessionalDropdownAction[];
 }
 

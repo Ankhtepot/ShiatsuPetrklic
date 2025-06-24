@@ -1,6 +1,6 @@
 <div class="dropdown" [class.show]="dropdownOpen()">
   <button
-    class="btn btn-outline-light dropdown-toggle d-flex align-items-center gap-2"
+    class="btn btn-outline-light dropdown-toggle d-flex align-items-center gap-1"
     type="button"
     (click)="toggleDropdown()"
     [attr.aria-expanded]="dropdownOpen()"
@@ -13,8 +13,8 @@
       <i class="bi" [class]="displayItem().icon"></i>
     }
 
-    @if (displayItem().text.trim()) {
-      <span>{{ displayItem().text }}</span>
+    @if (!configuration.hideTextInButton && displayItem().text.trim()) {
+      <span class="dropdown-text">{{ displayItem().text }}</span>
     }
 
     @if (displayItem().icon && displayItem().iconPosition === 'right' && !displayItem().imageUrl) {
