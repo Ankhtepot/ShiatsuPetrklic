@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 import {ScreenService} from '../../services/screen.service';
 import {T} from '../../shared/constants/text.tokens';
-import {Router, RouterModule} from '@angular/router';
+import {RouterModule} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import {LogoScreenComponent} from './logo-screen/logo-screen.component';
 import {HeaderProfessionalConfiguration} from './models';
@@ -41,7 +41,6 @@ export class HeaderProfessionalComponent implements OnDestroy {
   protected readonly T = T;
 
   private screenService = inject(ScreenService);
-  private router = inject(Router);
 
   private hideHeaderTimer: any;
 
@@ -117,11 +116,6 @@ export class HeaderProfessionalComponent implements OnDestroy {
       this.showHeader.set(false);
       this.screenService.setHeaderVisibility(false);
     }, showTime);
-  }
-
-  isXSScreen() {
-    // return !this.router.url.includes('/detail/');
-    return this.screenService.mediaBreakpoint() === 'xs';
   }
 
   get isDynamicShow(): boolean {
