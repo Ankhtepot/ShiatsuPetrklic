@@ -7,4 +7,16 @@
   position: absolute;
   background-color: #b95c1b;
   padding: 0.2em;
+  z-index: 500;
+}
+
+@media (max-width: 500px) {
+  .in-construction-banner {
+    top: 100px;
+    left: 0;
+    max-width: 200px;
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1.2em;
+  }
 }

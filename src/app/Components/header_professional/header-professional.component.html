@@ -1,10 +1,9 @@
-@if (isOnEligiblePage()
-&& isDynamicShow
-&& configuration.showLogo
-&& configuration.logoPath) {
-  <app-logo-screen [imagePath]="configuration.logoPath"/>
+<!-- Show full-screen logo strip if allowed -->
+@if (isDynamicShow && configuration.showLogo && configuration.logoPath) {
+  <app-logo-screen [imagePath]="configuration.logoPath" />
 }
 
+<!-- Trigger to show header -->
 <div
   class="show_trigger"
   (mouseenter)="onShowHeader()"
@@ -12,36 +11,42 @@
   (touchstart)="onShowHeader()"
 ></div>
 
-@if (isOnEligiblePage()) {
-  <nav
-    class="navbar fixed-top header px-4"
-    [class.visible]="!isDynamicShow || showHeader()"
-    [class.hidden]="isDynamicShow && !showHeader()"
-    [ngStyle]="backgroundStyle()"
-    (mouseenter)="onMouseEnter()"
-    (mouseleave)="onMouseLeave()"
-    (pointerenter)="onMouseEnter()"
-    (pointerleave)="onMouseLeave()"
-  >
-    <div class="container-fluid d-flex align-items-center" style="height: 110px">
-      @if (mediaBreakpoint() !== 'xs') {
-        @if (configuration.showLogo && configuration.logoPath) {
-          <img [src]=configuration.logoPath class="logo" alt="Logo"/>
-        }
-        @if (configuration.showTitle && configuration.title) {
-          <p class="title m-0" [ngStyle]="textColor()">{{ configuration.title }}</p>
-        }
-      }
+<!-- Main header bar -->
+<nav
+  class="navbar fixed-top header px-4"
+  [class.visible]="!isDynamicShow || showHeader()"
+  [class.hidden]="isDynamicShow && !showHeader()"
+  [ngStyle]="backgroundStyle()"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+  (pointerenter)="onMouseEnter()"
+  (pointerleave)="onMouseLeave()"
+>
+  <div class="container-fluid d-flex align-items-center justify-content-between" style="height: 110px">
 
-      <div style="width: 10em"></div>
+    <!-- Logo -->
+    @if (configuration.showLogo && configuration.logoPath) {
+      <img [src]="configuration.logoPath" class="logo" alt="Logo" />
+    }
 
-      <div class="nav-container d-none d-md-flex gap-3">
+    <!-- Title -->
+    @if (configuration.showTitle && configuration.title) {
+      <p class="title m-0" [ngStyle]="textColor()">{{ configuration.title }}</p>
+    }
+
+    <!-- Navigation and Hamburger (always rendered) -->
+    <div class="nav-container d-flex align-items-center gap-3">
+
+      <!-- Nav links (desktop only) -->
+      <div class="links d-none d-md-flex gap-3">
         @for (link of configuration.links; track link) {
           <a
             class="btn btn-link"
             [ngStyle]="textColor()"
             [routerLink]="link.navigationString"
-            routerLinkActive="active">
+            routerLinkActive="active"
+            (click)="closeMobileMenu()"
+          >
             @if (link.isIcon) {
               <i class="bi" [class]="link.textString"></i>
             } @else {
@@ -51,52 +56,33 @@
         }
       </div>
 
-      <div class="flex-grow-1"></div>
-
-      @if (configuration.dropdownsConfigurations && configuration.dropdownsConfigurations.length > 0) {
-        @for (dropdownConfiguration of configuration.dropdownsConfigurations; track dropdownConfiguration) {
-          <app-professional-header-dropdown [configuration]="dropdownConfiguration"/>
-        }
-      }
-
-    </div>
-  </nav>
-
-  <div class="menu-button d-md-none">
-    <i class="bi bi-list"></i>
-  </div>
-}
-
-@if (!isOnEligiblePage()) {
-  <div class="position-fixed top-0 end-0 p-3">
-    <div class="dropdown">
-      <button
-        class="btn btn-outline-dark dropdown-toggle"
-        type="button"
-        id="mobileMenuButton"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        <i class="bi bi-list"></i>
+      <!-- Hamburger (mobile only, controlled via CSS) -->
+      <button class="hamburger d-md-none" (click)="toggleMobileMenu()">
+        <i class="bi bi-list fs-3"></i>
       </button>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="mobileMenuButton">
-        @if (configuration.links.length > 0) {
-          @for (link of configuration.links; track link) {
-            <li>
-              <a
-                class="dropdown-item"
-                [ngStyle]="textColor()"
-                [routerLink]="link.navigationString">
-                @if (link.isIcon) {
-                  <i class="bi" [class]="link.textString"></i>
-                } @else {
-                  <span class="text">{{ link.textString }}</span>
-                }
-              </a>
-            </li>
-          }
-        }
-      </ul>
     </div>
+
+    <!-- Dropdowns (always visible) -->
+    @if (hasDropdowns()) {
+      @for (dropdownConfiguration of configuration.dropdownsConfigurations; track dropdownConfiguration) {
+        <app-professional-header-dropdown [configuration]="dropdownConfiguration" />
+      }
+    }
+
+  </div>
+</nav>
+
+<!-- Mobile menu: shown when hamburger is active -->
+@if (showMobileMenu()) {
+  <div class="mobile-menu d-md-none">
+    @for (link of configuration.links; track link) {
+      <a class="dropdown-item" [routerLink]="link.navigationString" (click)="closeMobileMenu()">
+        @if (link.isIcon) {
+          <i class="bi" [class]="link.textString"></i>
+        } @else {
+          {{ link.textString }}
+        }
+      </a>
+    }
   </div>
 }

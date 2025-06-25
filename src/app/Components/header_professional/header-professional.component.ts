@@ -5,7 +5,7 @@ import {
   OnDestroy,
   signal,
   effect,
-  inject
+  inject, computed
 } from '@angular/core';
 import {ScreenService} from '../../services/screen.service';
 import {T} from '../../shared/constants/text.tokens';
@@ -31,6 +31,14 @@ export class HeaderProfessionalComponent implements OnDestroy {
 
   public showHeader = signal(true);
   public mediaBreakpoint = signal('');
+  menuOpen = signal(false);
+  showMobileMenu = computed(() => this.menuOpen());
+
+  hasDropdowns = computed(() =>
+    !!this.configuration.dropdownsConfigurations?.length
+  );
+
+  protected readonly T = T;
 
   private screenService = inject(ScreenService);
   private router = inject(Router);
@@ -111,16 +119,14 @@ export class HeaderProfessionalComponent implements OnDestroy {
     }, showTime);
   }
 
-  isOnEligiblePage() {
-    return !this.router.url.includes('/detail/');
+  isXSScreen() {
+    // return !this.router.url.includes('/detail/');
+    return this.screenService.mediaBreakpoint() === 'xs';
   }
 
   get isDynamicShow(): boolean {
     return this.configuration.dynamicShow ?? true;
   }
-
-
-  protected readonly T = T;
 
   backgroundStyle() {
     const gradient = this.configuration.backgroundGradientStart && this.configuration.backgroundGradientEnd
@@ -135,4 +141,7 @@ export class HeaderProfessionalComponent implements OnDestroy {
   textColor() {
     return {'color': (this.configuration.textColor || '#000')}; // Default text color if not provided
   }
+
+  toggleMobileMenu = () => this.menuOpen.update(v => !v);
+  closeMobileMenu = () => this.menuOpen.set(false);
 }

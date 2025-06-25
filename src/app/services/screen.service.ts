@@ -1,5 +1,7 @@
 import { Injectable, Signal, WritableSignal, signal } from '@angular/core';
 
+export type SCREEN_BREAKPOINTS = 'xs' | "sm" | "md" | "lg" | "xl" | "xxl";
+
 @Injectable()
 export class ScreenService {
   private lastScrollY = window.scrollY;
@@ -10,8 +12,8 @@ export class ScreenService {
   private _screenWidth: WritableSignal<number> = signal(-1);
   screenWidth: Signal<number> = this._screenWidth.asReadonly();
 
-  private _mediaBreakpoint: WritableSignal<string> = signal('');
-  mediaBreakpoint: Signal<string> = this._mediaBreakpoint.asReadonly();
+  private _mediaBreakpoint: WritableSignal<SCREEN_BREAKPOINTS> = signal('xxl');
+  mediaBreakpoint: Signal<SCREEN_BREAKPOINTS> = this._mediaBreakpoint.asReadonly();
 
   private _scrolledUp: WritableSignal<boolean> = signal(false);
   scrolledUp: Signal<boolean> = this._scrolledUp.asReadonly();
@@ -66,7 +68,7 @@ export class ScreenService {
   }
 
   private _setMediaBreakpoint(width: number): void {
-    let newBreakpoint;
+    let newBreakpoint: SCREEN_BREAKPOINTS;
 
     if (width < 576) newBreakpoint = 'xs';
     else if (width < 768) newBreakpoint = 'sm';
