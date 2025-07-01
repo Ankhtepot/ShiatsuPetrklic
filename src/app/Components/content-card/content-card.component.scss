@@ -4,12 +4,14 @@
   @include styles.frosted-glass(); // shared visual style
   position: relative;
   width: 100%;
+  max-width: 100%;
   padding: 20px;
   margin: 150px auto 50px auto;
   z-index: 20;
   color: styles.$text-on-orange;
 
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
     margin-top: 120px; // Smaller shift on mobile
+    width: auto;
   }
 }

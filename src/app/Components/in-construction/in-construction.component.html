@@ -1,4 +1,10 @@
-<div class="in-construction-banner shadow-sm border rounded mb-3 mx-auto">
-  <i class="bi bi-tools fs-5 text-warning"></i>
-  <span class="text-body-emphasis small d-block">{{ T.in_construction | text}}</span>
-</div>
+@if (isVisible()) {
+  <div class="in-construction-banner shadow-sm border rounded mb-3 mx-auto"
+       [class.animate-out]="isAnimating()"
+       (click)="onClick()"
+  >
+    <i class="bi bi-tools fs-5 text-warning pulse-icon me-2"></i>
+    <span class="text-body-emphasis small d-block">{{ T.in_construction | text}}</span>
+  </div>
+}
+

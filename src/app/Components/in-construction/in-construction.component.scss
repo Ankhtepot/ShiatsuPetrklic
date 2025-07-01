@@ -8,6 +8,18 @@
   background-color: #b95c1b;
   padding: 0.2em;
   z-index: 500;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  cursor: pointer;
+  display: inline-block;
+
+  &.animate-out {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .pulse-icon {
+    animation: pulseOpacity 2s infinite ease-in-out;
+  }
 }
 
 @media (max-width: 500px) {
@@ -18,5 +30,14 @@
     text-align: center;
     padding: 0.5em;
     font-size: 1.2em;
+  }
+}
+
+@keyframes pulseOpacity {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
   }
 }
