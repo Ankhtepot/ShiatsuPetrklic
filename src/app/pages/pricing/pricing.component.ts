@@ -1,10 +1,11 @@
-import {Component, inject, signal} from '@angular/core';
+import {Component, inject, OnInit, signal} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ContentCardComponent} from '../../Components/content-card/content-card.component';
 import {EHeaderPosition, PricingTableComponent, TableData} from '../../Components/table/table.component';
 import {T} from '../../shared/constants/text.tokens';
-import {TextPipe} from '../../pipes/text.pipe';
 import {TextService} from '../../services/text.service';
+import {SeoService} from '../../services/seo.service';
+import {EPages} from '../../services/navigation-link.service';
 
 @Component({
   selector: 'app-pricing',
@@ -13,10 +14,23 @@ import {TextService} from '../../services/text.service';
   styleUrls: ['./pricing.component.scss'],
   standalone: true
 })
-export class PricingComponent {
+export class PricingComponent implements OnInit {
   protected T = T;
 
   private textService = inject(TextService);
+
+  constructor(private seo: SeoService) {
+  }
+
+  ngOnInit(): void {
+    this.seo.setSeo({
+      title: this.textService.get(T.pricing_page_title),
+      description: this.textService.get(T.pricing_page_description)
+      // description: 'Explore the pricing for Shiatsu therapy sessions in Brno. Find detailed information about session types and costs.'
+    });
+
+    this.seo.setCanonicalPage(EPages.Contact);
+  }
 
   data = signal<TableData>({
     headerPosition: EHeaderPosition.Center,

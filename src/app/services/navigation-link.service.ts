@@ -9,7 +9,8 @@ export enum EPages {
   Testimonials = 'testimonials',
   Pricing = 'pricing',
   Services = 'services',
-  Contact = 'contact'
+  Contact = 'contact',
+  NotFound = '401',
 }
 
 export interface HeaderLinkConfiguration {

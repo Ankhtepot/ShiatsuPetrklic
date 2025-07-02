@@ -9,7 +9,7 @@ import {NgStyle} from '@angular/common';
   imports: [NgStyle]
 })
 export class ContentCardComponent {
-  @Input() width: string = '600px'; // Can be '80%', '60%', '500px', etc.
+  @Input() width: string = '800px'; // Can be '80%', '60%', '500px', etc.
 
   private screenWidth = signal(window.innerWidth);
   readonly style = computed(() => this.isMobile() ? {} : { width: this.width });
