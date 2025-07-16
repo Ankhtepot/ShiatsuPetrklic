@@ -120,3 +120,9 @@ Changes in package.json file:
   },
 ... 
 ```
+
+## Site snapshot
+Run the following command to create a snapshot of the site for SEO purposes:
+```bash
+npx tsx snapshot.js
+```
