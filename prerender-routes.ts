@@ -1,0 +1,18 @@
+export const routesToPrerender: string[] = [
+  '/',
+  '/cs/home',
+  '/cs/about-me',
+  '/cs/contact',
+  '/cs/services',
+  '/cs/pricing',
+  '/cs/testimonials',
+  '/cs/not-found',
+
+  '/en/home',
+  '/en/about-me',
+  '/en/contact',
+  '/en/services',
+  '/en/pricing',
+  '/en/testimonials',
+  '/en/not-found'
+];

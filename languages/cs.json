@@ -73,5 +73,19 @@
   "contact_form_success_message": "Děkuji za váš zájem. Vaše zpráva byla úspěšně odeslána. Odpovím vám co nejdříve.",
   "contact_form_error_message": "Omlouvám se, ale došlo k chybě při odesílání vaší zprávy. Zkuste to prosím znovu později.",
   "button_sending": "Odesílám...",
-  "in_construction": "Tato stránka je ve výstavbě. Omlouvám se za případné nepříjemnosti."
+  "in_construction": "Tato stránka je ve výstavbě. Omlouvám se za případné nepříjemnosti.",
+  "contact_page_title": "Kontakt – Shiatsu Petrklíč",
+  "contact_page_description": "Spojte se se mnou pro domluvení termínu nebo získání více informací o tradiční Shiatsu terapii v Brně.",
+  "about_me_page_title": "O mně – Shiatsu Petrklíč",
+  "about_me_page_description": "Seznamte se s terapeutem, jeho zázemím a celostním přístupem k Shiatsu terapii v Brně.",
+  "home_page_title": "Shiatsu Brno – Petrklíč",
+  "home_page_description": "Tradiční Shiatsu terapie v Brně s jemným, účinným a celostním přístupem k zdraví a pohodě.",
+  "page_not_found_title": "Stránka nenalezena – Shiatsu Petrklíč",
+  "page_not_found_description": "Omlouváme se, ale požadovaná stránka nebyla nalezena. Zkontrolujte adresu nebo se vraťte na úvodní stránku.",
+  "pricing_page_title": "Ceník – Shiatsu Petrklíč",
+  "pricing_page_description": "Prohlédněte si ceny za Shiatsu terapie v Brně a možnosti zvýhodněných balíčků.",
+  "services_page_title": "Služby – Shiatsu Petrklíč",
+  "services_page_description": "Objevte nabídku Shiatsu terapií poskytovaných v Brně, včetně typů sezení a používaných technik.",
+  "testimonials_page_title": "Reference – Shiatsu Petrklíč",
+  "testimonials_page_description": "Přečtěte si zpětnou vazbu a zkušenosti klientů, kteří využili Shiatsu terapii v Brně."
 }
