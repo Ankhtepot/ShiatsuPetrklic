@@ -10,6 +10,7 @@ import {
 } from './Components/header_professional/models';
 import {ELanguage, LanguageService} from './services/language.service';
 import {InConstructionComponent} from './Components/in-construction/in-construction.component';
+import {GoogleAnalyticsService} from './services/google-analytics.service';
 
 @Component({
   selector: 'app-root',
@@ -49,4 +50,6 @@ export class AppComponent {
     backgroundGradientEnd: `rgba(255, 140, 0, 0.5)`,
     dropdownsConfigurations: this.headerDropdownSetup
   }));
+
+  constructor(ga: GoogleAnalyticsService) {}
 }
