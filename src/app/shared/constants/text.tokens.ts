@@ -88,4 +88,5 @@ export enum T {
   services_page_description = 'services_page_description',
   testimonials_page_title = 'testimonials_page_title',
   testimonials_page_description = 'testimonials_page_description',
+  events_anchor = 'events_anchor',
 }
