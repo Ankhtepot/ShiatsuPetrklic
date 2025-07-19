@@ -1,6 +1,7 @@
 <app-content-card [width]="'80%'">
   <div class="event-grid">
     <div class="event-column left">
+    <p>Prichazejici udalosti</p>
       @for (event of upcomingEvents; let i = $index; track event) {
         @if (i % 2 === 0) {
           <app-event-card
@@ -10,11 +11,12 @@
       }
     </div>
 
-    <div class="events-divider">
+    <div class="event-divider">
       <div class="divider-line"></div>
     </div>
 
     <div class="event-column right">
+      <p>Budouci udalosti</p>
       @for (event of pastEvents; let i = $index; track event) {
         @if (i % 2 === 1) {
           <app-event-card

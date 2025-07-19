@@ -1,0 +1,8 @@
+<div class="modal-backdrop">
+  <div class="modal-box" (click)="$event.stopPropagation()">
+    <ng-content></ng-content>
+    @if (isCloseButtonShown) {
+      <button class="modal-close" (click)="close.emit()">Zavřít</button>
+    }
+  </div>
+</div>

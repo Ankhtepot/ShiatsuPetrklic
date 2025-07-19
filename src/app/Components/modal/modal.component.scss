@@ -1,0 +1,39 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: white;
+  padding: 2em;
+  border-radius: 0.5em;
+  width: 80%;
+  height: 80%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+
+@media (max-width: 768px) {
+  .modal-box {
+    width: 95%;
+    height: 95%;
+  }
+
+  .modal-backdrop {
+    cursor: pointer;
+  }
+}

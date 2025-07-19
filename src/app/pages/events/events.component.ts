@@ -21,7 +21,7 @@ export class EventsComponent implements OnInit {
   public pastEvents : EventData[] = [];
 
   constructor(private seo: SeoService, private textService: TextService) {
-    let events = getEvents();
+    this.categorizeEvents();
   }
 
   ngOnInit(): void {
