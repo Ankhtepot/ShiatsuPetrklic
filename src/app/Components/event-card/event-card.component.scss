@@ -47,6 +47,8 @@
 @media (max-width: 768px) {
   .event-card {
     flex-direction: row;
+    align-content: center;
+    align-items: center;
 
     .event-image {
       width: auto;
@@ -55,6 +57,19 @@
 
     .event-content {
       width: auto;
+
+      .event-description {
+        display: none;
+      }
+
+      .event-title h4 {
+        font-size: 0.9em;
+      }
+
+      .read-more-button {
+        right: 1.2em;
+      }
     }
+
   }
 }

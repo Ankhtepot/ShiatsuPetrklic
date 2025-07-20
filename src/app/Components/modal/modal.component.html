@@ -2,7 +2,12 @@
   <div class="modal-box" (click)="$event.stopPropagation()">
     <ng-content></ng-content>
     @if (isCloseButtonShown) {
-      <button class="modal-close" (click)="close.emit()">Zavřít</button>
+      <div class="close-button-wrapper">
+        <app-generic-button
+          [label]="T.close | text"
+          (click)="close.emit()"
+        />
+      </div>
     }
   </div>
 </div>

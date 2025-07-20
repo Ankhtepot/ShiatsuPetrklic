@@ -18,6 +18,7 @@ export enum T {
   address_label = 'address_label',
   button_send = 'button_send',
   button_sending = 'button_sending',
+  close = 'close',
   contact_information = 'contact_information',
   contact_anchor = 'contact_anchor',
   email_label = 'email_label',
