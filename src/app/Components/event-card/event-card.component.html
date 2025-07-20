@@ -1,7 +1,7 @@
 <div class="event-card">
   <img class="event-image" [src]="event.miniatureUrl || event.imageUrl" alt="event image"/>
   <div class="event-content">
-    <div class="event-title d-flex flex-row align-items-start me-3 mb-0 gap-5">
+    <div class="event-title flex-row me-3 mb-0 gap-5">
       <h4>{{ title() }}</h4>
       <h4 class="event-date">{{ event.date | date: 'dd.MM.yyyy' }}</h4>
     </div>

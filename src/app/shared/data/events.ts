@@ -51,14 +51,14 @@ export function getEvents(): EventData[] {
     'Bad Reputation Studio, Brno, Česká republika',
     undefined,
     undefined,
-    undefined,
-    undefined,
+    'images/events/tantric_circle.webp',
+    'images/events/miniatures/tantric_circle.webp',
     'Večer proběhl v příjemné atmosféře, účastníci si užili blízkost a doteky v bezpečném prostředí. Bylo to skvělé setkání plné důvěry a respektu.',
     undefined,
      undefined,
    ),
     createQuoteData(
-      'TV-1',
+      'TV-2',
       'Tantrický Večer',
       'Tato akce je zaměřená na vědomé setkávání a lidské propojení v bezpečném a respektujícím prostoru. Nabízí příležitost vnímat blízkost, dotek a intimitu s důrazem na vlastní hranice a svobodu projevu.\n' +
       '\n' +
@@ -67,14 +67,14 @@ export function getEvents(): EventData[] {
       'Bad Reputation Studio, Brno, Česká republika',
       undefined,
       undefined,
-      undefined,
-      undefined,
+      'images/events/tantric_circle.webp',
+      'images/events/miniatures/tantric_circle.webp',
       'Večer proběhl v příjemné atmosféře, účastníci si užili blízkost a doteky v bezpečném prostředí. Bylo to skvělé setkání plné důvěry a respektu.',
       undefined,
       undefined,
     ),
     createQuoteData(
-      'TV-1',
+      'TV-3',
       'Tantrický Večer',
       'Tato akce je zaměřená na vědomé setkávání a lidské propojení v bezpečném a respektujícím prostoru. Nabízí příležitost vnímat blízkost, dotek a intimitu s důrazem na vlastní hranice a svobodu projevu.\n' +
       '\n' +
@@ -83,14 +83,14 @@ export function getEvents(): EventData[] {
       'Bad Reputation Studio, Brno, Česká republika',
       undefined,
       undefined,
-      undefined,
-      undefined,
+      'images/events/tantric_circle.webp',
+      'images/events/miniatures/tantric_circle.webp',
       'Večer proběhl v příjemné atmosféře, účastníci si užili blízkost a doteky v bezpečném prostředí. Bylo to skvělé setkání plné důvěry a respektu.',
       undefined,
       undefined,
     ),
     createQuoteData(
-      'TV-1',
+      'TV-4',
       'Tantrický Večer',
       'Tato akce je zaměřená na vědomé setkávání a lidské propojení v bezpečném a respektujícím prostoru. Nabízí příležitost vnímat blízkost, dotek a intimitu s důrazem na vlastní hranice a svobodu projevu.\n' +
       '\n' +
@@ -99,11 +99,25 @@ export function getEvents(): EventData[] {
       'Bad Reputation Studio, Brno, Česká republika',
       undefined,
       undefined,
+      'images/events/tantric_circle.webp',
+      'images/events/miniatures/tantric_circle.webp',
       undefined,
       undefined,
       undefined,
+    ),
+    createQuoteData(
+      'ST-1',
+      'UBU Camp!',
+      'Přijďte si užít Shiatsu masáže přímo na UBU Campu v Kempu Dobršín! Nabízím relaxační a terapeutické Shiatsu masáže, které vám pomohou uvolnit napětí, zlepšit prokrvení a celkově posílit vaše zdraví.\n',
+      new Date('2025-07-25T15:00:00'),
+      'Kemp Dobršín, Jižní Čechy, Česká republika',
       undefined,
       undefined,
+      'images/events/tent_massage.webp',
+      'images/events/miniatures/tent_massage.webp',
+      undefined,
+      undefined,
+      'https://www.kulturniraselina.cz/projekty/ubucamp',
     )
   ]
 }

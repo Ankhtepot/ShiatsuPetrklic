@@ -21,6 +21,12 @@
       margin-top: 0;
     }
 
+    .event-title {
+      display: flex;
+      flex-shrink: 1;
+      justify-content: space-between;
+    }
+
     .event-description {
       max-height: 6em;
       overflow: hidden;

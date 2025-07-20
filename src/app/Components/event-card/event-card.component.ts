@@ -57,7 +57,7 @@ export class EventCardComponent implements OnInit {
       usedText = textEn || '';
     }
 
-    return this.isExpanded() ? usedText : cutAtLastWholeWord(usedText, 220);
+    return this.isExpanded() ? usedText : cutAtLastWholeWord(usedText, 200);
   }
 
   protected readonly T = T;

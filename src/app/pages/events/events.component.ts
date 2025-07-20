@@ -50,7 +50,7 @@ export class EventsComponent implements OnInit {
 
     // Sort events by date
     this.upcomingEvents.sort((a, b) => a.date.getTime() - b.date.getTime());
-    this.pastEvents.sort((a, b) => a.date.getTime() - b.date.getTime());
+    this.pastEvents.sort((a, b) => b.date.getTime() - a.date.getTime());
   }
 
   protected readonly T = T;
