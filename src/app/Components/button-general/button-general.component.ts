@@ -1,5 +1,6 @@
 import { Component, Input, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {AppColors} from '../../../styles/colors.gen';
 
 @Component({
   selector: 'app-generic-button',
@@ -10,7 +11,6 @@ import { CommonModule } from '@angular/common';
 })
 export class GenericButtonComponent {
   @Input({ required: true }) public label!: string;
-  // @Input({ required: true }) public onClick!: () => void;
 
   @Input() public textColor?: string;
   @Input() public backgroundColor?: string;
@@ -20,10 +20,10 @@ export class GenericButtonComponent {
   @Input() public fontSize?: string;
 
   public styles = computed(() => ({
-    color: this.textColor ?? '#ffffff',
-    backgroundColor: this.backgroundColor ?? '#007bff',
+    color: this.textColor ?? AppColors.textOnOrange,
+    backgroundColor: this.backgroundColor ?? AppColors.orangeGradientStart,
     border: this.border ?? 'none',
-    width: this.width ?? 'auto',
+    width: this.width ?? '80%',
     height: this.height ?? 'auto',
     fontSize: this.fontSize ?? '1rem'
   }));

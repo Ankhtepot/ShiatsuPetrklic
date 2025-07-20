@@ -12,7 +12,7 @@
       (click)="openModal()"
       class="read-more-button"
     />
-<!--    <button class="read-more-button" (click)="openModal()">Více</button>-->
+    <!--    <button class="read-more-button" (click)="openModal()">Více</button>-->
   </div>
 </div>
 
@@ -21,13 +21,21 @@
     <div class="event-modal-content">
       <h2>{{ title() }}</h2>
       <p>{{ event.date | date: 'dd.MM.yyyy' }} — {{ event.location }}</p>
-      @if (event.imageUrl) {
-        <img [src]="event.imageUrl" class="modal-image" alt="event miniature"/>
-      }
-      @if (event.postEventTextCs) {
-        <p class="post-event-text">{{ event.postEventTextCs }}</p>
-      }
-      <p>{{ description() }}</p>
+      <div class="image-and-text-wrapper">
+
+        @if (event.imageUrl) {
+          <img [src]="event.imageUrl" class="modal-image" alt="event miniature"/>
+        }
+        <div class="texts-wrapper">
+
+          @if (event.postEventTextCs) {
+            <div class="post-event-wrapper">
+              <p class="post-event-text">{{ event.postEventTextCs }}</p>
+            </div>
+          }
+          <p>{{ description() }}</p>
+        </div>
+      </div>
       @if (event.externalLink) {
         <a [href]="event.externalLink" target="_blank">Externí odkaz</a>
       }
