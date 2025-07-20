@@ -8,10 +8,11 @@ import {T} from '../../shared/constants/text.tokens';
 import {EventData} from '../../Models/event-data';
 import {getEvents} from '../../shared/data/events';
 import {EventCardComponent} from '../../Components/event-card/event-card.component';
+import {TextPipe} from '../../pipes/text.pipe';
 
 @Component({
   selector: 'app-services',
-  imports: [CommonModule, ContentCardComponent, EventCardComponent],
+  imports: [CommonModule, ContentCardComponent, EventCardComponent, TextPipe],
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.scss'],
   standalone: true
@@ -51,4 +52,6 @@ export class EventsComponent implements OnInit {
     this.upcomingEvents.sort((a, b) => a.date.getTime() - b.date.getTime());
     this.pastEvents.sort((a, b) => a.date.getTime() - b.date.getTime());
   }
+
+  protected readonly T = T;
 }

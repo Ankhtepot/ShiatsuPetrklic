@@ -1,13 +1,11 @@
 <app-content-card [width]="'80%'">
   <div class="event-grid">
-    <div class="event-column left">
-    <p>Prichazejici udalosti</p>
+    <div class="event-column center">
+      <h3>{{ T.events_upcoming | text }}</h3>
       @for (event of upcomingEvents; let i = $index; track event) {
-        @if (i % 2 === 0) {
-          <app-event-card
-            [event]="event"
-          />
-        }
+        <app-event-card
+          [event]="event"
+        />
       }
     </div>
 
@@ -15,14 +13,12 @@
       <div class="divider-line"></div>
     </div>
 
-    <div class="event-column right">
-      <p>Budouci udalosti</p>
+    <div class="event-column center">
+      <h3 class="past-events-header">{{ T.events_past | text }}</h3>
       @for (event of pastEvents; let i = $index; track event) {
-        @if (i % 2 === 1) {
-          <app-event-card
-            [event]="event"
-          />
-        }
+        <app-event-card
+          [event]="event"
+        />
       }
     </div>
   </div>

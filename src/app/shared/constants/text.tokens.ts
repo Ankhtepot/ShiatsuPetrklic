@@ -89,4 +89,6 @@ export enum T {
   testimonials_page_title = 'testimonials_page_title',
   testimonials_page_description = 'testimonials_page_description',
   events_anchor = 'events_anchor',
+  events_upcoming = 'events_upcoming',
+  events_past = 'events_past',
 }

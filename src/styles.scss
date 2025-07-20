@@ -6,19 +6,19 @@ body {
   color: styles.$text-on-orange !important;
 }
 
-h1 {
-  font-family: "Pacifico", cursive;
-  color: styles.$text-on_text_background !important;
-  font-weight: bold !important;
-}
+//h1 {
+//  font-family: "Pacifico", cursive;
+//  color: styles.$text-on_text_background !important;
+//  font-weight: bold !important;
+//}
+//
+//h2 {
+//  font-family: "Pacifico", cursive;
+//  color: styles.$text-on_text_background !important;
+//  font-weight: bold !important;
+//}
 
-h2 {
-  font-family: "Pacifico", cursive;
-  color: styles.$text-on_text_background !important;
-  font-weight: bold !important;
-}
-
-h3 {
+h1, h2, h3, h4 {
   font-family: "Pacifico", cursive;
   color: styles.$text-on_text_background !important;
   font-weight: bold !important;

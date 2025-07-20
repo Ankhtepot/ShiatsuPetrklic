@@ -15,9 +15,10 @@
     >
       {{ currentQuote().author }}
       @if (isUsingEllipsis) {
-        <div class="read-more-wrapper" (click)="navigateToReadWhole()">
-          <button class="btn btn-link">{{ T.read_more | text }}</button>
-        </div>
+        <app-button-read-more
+          [label]="T.read_more | text"
+          (click)="navigateToReadWhole()"
+        />
       }
     </footer>
   </blockquote>

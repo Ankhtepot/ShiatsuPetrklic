@@ -1,24 +1,36 @@
 <div class="event-card">
-  <img class="event-image" [src]="event.miniatureUrl || event.imageUrl" alt="event image" />
+  <img class="event-image" [src]="event.miniatureUrl || event.imageUrl" alt="event image"/>
   <div class="event-content">
-    <div class="event-title d-flex flex-row justify-content-between align-items-start me-3 mb-0">
-      <h3>{{ event.titleCs }}</h3>
-      <h3 class="event-date">{{ event.date | date: 'dd.MM.yyyy' }}</h3>
+    <div class="event-title d-flex flex-row align-items-start me-3 mb-0 gap-5">
+      <h4>{{ title() }}</h4>
+      <h4 class="event-date">{{ event.date | date: 'dd.MM.yyyy' }}</h4>
     </div>
-    <p class="event-description">{{ event.descriptionCs }}</p>
-    <button class="read-more-button" (click)="openModal()">Více</button>
+    <p class="event-description">{{ description() }}</p>
+    <app-button-read-more
+      [label]="T.read_more | text"
+      [alwaysShow]="true"
+      (click)="openModal()"
+      class="read-more-button"
+    />
+<!--    <button class="read-more-button" (click)="openModal()">Více</button>-->
   </div>
 </div>
 
 @if (isExpanded()) {
   <app-modal (close)="closeModal()" [isCloseButtonShown]="true">
     <div class="event-modal-content">
-      <h2>{{ event.titleCs }}</h2>
-      <p>{{ event.date | date: 'mediumDate' }} — {{ event.location }}</p>
-      <img *ngIf="event.imageUrl" [src]="event.imageUrl" class="modal-image" alt="event image" />
-      <p>{{ event.descriptionCs }}</p>
-      <p *ngIf="event.postEventTextCs">{{ event.postEventTextCs }}</p>
-      <a *ngIf="event.externalLink" [href]="event.externalLink" target="_blank">Externí odkaz</a>
+      <h2>{{ title() }}</h2>
+      <p>{{ event.date | date: 'dd.MM.yyyy' }} — {{ event.location }}</p>
+      @if (event.imageUrl) {
+        <img [src]="event.imageUrl" class="modal-image" alt="event miniature"/>
+      }
+      @if (event.postEventTextCs) {
+        <p class="post-event-text">{{ event.postEventTextCs }}</p>
+      }
+      <p>{{ description() }}</p>
+      @if (event.externalLink) {
+        <a [href]="event.externalLink" target="_blank">Externí odkaz</a>
+      }
     </div>
   </app-modal>
 }

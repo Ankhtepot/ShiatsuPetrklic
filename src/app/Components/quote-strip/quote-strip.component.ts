@@ -14,11 +14,12 @@ import {LanguageService} from '../../services/language.service';
 import {cutAtLastWholeWord} from '../../shared/utilities/string-extensions';
 import {T} from '../../shared/constants/text.tokens';
 import {TextPipe} from '../../pipes/text.pipe';
+import {ButtonReadMoreComponent} from '../button-read-more/button-read-more.component';
 
 @Component({
   selector: 'app-quote-strip',
   standalone: true,
-  imports: [CommonModule, TextPipe],
+  imports: [CommonModule, TextPipe, ButtonReadMoreComponent],
   templateUrl: './quote-strip.component.html',
   styleUrls: ['./quote-strip.component.scss']
 })
