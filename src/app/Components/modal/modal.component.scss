@@ -33,9 +33,11 @@
 }
 
 @media (max-width: 768px) {
+
   .modal-box {
+    margin-top: 7em;
     width: 95%;
-    height: 95%;
+    height: 80%;
   }
 
   .modal-backdrop {

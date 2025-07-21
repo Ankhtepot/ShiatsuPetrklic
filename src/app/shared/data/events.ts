@@ -1,5 +1,5 @@
 import {EventData} from '../../Models/event-data';
-import {ContentItem, ContentItemHyperlink, EContentItem} from '../../Models/content-item';
+import {ContentItem, ContentItemHyperlink, ContentItemText, EContentItem} from '../../Models/content-item';
 
 function createQuoteData(
   eventId: string,
@@ -104,7 +104,11 @@ export function getEvents(): EventData[] {
       'images/events/miniatures/tantric_circle.webp',
       undefined,
       undefined,
-      undefined,
+      [{
+        contentType: EContentItem.Text,
+        textCs: 'Přihlášky a více informací na webu Bad Reputation Studio bude doplňeno v nejbližší době.',
+        textEn: undefined,
+      } as ContentItemText],
     ),
     createQuoteData(
       'ST-1',
