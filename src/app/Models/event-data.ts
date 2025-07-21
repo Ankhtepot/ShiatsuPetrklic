@@ -1,3 +1,5 @@
+import {ContentItem} from './content-item';
+
 export class EventData {
     public id: string = 'Unset ID';
     public titleCs: string = 'Unset Title';
@@ -10,7 +12,7 @@ export class EventData {
     public miniatureUrl?: string = undefined;
     public postEventTextCs?: string = undefined;
     public postEventTextEn?: string = undefined;
-    public externalLink?: string = undefined;
+    public contentItems?: ContentItem[] = undefined;
 
     constructor(
         id: string,
@@ -24,7 +26,7 @@ export class EventData {
         miniatureUrl?: string,
         postEventTextCs?: string,
         postEventTextEn?: string,
-        externalLink?: string,
+        contentItems?: ContentItem[],
     ) {
         this.id = id;
         this.titleCs = titleCs;
@@ -37,6 +39,6 @@ export class EventData {
         this.miniatureUrl = miniatureUrl;
         this.postEventTextCs = postEventTextCs;
         this.postEventTextEn = postEventTextEn;
-        this.externalLink = externalLink;
+        this.contentItems = contentItems ?? [];
     }
 }

@@ -7,6 +7,8 @@ import {cutAtLastWholeWord} from '../../shared/utilities/string-extensions';
 import {ButtonReadMoreComponent} from '../button-read-more/button-read-more.component';
 import {T} from '../../shared/constants/text.tokens';
 import {TextPipe} from '../../pipes/text.pipe';
+import {of} from 'rxjs';
+import {ContentItem, ContentItemHyperlink, ContentItemText, EContentItem} from '../../Models/content-item';
 
 @Component({
   selector: 'app-event-card',
@@ -44,7 +46,7 @@ export class EventCardComponent implements OnInit {
     this.isExpanded.set(false);
   }
 
-  private resolveText(textCs?: string, textEn?: string): string {
+  public resolveText(textCs?: string, textEn?: string): string {
     if(!textCs && !textEn) {
       return '';
     }
@@ -60,5 +62,16 @@ export class EventCardComponent implements OnInit {
     return this.isExpanded() ? usedText : cutAtLastWholeWord(usedText, 200);
   }
 
+  isHyperlink(item: ContentItem): item is ContentItemHyperlink {
+    return item.contentType === EContentItem.Hyperlink;
+  }
+
+  isText(item: ContentItem): item is ContentItemText {
+    return item.contentType === EContentItem.Text;
+  }
+
   protected readonly T = T;
+  protected readonly of = of;
+  protected readonly EContentItem = EContentItem;
+  protected readonly ContentItemHyperlink = ContentItemHyperlink;
 }

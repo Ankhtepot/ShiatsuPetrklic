@@ -1,4 +1,5 @@
 import {EventData} from '../../Models/event-data';
+import {ContentItem, ContentItemHyperlink, EContentItem} from '../../Models/content-item';
 
 function createQuoteData(
   eventId: string,
@@ -12,7 +13,7 @@ function createQuoteData(
   miniatureUrl?: string,
   postEventTextCs?: string,
   postEventTextEn?: string,
-  externalLink?: string,
+  contentItems?: ContentItem[],
 ): EventData {
 
   if (!imageUrl) {
@@ -35,7 +36,7 @@ function createQuoteData(
     miniatureUrl: miniatureUrl,
     postEventTextCs: postEventTextCs,
     postEventTextEn: postEventTextEn,
-    externalLink: externalLink,
+    contentItems: contentItems,
   }
 }
 
@@ -55,7 +56,7 @@ export function getEvents(): EventData[] {
     'images/events/miniatures/tantric_circle.webp',
     'Večer proběhl v příjemné atmosféře, účastníci si užili blízkost a doteky v bezpečném prostředí. Bylo to skvělé setkání plné důvěry a respektu.',
     undefined,
-     undefined,
+    undefined,
    ),
     createQuoteData(
       'TV-2',
@@ -117,7 +118,14 @@ export function getEvents(): EventData[] {
       'images/events/miniatures/tent_massage.webp',
       undefined,
       undefined,
-      'https://www.kulturniraselina.cz/projekty/ubucamp',
+      [{
+        contentType: EContentItem.Hyperlink,
+        url: 'https://www.kulturniraselina.cz/projekty/ubucamp',
+        labelCs: 'O UBU Campu se dozvíte více na stránkách Kulturní Rašeliny: ',
+        labelEn: undefined,
+        urlTextCs: 'UBU Camp 2025',
+        urlTextEn: undefined,
+      } as ContentItemHyperlink],
     )
   ]
 }

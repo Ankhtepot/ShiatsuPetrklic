@@ -36,8 +36,21 @@
           <p>{{ description() }}</p>
         </div>
       </div>
-      @if (event.externalLink) {
-        <a [href]="event.externalLink" target="_blank">Externí odkaz</a>
+      @if (event.contentItems && event.contentItems.length > 0) {
+        @for (item of event.contentItems; track item) {
+          @if (isHyperlink(item)) {
+            <div class="hyperlink-wrapper">
+              <p>{{ resolveText(item.labelCs, item.labelEn) }}</p>
+              <a [href]="item.url" target="_blank" rel="noopener noreferrer">
+                {{ resolveText(item.urlTextCs, item.urlTextEn) }}
+              </a>
+            </div>
+          } @else if (isText(item)) {
+            <div class="text-wrapper">
+              <p>{{ resolveText(item.textCs, item.textEn) }}</p>
+            </div>
+          }
+        }
       }
     </div>
   </app-modal>
