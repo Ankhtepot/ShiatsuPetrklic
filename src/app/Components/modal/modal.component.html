@@ -3,10 +3,12 @@
     <ng-content></ng-content>
     @if (isCloseButtonShown) {
       <div class="close-button-wrapper">
-        <app-generic-button
-          [label]="T.close | text"
-          (click)="close.emit()"
-        />
+          <app-generic-button
+            [label]="T.close | text"
+            (click)="close.emit()"
+            [width]="closeButtonStyle.width"
+            [margin]="closeButtonStyle.margin"
+          />
       </div>
     }
   </div>

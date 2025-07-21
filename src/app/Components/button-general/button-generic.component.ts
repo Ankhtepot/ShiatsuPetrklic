@@ -6,8 +6,8 @@ import {AppColors} from '../../../styles/colors.gen';
   selector: 'app-generic-button',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './button-general.component.html',
-  styleUrls: ['./button-general.component.scss']
+  templateUrl: './button-generic.component.html',
+  styleUrls: ['./button-generic.component.scss']
 })
 export class GenericButtonComponent {
   @Input({ required: true }) public label!: string;
@@ -18,6 +18,7 @@ export class GenericButtonComponent {
   @Input() public width?: string;
   @Input() public height?: string;
   @Input() public fontSize?: string;
+  @Input() public margin?: string;
 
   public styles = computed(() => ({
     color: this.textColor ?? AppColors.textOnOrange,
@@ -25,6 +26,7 @@ export class GenericButtonComponent {
     border: this.border ?? 'none',
     width: this.width ?? '80%',
     height: this.height ?? 'auto',
-    fontSize: this.fontSize ?? '1rem'
+    fontSize: this.fontSize ?? '1em',
+    margin: this.margin ?? '0.5em auto',
   }));
 }

@@ -2,7 +2,7 @@ import { Component, EventEmitter, HostListener, Input, Output } from '@angular/c
 import { CommonModule } from '@angular/common';
 import {TextPipe} from '../../pipes/text.pipe';
 import {T} from '../../shared/constants/text.tokens';
-import {GenericButtonComponent} from '../button-general/button-general.component';
+import {GenericButtonComponent} from '../button-general/button-generic.component';
 
 @Component({
   selector: 'app-modal',
@@ -14,6 +14,11 @@ import {GenericButtonComponent} from '../button-general/button-general.component
 export class ModalComponent {
   @Output() close = new EventEmitter<void>();
   @Input() isCloseButtonShown: boolean = true;
+
+  closeButtonStyle = {
+    width: '80%',
+    margin: ' 0.5em auto',
+  }
 
   @HostListener('document:click', ['$event'])
   onClickOutside(event: MouseEvent) {
