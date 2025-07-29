@@ -120,7 +120,7 @@ export function getEvents(): EventData[] {
       undefined,
       'images/events/tent_massage.webp',
       'images/events/miniatures/tent_massage.webp',
-      'Vydařený UBU Camp 2025, kde jsem poskytoval ošetření Shiatsu účastníkům. Bylo to skvělé setkání plné relaxace, výborne hudby a dobré nálady.',
+      'UBU Camp 2025 se vydařil, několika účastníkům jsem poskytl ošetření Shiatsu a poznal tak opět nové báječné lidi. Bylo to skvělé setkání plné relaxace, výborné hudby a dobré nálady.',
       undefined,
       [{
         contentType: EContentItem.Hyperlink,
