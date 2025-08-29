@@ -105,9 +105,11 @@ export function getEvents(): EventData[] {
       undefined,
       undefined,
       [{
-        contentType: EContentItem.Text,
-        textCs: 'Přihlášky a více informací na webu Bad Reputation Studio bude doplňeno v nejbližší době.',
+        contentType: EContentItem.Hyperlink,
+        textCs: 'Přihlášky a více informací v odkazu:',
         textEn: undefined,
+        url: `https://badreputation.cz/akce/info/tantricke-setkani-638`,
+        urlTextCs: 'Tantrický Večer - Bad Reputation Studio',
       } as ContentItemText],
     ),
     createQuoteData(
