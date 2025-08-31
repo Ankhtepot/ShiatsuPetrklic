@@ -163,7 +163,7 @@ export function getEvents(): EventData[] {
         {
           contentType: EContentItem.Hyperlink,
           url: 'https://badreputation.cz/akce/info/workshop-dotek-dutek',
-          labelCs: 'Bad Reputation Studio',
+          labelCs: 'Klikněte na odkaz níže pro více informací a přihlášení:',
           labelEn: undefined,
           urlTextCs: 'Dotek Důtek - Bad Reputation Studio',
           urlTextEn: undefined,

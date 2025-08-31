@@ -59,7 +59,7 @@ export class EventCardComponent implements OnInit {
       usedText = textEn || '';
     }
 
-    return this.isExpanded() ? usedText : cutAtLastWholeWord(usedText, 200);
+    return this.isExpanded() ? usedText : cutAtLastWholeWord(usedText, 2000);
   }
 
   isHyperlink(item: ContentItem): item is ContentItemHyperlink {
