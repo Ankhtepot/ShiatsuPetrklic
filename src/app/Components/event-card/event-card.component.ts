@@ -33,20 +33,26 @@ export class EventCardComponent implements OnInit {
       return;
     }
 
+    this.resolveTexts();
+  }
+
+  resolveTexts() {
     this.description.set(this.resolveText(this.event.descriptionCs, this.event.descriptionEn));
-    this.title.set(this.resolveText(this.event.titleCs, this.event.titleEn));
+    this.title.set(this.resolveText(this.event.titleCs, this.event.titleEn, 15));
     this.postEventText.set(this.resolveText(this.event.postEventTextCs, this.event.postEventTextEn));
   }
 
   openModal() {
     this.isExpanded.set(true);
+    this.resolveTexts();
   }
 
   closeModal() {
     this.isExpanded.set(false);
+    this.resolveTexts();
   }
 
-  public resolveText(textCs?: string, textEn?: string): string {
+  public resolveText(textCs?: string, textEn?: string, cutoffText?: number): string {
     if(!textCs && !textEn) {
       return '';
     }
@@ -59,7 +65,7 @@ export class EventCardComponent implements OnInit {
       usedText = textEn || '';
     }
 
-    return this.isExpanded() ? usedText : cutAtLastWholeWord(usedText, 2000);
+    return this.isExpanded() ? usedText : cutAtLastWholeWord(usedText, cutoffText || 200);
   }
 
   isHyperlink(item: ContentItem): item is ContentItemHyperlink {
