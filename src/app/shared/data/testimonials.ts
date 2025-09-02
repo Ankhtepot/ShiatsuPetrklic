@@ -109,5 +109,31 @@ export function getTestimonials(): QuoteData[] {
       "Prva masaz u Petra. Vsetko bolo na zaciatku vysvetlene. Zamer mal byt o rozvinuti a uktoveni muzskej energie/sily. Masaz skvela, zazil som az \"nadprirodzene\" stavy, ktore je tazko popisat, po masazi prislo uvolnenie a plac, plac s pocitom stastia, ze nieco dobre sa udialo. Citim sa pevnejsi, ak treba podrzat manzelku, alebo odvaha komunikovat otvorene s pokojom a laskou ako muz pre zenu. Citim, ze je na com pracovat a verim, ze to nebola posledna masaz. Dakujem",
       "My first massage with Peter. Everything was explained at the beginning. The focus was on the development and grounding of masculine energy/strength. The massage was excellent; I experienced almost 'supernatural' states that are hard to describe. Afterwards there was release and tears—tears accompanied by a feeling of happiness that something positive had happened. I feel stronger, more able to support my wife when needed, or to communicate openly with calm and love, as a man to a woman. I see there is still work to do and I believe this was not my last massage. Thank you.",
       "Peter Biely, programator", 14),
+    createQuoteData(
+      "Toto bola moja prvá shiatsu masáž. Myslela som si, že viem presne čo moje telo potrebuje. Avšak po pár otázkach, Petrovho nacítenia a môjho pocitu v danej chvíli v tele sme zvolili úplne inú dráhu na ošetrenie. Dráhu srdca a presne to som v daný okamih potrebovala.\n" +
+      "Peto vytvoril príjemnú a uvoľnenú atmosféru, dostala som všetky informácie o shiatsu ako takej a aj informácie ako bude ošetrenie prebiehať. Toto mi pomohlo uvoľniť sa do procesu bez očakávania, napätia, len so zvedavosťou. Ošetrenie bolo pre mňa veľmi silné a hlboké.\n" +
+      "\n" +
+      "Dotyk jemný, ale presne vedený. Stačilo kratučkú chvíľu, pár mojich hlbokých nádychov a cítila som silu ošetrenia. \n" +
+      "Časť z neho som preplakla, netuším čo potrebovalo byť pustené, ale s pocitom prijatia, podpory, bezpečenia a dôvery, ktoré išlo z Peťa som si dovolila všetko, čo moje telo v danej chvíli potrebuje. Slzy, pohyb, hlas. Cítila som príval rôznych emócii, avšak bez myšlienok, len čistá prítomnosť v tele. Po ošetrení som doslova cítila otvorenie v srdci, ľahkosť, lásku, dojatie, zraniteľnosť a aj silu. Následne som mala priestor a čas na dosadnutie a integráciu zažitého. Na záver prišlo zdieľanie, čo sa udialo, čo bolo cítiť z môjho tela, aké kvality emócií. Táto časť zdieľania bola pre mňa veľmi prínosná a len objasnila a doťukla proces, ktorým som si prešla a ja som mohla zrieť, čo mi moje telo hovorí a cíti. \n" +
+      "\n" +
+      "Je úžasné ako Peťo presne vie, čo klient potrebuje, ako sa vie nacítiť, ako vie vytvoriť bezpečný priestor v ktorom sa môže diať a je si istý, čo, ako a prečo robí. Bola som prekvapená, ako tak jemný dotyk može vyvolat takú hlbokú a liečivú odozvu v tele. \n" +
+      "S odstupom pár dní po ošetrení cítim svoju silu a je to krásne.  \n" +
+      "\n" +
+      "Ak hľadáte niekoho pre koho nebudete len číslo v poradí, tak Peťa odporúčam. Veľmi cítiť, že mu záleží na klientovi, na dobre odvedenom ošetrení a aj na pocitoch klienta.\n",
+      "This was my first shiatsu massage. I thought I knew exactly what my body needed, but after a few questions, Peter’s intuition, and being present with how I felt in my body, we ended up choosing a completely different path for the session—the heart meridian. And it turned out that’s exactly what I needed at that moment.\n" +
+      "\n" +
+      "Peter created a pleasant and relaxed atmosphere and explained everything about shiatsu in detail, including how the session would unfold. This helped me let go of expectations and tension and simply enter the process with curiosity. The treatment felt powerful and deep for me.\n" +
+      "\n" +
+      "His touch was gentle but precise. Just a brief moment and a few deep breaths were enough for me to feel the intensity of the treatment. Part of the session I spent in tears; I don’t know what needed to be released, but with the sense of acceptance, support, safety, and trust coming from Peter, I allowed myself whatever my body needed at that moment—tears, movement, voice. I felt a surge of different emotions, but no thoughts—just pure presence in my body. Afterward, I literally felt my heart opening—lightness, love, emotion, vulnerability, and strength. I then had time and space to settle and integrate what I’d experienced.\n" +
+      "\n" +
+      "At the end, there was a sharing about what happened, what Peter felt from my body, and the qualities of emotion present. This part was very valuable for me—it clarified and completed the process I had gone through, so I could better understand what my body was saying and feeling.\n" +
+      "\n" +
+      "It’s amazing how Peter knows exactly what the client needs, how intuitive he is, and how he creates a safe space for things to unfold—he is certain about what, how, and why he’s doing things. I was surprised how such a gentle touch could evoke such a deep and healing response in my body.\n" +
+      "\n" +
+      "A few days after the session, I still feel my strength, and it’s beautiful.\n" +
+      "\n" +
+      "If you’re looking for someone who won’t treat you just as another number in line, I definitely recommend Peter. You can genuinely feel that he cares about the clients, the quality of the treatment, and about how the client feels.",
+      "Lucia B., 35 let", 15
+    )
   ]
 }
