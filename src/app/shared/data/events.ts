@@ -91,28 +91,6 @@ export function getEvents(): EventData[] {
       undefined,
     ),
     createEventData(
-      'TV-4',
-      'Tantrický Večer',
-      'Tato akce je zaměřená na vědomé setkávání a lidské propojení v bezpečném a respektujícím prostoru. Nabízí příležitost vnímat blízkost, dotek a intimitu s důrazem na vlastní hranice a svobodu projevu.\n' +
-      '\n' +
-      'Nejedná se o workshop ani výuku, ale o otevřený večer, kde každý může být sám sebou a zvolit si svou míru zapojení. Důležitá je důvěra, autenticita a respekt – nic není povinné, nic se neočekává. Jen prostor pro skutečné lidské spojení.',
-      new Date('2025-09-11T19:00:00'),
-      'Bad Reputation Studio, Brno, Česká republika',
-      undefined,
-      undefined,
-      'images/events/tantric_circle.webp',
-      'images/events/miniatures/tantric_circle.webp',
-      undefined,
-      undefined,
-      [{
-        contentType: EContentItem.Hyperlink,
-        textCs: 'Přihlášky a více informací v odkazu:',
-        textEn: undefined,
-        url: `https://badreputation.cz/akce/info/tantricke-setkani-638`,
-        urlTextCs: 'Tantrický Večer - Bad Reputation Studio',
-      } as ContentItemText],
-    ),
-    createEventData(
       'ST-1',
       'UBU Camp!',
       'Přijďte si užít Shiatsu masáže přímo na UBU Campu v Kempu Dobršín! Nabízím relaxační a terapeutické Shiatsu masáže, které vám pomohou uvolnit napětí, zlepšit prokrvení a celkově posílit vaše zdraví.\n',
