@@ -133,7 +133,16 @@ export function getTestimonials(): QuoteData[] {
       "A few days after the session, I still feel my strength, and it’s beautiful.\n" +
       "\n" +
       "If you’re looking for someone who won’t treat you just as another number in line, I definitely recommend Peter. You can genuinely feel that he cares about the clients, the quality of the treatment, and about how the client feels.",
-      "Lucia B., 35 let", 15
-    )
+      "Lucia B., 35 let", 15),
+    createQuoteData(
+      "Druhá shiatsu masáž. Bola úplne iná ako prvá. Tá bola vtedy veľmi silná, hlboká, intenzívna a púšťajúca.\n" +
+      "Teraz to bolo v jemnosti, ale v sile a v maximálnom rešpekte. Pretože kde bol Peťov dotyk, tak tam bola automatická aj moja pozornosť a smeroval tam aj môj dych, ktorý veľmi napomáhal procesu. A nastalo krásne spojenie sa s telom. V dôvere v jeho liečenie. Bez akýchkoľvek pochybností. Už len toto spojenie so sebou počas ošetrenia bolo velmi liečivé a krásne. Na prvý pohľad sa takmer nič nedialo, ale v skutočnosti to bolo vo veľkých hĺbkach. Počas ošetrenia som cítila pokoj, vyrovnanosť, dôveru, prijatie, živosť. \n" +
+      "Veľmi oceňujem Peťov záujem o človeka a o jeho širší pohľad na situáciu, ďakujem za jeho vhľady. Boli veľmi obohacujúce a podporné. Toto je taktiež veľmi dôležitá časť procesu. \n" +
+      "Už teraz sa teším na ďalšie ošetrenie, ktoré zas bude iné, pretože každá časť tela, dráha v tele su jedinečné ☺. \n",
+      "The second shiatsu massage. It was completely different from the first one. The first was very strong, deep, intense, and releasing.\n" +
+      "This time it was in gentleness, but with strength and maximum respect. Wherever Peter's touch was, my attention automatically followed, and my breath also directed there, which greatly aided the process. And a beautiful connection with the body occurred. In trust in its healing. Without any doubts. Just this connection with myself during the treatment was very healing and beautiful. At first glance, almost nothing seemed to be happening, but in reality, it was happening at great depths. During the treatment, I felt peace, balance, trust, acceptance, and vitality.\n" +
+      "I greatly appreciate Peter's interest in the person and his broader perspective on the situation; thank you for his insights. They were very enriching and supportive. This is also a very important part of the process.\n" +
+      "I am already looking forward to the next treatment, which will again be different because each part of the body, each meridian in the body is unique ☺.\n",
+      "Luci", 16),
   ]
 }
