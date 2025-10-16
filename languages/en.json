@@ -87,5 +87,9 @@
   "services_page_title": "Services – Shiatsu Petrklíč",
   "services_page_description": "Discover the range of Shiatsu therapy services offered in Brno, including session types and techniques used.",
   "testimonials_page_title": "Testimonials – Shiatsu Petrklíč",
-  "testimonials_page_description": "Read authentic feedback and experiences from clients who have benefited from Shiatsu therapy in Brno."
+  "testimonials_page_description": "Read authentic feedback and experiences from clients who have benefited from Shiatsu therapy in Brno.",
+  "close" : "Close",
+  "events_anchor": "Events",
+  "events_past": "Past Events",
+  "events_upcoming": "Upcoming Events"
 }
