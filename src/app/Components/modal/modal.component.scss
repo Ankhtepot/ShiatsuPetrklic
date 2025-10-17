@@ -11,33 +11,42 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  overflow: hidden; // prevent backdrop scrolling
 }
 
 .modal-box {
-  background: $glass-white;
+  //background: $glass-white;
+  background: rgba(230, 230, 230,0.95);
   padding: 2em;
+  padding-top: 5em;
   border-radius: 0.5em;
   width: 80%;
-  height: auto;
-  overflow-y: auto;
+  max-height: 90vh; // overall modal height limit
+  display: flex;
+  flex-direction: column;
   position: relative;
+  overflow: hidden; // scrolling handled only inside content area
+}
 
-  .close-button-wrapper {
-    width: 100%;
-    text-align: center;
+.modal-content-scroll {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0; // required for flex scroll containers
+  padding-right: 0.5em; // space for scrollbar
+}
 
-    @media (max-width: 768px) {
-      width: 100%;
-    }
-  }
+.close-button-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-top: 1em;
+  flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
-
   .modal-box {
-    margin-top: 7em;
     width: 95%;
-    height: 80%;
+    max-height: 85vh;
+    margin-top: 7em;
   }
 
   .modal-backdrop {

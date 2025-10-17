@@ -1,44 +1,19 @@
-import {ContentItem} from './content-item';
+import { ContentItem } from './content-item';
 
 export class EventData {
     public id: string = 'Unset ID';
-    public titleCs: string = 'Unset Title';
-    public descriptionCs: string = 'Unset Description';
     public date: Date = new Date();
-    public location: string = 'Unset Location';
+    public titleCs: string = 'Unset Title';
+    public location?: string = 'Unset Location';
+    public descriptionCs?: string = 'Unset Description';
     public titleEn?: string = 'Unset Title';
     public descriptionEn?: string = 'Unset Description';
-    public imageUrl?: string = undefined;
-    public miniatureUrl?: string = undefined;
-    public postEventTextCs?: string = undefined;
-    public postEventTextEn?: string = undefined;
-    public contentItems?: ContentItem[] = undefined;
-
-    constructor(
-        id: string,
-        titleCs: string,
-        titleEn: string,
-        descriptionCs: string,
-        descriptionEn: string,
-        date: Date,
-        location: string,
-        imageUrl?: string,
-        miniatureUrl?: string,
-        postEventTextCs?: string,
-        postEventTextEn?: string,
-        contentItems?: ContentItem[],
-    ) {
-        this.id = id;
-        this.titleCs = titleCs;
-        this.descriptionCs = descriptionCs;
-        this.date = date;
-        this.location = location;
-        this.descriptionEn = descriptionEn;
-        this.titleEn = titleEn;
-        this.imageUrl = imageUrl;
-        this.miniatureUrl = miniatureUrl;
-        this.postEventTextCs = postEventTextCs;
-        this.postEventTextEn = postEventTextEn;
-        this.contentItems = contentItems ?? [];
-    }
+    public imageUrl?: string;
+    public miniatureUrl?: string;
+    public postEventTextCs?: string;
+    public postEventTextEn?: string;
+    public contentItems?: ContentItem[] = [];
+    public showsMarkdown?: boolean = false;
+    public markdownCZContentPath?: string;
+    public markdownENContentPath?: string;
 }

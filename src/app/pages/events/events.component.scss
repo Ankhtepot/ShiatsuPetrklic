@@ -11,6 +11,9 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 100%;
+  max-width: unset;
+  align-items: stretch;
 
   &.left {
     align-items: flex-end;

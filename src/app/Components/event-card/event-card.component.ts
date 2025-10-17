@@ -1,4 +1,4 @@
-import {Component, Input, signal, OnInit, WritableSignal, inject} from '@angular/core';
+import {Component, inject, Input, OnInit, signal, WritableSignal} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {EventData} from '../../Models/event-data';
 import {ModalComponent} from '../modal/modal.component';
@@ -9,11 +9,12 @@ import {T} from '../../shared/constants/text.tokens';
 import {TextPipe} from '../../pipes/text.pipe';
 import {of} from 'rxjs';
 import {ContentItem, ContentItemHyperlink, ContentItemText, EContentItem} from '../../Models/content-item';
+import {MarkdownComponent} from 'ngx-markdown';
 
 @Component({
   selector: 'app-event-card',
   standalone: true,
-  imports: [CommonModule, ModalComponent, ButtonReadMoreComponent, TextPipe],
+  imports: [CommonModule, ModalComponent, ButtonReadMoreComponent, TextPipe, MarkdownComponent],
   templateUrl: './event-card.component.html',
   styleUrls: ['./event-card.component.scss']
 })
@@ -38,7 +39,7 @@ export class EventCardComponent implements OnInit {
 
   resolveTexts() {
     this.description.set(this.resolveText(this.event.descriptionCs, this.event.descriptionEn));
-    this.title.set(this.resolveText(this.event.titleCs, this.event.titleEn, 15));
+    this.title.set(this.resolveText(this.event.titleCs, this.event.titleEn, 25));
     this.postEventText.set(this.resolveText(this.event.postEventTextCs, this.event.postEventTextEn));
   }
 
@@ -53,7 +54,7 @@ export class EventCardComponent implements OnInit {
   }
 
   public resolveText(textCs?: string, textEn?: string, cutoffText?: number): string {
-    if(!textCs && !textEn) {
+    if (!textCs && !textEn) {
       return '';
     }
 
@@ -76,8 +77,18 @@ export class EventCardComponent implements OnInit {
     return item.contentType === EContentItem.Text;
   }
 
+  GetMarkdown() {
+    let path = '';
+    if (this.event.markdownCZContentPath) {
+      path = this.event.markdownCZContentPath;
+      if (this.languageService.current === ELanguage.En && this.event.markdownENContentPath) {
+        path = this.event.markdownENContentPath;
+      }
+    }
+
+    return path;
+  }
+
   protected readonly T = T;
   protected readonly of = of;
-  protected readonly EContentItem = EContentItem;
-  protected readonly ContentItemHyperlink = ContentItemHyperlink;
 }

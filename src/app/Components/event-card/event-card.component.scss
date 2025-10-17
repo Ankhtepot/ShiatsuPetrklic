@@ -1,5 +1,11 @@
 @use "../../../styles/colors" as *;
 
+:host {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
 .event-card {
   display: flex;
   max-height: 10em;
@@ -7,6 +13,7 @@
   border: 1px solid #ddd;
   border-radius: 0.5em;
   background: white;
+  width: 100%;
 
   .event-image {
     max-width: 12em;
@@ -15,7 +22,7 @@
   }
 
   .event-content {
-    width: auto;
+    width: 100%;
     padding: 1em;
     position: relative;
 
@@ -24,10 +31,23 @@
     }
 
     .event-title {
+      font-size: 1.5em;
       display: flex;
       flex-shrink: 1;
       justify-content: space-between;
+
+      p {
+        margin: 0;
+        font-family: "Cactus Classical Serif", serif;
+        color: $text-on-text_background;
+        font-weight: bolder;
+      }
+
+      .event-date {
+        text-align: right;
+      }
     }
+
 
     .event-description {
       max-height: 6em;
@@ -109,6 +129,7 @@
 
 @media (max-width: 768px) {
   .event-card {
+    min-height: 5em;
     flex-direction: row;
     align-content: center;
     align-items: center;
@@ -116,17 +137,27 @@
     .event-image {
       width: auto;
       max-height: 5em;
+      max-width: 5em;
     }
 
     .event-content {
-      width: auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      align-content: flex-start;
+      padding-left: 1em;
+      padding-right: 1em;
 
       .event-description {
         display: none;
       }
 
-      .event-title h4 {
+      .event-title {
         font-size: 0.9em;
+        margin-bottom: 2em;
+        margin-top: 0;
       }
 
       .read-more-button {

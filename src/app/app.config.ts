@@ -10,6 +10,7 @@ import {routerOptions, routes} from './app.routes';
 import {ScreenService} from './services/screen.service';
 import {provideHttpClient} from '@angular/common/http';
 import {LanguageService} from './services/language.service';
+import {provideMarkdown} from 'ngx-markdown';
 
 function preloadTranslations(langService: LanguageService): () => Promise<void> {
   return () => langService.loadInitialLanguage();
@@ -21,6 +22,7 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideRouter(routes, withRouterConfig(routerOptions)),
+    provideMarkdown(),
     ScreenService,
     {
       provide: APP_INITIALIZER, // Leaving this as APP_INITIALIZER to ensure translations are loaded before the app starts, even deprecated, its cleanest way to do it for now
