@@ -1,5 +1,6 @@
 ## Vědomá Smyslnost - Retreat
 
+Robert Silber z Hawaie zavítá po letech opět do České Republiky!
 
 V bezpečné a důvěryhodné atmosféře se naučíš rozlišovat, co skutečně chceš, od toho, co vychází z tlaku okolí nebo ze strachu. Objevíš, jak přijmout svou pravdu a žít v souladu s ní.
 
@@ -29,6 +30,7 @@ Poznáš, jak lépe rozumět svým emocím, potřebám a hranicím – a jak s n
 - **Vědomá komunikace**
 Procvičíš si otevřenou zpětnou vazbu, společné rozhodování a rozpoznávání vlastních přání v kontaktu s ostatními.
 
+Tento retreat se koná v anglickém jazyce s překladem do češtiny.﻿
 
 **Registrace zde:**  
 [Odkaz na registraci](https://docs.google.com/forms/d/e/1FAIpQLSfPVVXd8q44gZiwA-T7OgPeQ_6w0GpICmeyfQPLZTXa0UDIKw/viewform?usp=header&fbclid=IwZXh0bgNhZW0CMTAAYnJpZBEwQmtMT2lTdkhWd2lBYUJVeQEek2ztCx0Bg9oDhBYDtO8HuEZf7yGVf6cUe3HFc--b-S1914x4o5JvdKTkn7Y_aem_VNS9qW4FPjEE6a0VvCb3Ng)

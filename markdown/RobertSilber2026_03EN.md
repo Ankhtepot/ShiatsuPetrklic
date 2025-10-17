@@ -1,6 +1,9 @@
 ## Conscious Sensuality - Retreat
 
 I warmly invite you to the retreat "Conscious Sensuality".  
+
+Robert Silber from Hawaii is returning to the Czech Republic after many years!
+
 In a safe and trusting environment, you will learn to distinguish what you truly want from what comes from external pressure or fear. You will discover how to embrace your truth and live in alignment with it.  
 The program also includes rest, inner reflection, writing, and sharing experiences that will help you bring these insights into everyday life.  
 The retreat is designed to strengthen your inner resilience, confidence, and ability to tune in to yourself and others.  
@@ -24,6 +27,8 @@ You will learn to better understand your emotions, needs, and boundaries—and h
 
 - **Conscious Communication**  
 You will practice open feedback, joint decision-making, and recognizing your own desires in contact with others.
+
+This workshop is held in English with translation into Czech.﻿
 
 **Register here:**  
 [Registration](https://docs.google.com/forms/d/e/1FAIpQLSfPVVXd8q44gZiwA-T7OgPeQ_6w0GpICmeyfQPLZTXa0UDIKw/viewform?usp=header&fbclid=IwZXh0bgNhZW0CMTAAYnJpZBEwQmtMT2lTdkhWd2lBYUJVeQEek2ztCx0Bg9oDhBYDtO8HuEZf7yGVf6cUe3HFc--b-S1914x4o5JvdKTkn7Y_aem_VNS9qW4FPjEE6a0VvCb3Ng)
