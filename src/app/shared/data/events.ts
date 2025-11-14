@@ -138,6 +138,21 @@ export function getEvents(): EventData[] {
       markdownENContentPath: '/markdown/RobertSilber2026_03EN.md',
       imageUrl: 'images/events/tantric_couple_outside.webp',
       miniatureUrl: 'images/events/miniatures/tantric_couple_outside.webp',
+    },
+    {
+      id: 'Pezinok-1',
+      date: new Date('2025-12-05T18:00:00'),
+      titleCs: "Vedomý dotyk - tantrický večer",
+      descriptionCs: 'Objav silu vedomého dotyku, intimity a prítomnosti.\n' +
+        'Tantrický večer je priestorom pre stretnutia, zdieľanie a kultivovanie energie, ktorá v nás prebúdza jemnosť, radosť aj zmyselnosť.\n' +
+        '\n' +
+        'Nebude to workshop, ale večer v bezpečnom priestore, kde môžeš byť sám/sama sebou a prepojiť sa s ostatnými. Každý si určuje svoje hranice, všetko prebieha s úctou, dôverou a rešpektom, kde každý môže byť v tej hĺbke, na akú sa cíti. \n' +
+        'Priebeh večera bude pod lektorským vedením Petra Závodného.\n' +
+        'Vítaní sú všetci – bez ohľadu na skúsenosti, vek či pohlavie.\n',
+      showsMarkdown: true,
+      markdownCZContentPath: '/markdown/VedomyDotykPezinok.md',
+      imageUrl: 'images/events/VedomyDotykPezinok.jpg',
+      miniatureUrl: 'images/events/VedomyDotykPezinok.jpg',
     }
   ];
 }
