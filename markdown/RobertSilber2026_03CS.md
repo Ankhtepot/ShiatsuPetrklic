@@ -43,7 +43,8 @@ Detaily k pobytu zašleme v e-mailu.
 **Více informací o Roberu Silberovi:**  
 [Robert Silber](https://www.conscioussensuality.com/about?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBEwQmtMT2lTdkhWd2lBYUJVeQEezeXNuKcxrrnOimIUq5LxDfVnMtSTmzDAz_Wp98_L-BTDUabZVtdi9KlvcCA_aem_PsIArhYvaMxk0CDcNmbbPg)
 
-**Více informací o Katice Kai:** <br>
+**Více informací o Katika Kai:** <br>
+[Hlavní www stránka Katiky Kai](https://www.katika-kai.com/)
 [Facebook Katiky Kai](https://www.facebook.com/katika.kai?__cft__[0]=AZWYqj4pjRwqlRHYKvJcvs4zb8YzMTSVZ_E7QjxO158p_1KKJkYky7TeCwRw4kc0ZrHN9yJ0x4fnVpmmTOiiOGnjIw5FDFJ9OoHVi5-4u9RwTA&__tn__=q)  
 [www stranky Katiky Kai](https://www.liecivatantra.sk/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBEwQmtMT2lTdkhWd2lBYUJVeQEevHhvdGNTQB98JHjyYK2kJj_xiUTN8E1BAXrUrkYaKuCtRYXChyWIV-n-nbE_aem_8pIm6o8tGz5qjVSDe-QzxQ)
 
