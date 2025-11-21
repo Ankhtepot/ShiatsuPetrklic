@@ -1,4 +1,4 @@
-## Conscious Sensuality - Retreat
+## Conscious Sensuality and Body Wisdom
 
 I warmly invite you to the retreat "Conscious Sensuality".  
 

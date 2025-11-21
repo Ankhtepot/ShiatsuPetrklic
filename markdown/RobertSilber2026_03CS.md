@@ -1,4 +1,4 @@
-## Vědomá Smyslnost - Retreat
+## Vědomá Smyslnost a Moudrost Těla - Retreat
 
 Robert Silber z Hawaie zavítá po letech opět do České Republiky!
 
