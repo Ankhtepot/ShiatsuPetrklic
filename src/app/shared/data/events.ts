@@ -128,8 +128,8 @@ export function getEvents(): EventData[] {
     },
     {
       id: 'TEST-2',
-      titleCs: 'Vědomá Smyslnost Retreat',
-      titleEn: 'Conscious Sensuality Retreat',
+      titleCs: 'Vědomá Smyslnost a moudrost Těla',
+      titleEn: 'Conscious Sensuality and Body Wisdom',
       date: new Date('2026-03-17T10:00:00'),
       descriptionCs: 'Robert Silber z Hawaie zavítá po letech opět do České Republiky! Srdečně vás zvu na retreat tohoto vynikajícího Havajského učitele a slovenské průvodkyně Katiky Kai.',
       descriptionEn: 'Robert Silber from Hawaii is returning to the Czech Republic after many years! You are warmly invited to a retreat with this excellent Hawaiian teacher and the Slovak guide Katika Kai.',
