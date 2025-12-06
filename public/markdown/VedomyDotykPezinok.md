@@ -1,6 +1,9 @@
 ### Tantrický večer – Vedomý dotyk
 <img src="images/events/VedomyDotykPezinok.jpg" alt="Obrazek udalosti" width="300" height="400">
 <br><br>
+<div class="post-event-text">
+'Večer proběhl v příjemné atmosféře, účastníci si užili blízkost a doteky v bezpečném prostředí. Bylo to krásné setkání plné důvěry a respektu.'
+</div>
 
 Objav silu vedomého dotyku, intimity a prítomnosti.
 Tantrický večer je priestorom pre stretnutia, zdieľanie a kultivovanie energie, ktorá v nás prebúdza jemnosť, radosť aj zmyselnosť.

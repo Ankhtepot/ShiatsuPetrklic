@@ -153,6 +153,7 @@ export function getEvents(): EventData[] {
       markdownCZContentPath: '/markdown/VedomyDotykPezinok.md',
       imageUrl: 'images/events/VedomyDotykPezinok.jpg',
       miniatureUrl: 'images/events/VedomyDotykPezinok.jpg',
+      postEventTextCs: 'Večer proběhl v příjemné atmosféře, účastníci si užili blízkost a doteky v bezpečném prostředí. Bylo to krásné setkání plné důvěry a respektu.',
     }
   ];
 }

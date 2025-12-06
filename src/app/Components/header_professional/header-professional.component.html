@@ -39,7 +39,7 @@
 
       <!-- Nav links (desktop only) -->
       <div class="links d-none d-md-flex gap-3">
-        @for (link of configuration.links; track link) {
+        @for (link of configuration.links; track link.textString) {
           <a
             class="btn btn-link"
             [ngStyle]="textColor()"

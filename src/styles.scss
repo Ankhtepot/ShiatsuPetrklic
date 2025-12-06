@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @use "styles/index" as styles;
+@use "styles/md-styles" as mardown;
 
 body {
   font-family: "Roboto", sans-serif;
