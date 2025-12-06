@@ -1,7 +1,11 @@
-<app-background-tiled [imagePath]="backgroundImagePath()"></app-background-tiled>
+<!--<app-background-tiled [imagePath]="backgroundImagePath()"></app-background-tiled>-->
+<div class="app-background" [ngStyle]="{
+    'background-image': 'url(' + backgroundImagePath() + ')'
+  }"></div>
+<div class="app-background_overlay"></div>
 <app-header-professional [configuration]="headerConfiguration()"/>
-@if (showConstruction()) {
-  <app-in-construction/>
-}
+<!--@if (showConstruction()) {-->
+<!--  <app-in-construction/>-->
+<!--}-->
 <router-outlet></router-outlet>
 

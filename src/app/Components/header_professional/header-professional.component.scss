@@ -21,6 +21,8 @@ $background-color: 255;
     font-size: 36px;
     font-weight: bolder;
     font-family: 'Pacifico', cursive;
+    text-shadow: 10px 4px 3px rgba(0,0,0,0.36);
+    letter-spacing: 1.5px;
   }
 
   .logo {
@@ -28,6 +30,8 @@ $background-color: 255;
     height: 100px;
     margin-left: 1em;
     margin-right: 5em;
+    border-radius: 50%;
+    border: 3px gray double;
   }
 
   .nav-container {
@@ -57,7 +61,10 @@ $background-color: 255;
   }
 
   a {
+    position: relative;
     text-decoration: none;
+    border: none;
+    outline: none;
     font-family: inherit;
     font-weight: 300;
     font-size: 1.5em;
@@ -65,21 +72,46 @@ $background-color: 255;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.3s;
+    transition: color 0.3s, transform 0.3s;
     margin-left: 1rem;
-    border-radius: 0.2em;
-    border: #ECEFF1 solid 1px;
+    border-radius: 50%;
+    //border: #ECEFF1 solid 1px;
     height: 2em;
 
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 1s;
+      background: radial-gradient(rgba(#26f3bd, 0.5) 10%, rgba(#fafafa, 0.1) 100%);
+      z-index: -1;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
     &:hover {
-      background-color: rgba($background-color, $background-color, $background-color, 0.4);
+      transform: scale(1.1) translateY(-2px);
+      color: black !important;
+    }
+
+    .text {
+      font-weight: bold;
+      text-shadow: 10px 4px 3px rgba(0,0,0,0.36);
     }
   }
 
   a.active {
     background-color: rgba($background-color, $background-color, $background-color, 0.4);
-    transition: color 0.3s;
-    font-weight: bold;
+    //transition: color 0.3s;
+    font-weight: bolder;
+    color: black !important;
 
     &:hover {
       background-color: rgba($background-color, $background-color, $background-color, 0.6);

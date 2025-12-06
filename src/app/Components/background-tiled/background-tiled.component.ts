@@ -10,4 +10,5 @@ import {CommonModule} from '@angular/common';
 })
 export class BackgroundTiledComponent {
   @Input() imagePath: string | undefined;
+  @Input() isCover: boolean = false;
 }

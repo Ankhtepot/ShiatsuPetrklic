@@ -1,7 +1,7 @@
 import {Component, computed, inject, signal} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {HeaderProfessionalComponent} from './Components/header_professional/header-professional.component';
-import {BackgroundTiledComponent} from './Components/background-tiled/background-tiled.component';
+// import {BackgroundTiledComponent} from './Components/background-tiled/background-tiled.component';
 import {NavigationLinkService} from './services/navigation-link.service';
 import {AppColors} from '../styles/colors.gen';
 import {
@@ -9,18 +9,21 @@ import {
   HeaderProfessionalConfiguration
 } from './Components/header_professional/models';
 import {ELanguage, LanguageService} from './services/language.service';
-import {InConstructionComponent} from './Components/in-construction/in-construction.component';
+// import {InConstructionComponent} from './Components/in-construction/in-construction.component';
 import {GoogleAnalyticsService} from './services/google-analytics.service';
+import {NgStyle} from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderProfessionalComponent, BackgroundTiledComponent, InConstructionComponent],
+  // imports: [RouterOutlet, HeaderProfessionalComponent, BackgroundTiledComponent, InConstructionComponent, NgStyle],
+  imports: [RouterOutlet, HeaderProfessionalComponent, NgStyle],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true
 })
 export class AppComponent {
-  backgroundImagePath = signal<string | undefined>('images/textures/texture_orange_hairy_blanket4.png');
+  // backgroundImagePath = signal<string>('images/textures/texture_orange_hairy_blanket4.png');
+  backgroundImagePath = signal<string>('images/textures/background_castle.webp');
   links = inject(NavigationLinkService).headerLinks;
 
   showConstruction = signal(true);
@@ -46,8 +49,10 @@ export class AppComponent {
     logoPath: 'images/appIcon.png',
     dynamicShow: false,
     textColor: AppColors.textOnOrange,
-    backgroundGradientStart: `rgba(255, 140, 0, 1)`,
-    backgroundGradientEnd: `rgba(255, 140, 0, 0.5)`,
+    // backgroundGradientStart: `rgba(255, 140, 0, 1)`,
+    // backgroundGradientEnd: `rgba(255, 140, 0, 0.5)`,
+    backgroundGradientStart: `rgba(255,255,255, .8) 50%, rgba(255,255,255, .7)`,
+    backgroundGradientEnd: `rgba(255,255,255, .1)`,
     dropdownsConfigurations: this.headerDropdownSetup
   }));
 
