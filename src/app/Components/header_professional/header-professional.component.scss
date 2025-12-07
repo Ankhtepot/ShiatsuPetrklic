@@ -21,7 +21,7 @@ $background-color: 255;
     font-size: 36px;
     font-weight: bolder;
     font-family: 'Pacifico', cursive;
-    text-shadow: 10px 4px 3px rgba(0,0,0,0.36);
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.4);
     letter-spacing: 1.5px;
   }
 
@@ -103,15 +103,20 @@ $background-color: 255;
 
     .text {
       font-weight: bold;
-      text-shadow: 10px 4px 3px rgba(0,0,0,0.36);
+      text-shadow: 3px 3px 3px rgba(0,0,0,0.25);
     }
   }
 
   a.active {
     background-color: rgba($background-color, $background-color, $background-color, 0.4);
-    //transition: color 0.3s;
-    font-weight: bolder;
+    transition: color 0.3s, font-size 0.3s, letter-spacing 0.3s;
     color: black !important;
+
+    .text {
+      font-weight: 600;
+      font-size: 1.2em !important;
+      letter-spacing: 1px;
+    }
 
     &:hover {
       background-color: rgba($background-color, $background-color, $background-color, 0.6);

@@ -49,9 +49,7 @@ export class AppComponent {
     logoPath: 'images/appIcon.png',
     dynamicShow: false,
     textColor: AppColors.textOnOrange,
-    // backgroundGradientStart: `rgba(255, 140, 0, 1)`,
-    // backgroundGradientEnd: `rgba(255, 140, 0, 0.5)`,
-    backgroundGradientStart: `rgba(255,255,255, .8) 50%, rgba(255,255,255, .7)`,
+    backgroundGradientStart: `rgba(255,255,255, .95) 50%, rgba(255,255,255, .8)`,
     backgroundGradientEnd: `rgba(255,255,255, .1)`,
     dropdownsConfigurations: this.headerDropdownSetup
   }));

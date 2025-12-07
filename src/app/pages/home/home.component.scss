@@ -1,15 +1,5 @@
 @use "../../../styles/index" as styles;
 
-.content {
-  @include styles.frosted-glass(); // sets background, blur, radius, shadow
-  position: relative;
-  max-width: 800px;
-  width: 100%;
-  padding: 20px;
-  margin: 12em auto;
-  z-index: 20;
-}
-
 .home-section,
 .text-section {
   max-width: 800px;

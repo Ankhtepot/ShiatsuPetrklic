@@ -1,3 +1,7 @@
-<div class="content" [ngStyle]="style()">
+<div
+  class="content"
+  [ngStyle]="style()"
+  [style.--opacity]="backgroundOpacity()"
+>
   <ng-content></ng-content>
 </div>
