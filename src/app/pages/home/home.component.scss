@@ -38,13 +38,15 @@
 
       li {
         width: 100%;
-        background-color: styles.$orange-gradient-end;
+        //background-color: styles.$orange-gradient-end;
+        background-color: styles.$light-blue;
         padding: 0.5em;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         transition: transform 0.2s ease;
         text-align: left;
-        color: styles.$text-on-text_background;
+        //color: styles.$text-on-text_background;
+        color: styles.$deep-navy;
         font-weight: 700;
         font-size: 1.1rem;
 
