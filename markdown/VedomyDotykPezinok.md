@@ -1,7 +1,12 @@
-### Tantrický večer – Vedomý dotyk
+<div class="md-container">
+<div class="md-title">
+Tantrický večer – Vedomý dotyk
+</div>
+<div class="md-image">
 <img src="images/events/VedomyDotykPezinok.jpg" alt="Obrazek udalosti" width="300" height="400">
+</div>
 <br><br>
-<div class="post-event-text">
+<div class="md-post-event-text">
 'Večer proběhl v příjemné atmosféře, účastníci si užili blízkost a doteky v bezpečném prostředí. Bylo to krásné setkání plné důvěry a respektu.'
 </div>
 
@@ -17,5 +22,5 @@ Nič nie je povinné. Všetko je pozvanie.
 
 Místo konání: studio [Joga s Láskou Kupeckého 36, Peinok, SK](https://www.jogaslaskou.sk/#kontakt)
 
-**Přihlášení na následujícím odkazu v sekci události u data 5.12.2025:**  
-[Příhlášení](https://www.jogaslaskou.sk/#udalosti)
+
+</div>

@@ -1,4 +1,7 @@
-## Vědomá Smyslnost a Moudrost Těla - Retreat
+<div class="md-container">
+<div class="md-title">
+Vědomá Smyslnost a Moudrost Těla - Retreat
+</div> 
 
 Robert Silber z Hawaie zavítá po letech opět do České Republiky!
 
@@ -20,15 +23,15 @@ Robert a Katika tě provedou praktickou a zároveň hlubokou cestou, která ti p
 Zaměřovat se budeme na tři hlavní oblasti:
 
 - **Vědomí těla**
-Prostřednictvím meditací a rituálů se naučíš lépe vnímat své tělo, pocity a smyslové prožitky.
+  Prostřednictvím meditací a rituálů se naučíš lépe vnímat své tělo, pocity a smyslové prožitky.
 
 
 - **Emoční uvědomění**
-Poznáš, jak lépe rozumět svým emocím, potřebám a hranicím – a jak s nimi vědomě pracovat.
+  Poznáš, jak lépe rozumět svým emocím, potřebám a hranicím – a jak s nimi vědomě pracovat.
 
 
 - **Vědomá komunikace**
-Procvičíš si otevřenou zpětnou vazbu, společné rozhodování a rozpoznávání vlastních přání v kontaktu s ostatními.
+  Procvičíš si otevřenou zpětnou vazbu, společné rozhodování a rozpoznávání vlastních přání v kontaktu s ostatními.
 
 Tento retreat se koná v anglickém jazyce s překladem do češtiny.﻿
 
@@ -44,18 +47,21 @@ Detaily k pobytu zašleme v e-mailu.
 [Robert Silber](https://www.conscioussensuality.com/about?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBEwQmtMT2lTdkhWd2lBYUJVeQEezeXNuKcxrrnOimIUq5LxDfVnMtSTmzDAz_Wp98_L-BTDUabZVtdi9KlvcCA_aem_PsIArhYvaMxk0CDcNmbbPg)
 
 **Více informací o Katika Kai:** <br>
-[Hlavní www stránka Katiky Kai](https://www.katika-kai.com/)
+[Hlavní www stránka Katiky Kai](https://www.katika-kai.com/) <br>
 [Facebook Katiky Kai](https://www.facebook.com/katika.kai?__cft__[0]=AZWYqj4pjRwqlRHYKvJcvs4zb8YzMTSVZ_E7QjxO158p_1KKJkYky7TeCwRw4kc0ZrHN9yJ0x4fnVpmmTOiiOGnjIw5FDFJ9OoHVi5-4u9RwTA&__tn__=q)  
 [www stranky Katiky Kai](https://www.liecivatantra.sk/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBEwQmtMT2lTdkhWd2lBYUJVeQEevHhvdGNTQB98JHjyYK2kJj_xiUTN8E1BAXrUrkYaKuCtRYXChyWIV-n-nbE_aem_8pIm6o8tGz5qjVSDe-QzxQ)
 
 ---
 
-### Cena Retreatu:
+<div class="md-title">
+Cena Retreatu:
+</div>
 
-|                                       |    | CZK   |    | EUR |
-|-----------------------------------------------|----|-------|----|-----|
+|                                               |    | CZK    |    | EUR |
+|-----------------------------------------------|----|--------|----|-----|
 | Retreat - základní cena                       | -> | 11,990 | -> | 510 |
 | Retreat - Cena při platbě do 31.1.2026        | -> | 11,490 | -> | 490 |
 | Retreat - Cena za osobu při přihlášení v páru | -> | 11,490 | -> | 490 |
-| Ubytování a vegetariánská/veganská strava     | -> | 5,750 | -> | 250 |
+| Ubytování a vegetariánská/veganská strava     | -> | 5,750  | -> | 250 |
 
+</div>
