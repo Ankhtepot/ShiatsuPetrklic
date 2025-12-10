@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {Router} from '@angular/router';
-import {QuoteData} from '../../Models/quote-data';
+import {QuoteData} from '../../shared/models/quote-data';
 import {LanguageService} from '../../services/language.service';
 import {cutAtLastWholeWord} from '../../shared/utilities/string-extensions';
 import {T} from '../../shared/constants/text.tokens';

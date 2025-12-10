@@ -87,3 +87,5 @@ function generateColors() {
 // Watch file and regenerate on change
 chokidar.watch(INPUT_SCSS).on('change', generateColors);
 generateColors();
+
+// README: Run: npm run watch:colors

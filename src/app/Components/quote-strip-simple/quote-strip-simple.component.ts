@@ -1,6 +1,6 @@
 import {Component, computed, inject, Input} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {QuoteData} from '../../Models/quote-data';
+import {QuoteData} from '../../shared/models/quote-data';
 import {LanguageService} from '../../services/language.service';
 import {T} from '../../shared/constants/text.tokens';
 

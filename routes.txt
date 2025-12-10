@@ -6,6 +6,8 @@
 /cs/services
 /cs/pricing
 /cs/testimonials
+/cs/events
+/cs/events/detail
 /cs/not-found
 
 /en/home
@@ -14,4 +16,6 @@
 /en/services
 /en/pricing
 /en/testimonials
+/en/events
+/en/events/detail
 /en/not-found

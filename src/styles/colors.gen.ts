@@ -13,7 +13,11 @@ export const AppColors = {
   orangeGradientStart: '#ff8c00',
   orangeGradientEnd: '#ffb464',
   orangeSoft: '#ffd8b0',
+  lightBlue: '#add8e6',
+  lightPurple: '#c2b1c8',
   glassWhite: 'rgba(255, 255, 255, 0.75)',
   glassWhiteStrong: 'rgba(255, 255, 255, 0.9)',
   glassWhiteSoft: 'rgba(255, 255, 255, 0.6)',
+  tabText: 'black',
+  tabBg: '#c2b1c8',
 };

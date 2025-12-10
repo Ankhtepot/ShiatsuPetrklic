@@ -8,6 +8,7 @@ import {TestimonialsComponent} from './pages/testimonials/testimonials.component
 import {PricingComponent} from './pages/pricing/pricing.component';
 import {LanguageRedirectComponent} from './Components/language-redirect.component';
 import {EventsComponent} from './pages/events/events.component';
+import {DetailComponent} from './pages/events/detail/detail.component';
 
 export const routerOptions: ExtraOptions = {
   onSameUrlNavigation: 'reload',
@@ -23,6 +24,7 @@ const localizedRoutes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'services', component: ServicesComponent},
   {path: 'events', component: EventsComponent},
+  {path: 'events/details/:id', component: DetailComponent},
   {path: 'pricing', component: PricingComponent},
   {path: 'testimonials', component: TestimonialsComponent},
   {path: 'not-found', component: PageNotFoundComponent},

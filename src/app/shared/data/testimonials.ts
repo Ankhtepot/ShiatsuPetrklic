@@ -1,4 +1,4 @@
-import {QuoteData} from '../../Models/quote-data';
+import {QuoteData} from '../models/quote-data';
 
 const changeAfter = 7000;
 const lengthBeforeEllipsis = 300;
