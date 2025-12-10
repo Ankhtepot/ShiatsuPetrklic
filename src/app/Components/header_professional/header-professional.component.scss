@@ -20,9 +20,10 @@ $background-color: 255;
     margin-right: 2em;
     font-size: 36px;
     font-weight: bolder;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Dosis', serif;
     text-shadow: 3px 3px 3px rgba(0,0,0,0.4);
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
+    //text-transform: uppercase;
   }
 
   .logo {
@@ -75,7 +76,6 @@ $background-color: 255;
     transition: color 0.3s, transform 0.3s;
     margin-left: 1rem;
     border-radius: 50%;
-    //border: #ECEFF1 solid 1px;
     height: 2em;
 
     &::before {
@@ -109,7 +109,8 @@ $background-color: 255;
 
   a.active {
     background-color: rgba($background-color, $background-color, $background-color, 0.4);
-    transition: color 0.3s, font-size 0.3s, letter-spacing 0.3s;
+    //transition: color 0.3s, font-size 0.3s, letter-spacing 0.3s;
+    transition: all .5s;
     color: black !important;
 
     .text {

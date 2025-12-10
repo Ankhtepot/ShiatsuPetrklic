@@ -37,21 +37,20 @@
       margin-top: 0.5em;
 
       li {
+        list-style: none;
         width: 100%;
-        //background-color: styles.$orange-gradient-end;
-        background-color: styles.$light-blue;
-        padding: 0.5em;
+        background-color: styles.$tab-bg;
+        padding: 0.5em 2em;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         transition: transform 0.2s ease;
         text-align: left;
-        //color: styles.$text-on-text_background;
-        color: styles.$deep-navy;
+        color: styles.$tab-text;
         font-weight: 700;
         font-size: 1.1rem;
 
         &:hover {
-          transform: translateY(-2px);
+          transform: translateY(-1px);
         }
       }
     }

@@ -12,14 +12,13 @@
   border-spacing: 0;
 
   th, td {
-    //background-color: $orange-soft;
-    background-color: $light-blue;
+    background-color: $tab-bg;
     border: 1px solid $orange-gradient-start;
     padding: 1rem;
     border-radius: 0.5rem;
     font-size: 1rem;
     font-weight: 500;
-    color: $deep-navy;
+    color: $tab-text;
   }
 
   // Remove styling for <th>

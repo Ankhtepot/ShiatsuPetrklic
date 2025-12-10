@@ -1,8 +1,10 @@
 @use '../../../../src/styles/colors' as *;
 
 .quote-strip {
-  background-color: #b95c1b;
-  color: #fff;
+  //background-color: #b95c1b;
+  background-color: $light-purple;
+  color: #000;
+  font-weight: 400;
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); // soft depth
@@ -30,7 +32,8 @@
     padding-left: 1rem;
 
     .blockquote-footer {
-      color: #ffd8b0;
+      //color: #ffd8b0;
+      color: $text-on-orange;
       font-size: 1.1rem;
       font-weight: 600;
       margin-top: 0.5rem;
