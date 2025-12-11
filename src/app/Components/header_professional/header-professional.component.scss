@@ -199,6 +199,18 @@ $background-color: 255;
   }
 }
 
+@media (max-width: 950px) {
+  .header {
+    height: 7em;
+  }
+
+  .links {
+    padding: 1em 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     height: 100px;

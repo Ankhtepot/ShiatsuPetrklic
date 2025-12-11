@@ -2,6 +2,11 @@
   type="button"
   [ngStyle]="styles()"
   class="custom-button"
+  [disabled]="disabled()"
 >
-  {{ label }}
+  @if(label) {
+    {{ label }}
+  }  @else {
+    <ng-content></ng-content>
+  }
 </button>

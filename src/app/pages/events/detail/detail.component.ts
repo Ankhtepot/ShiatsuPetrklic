@@ -1,19 +1,20 @@
 import {
   AfterViewInit,
   Component,
+  computed,
   effect,
   OnInit,
   signal,
   ViewChild,
-  WritableSignal
 } from '@angular/core';
 import {EventCardComponent} from '../../../Components/event-card/event-card.component';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {DEFAULT_EVENT_DATA, EventData, INVALID_ID} from '../../../shared/models/event-data';
 import {ContentCardComponent} from '../../../Components/content-card/content-card.component';
-import {getEventById} from '../../../shared/data/events';
+import {getEvents} from '../../../shared/data/events';
 import {QuoteStripSimpleComponent} from '../../../Components/quote-strip-simple/quote-strip-simple.component';
 import {QuoteData} from '../../../shared/models/quote-data';
+import {EventDetailNavigationComponent, ItemsData} from './event-detail-navigation/event-detail-navigation.component';
 
 const INVALID_QUOTE: QuoteData = {
   author: 'Shiatsu Petrklic',
@@ -26,7 +27,8 @@ const INVALID_QUOTE: QuoteData = {
   imports: [
     EventCardComponent,
     ContentCardComponent,
-    QuoteStripSimpleComponent
+    QuoteStripSimpleComponent,
+    EventDetailNavigationComponent
   ],
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.scss'],
@@ -35,21 +37,54 @@ const INVALID_QUOTE: QuoteData = {
 export class DetailComponent implements OnInit, AfterViewInit {
   @ViewChild('eventCard') eventCard!: EventCardComponent;
 
-  isEventValid: WritableSignal<boolean> = signal<boolean>(false);
-  event: WritableSignal<EventData> = signal<EventData>(DEFAULT_EVENT_DATA);
-  readonly invalidQuote: QuoteData = INVALID_QUOTE
+  // base data
+  readonly allEvents: EventData[] = getEvents().sort(
+    (a, b) => a.date.getTime() - b.date.getTime()
+  );
 
-  constructor(private route: ActivatedRoute,) {
-  }
+  // state
+  private currentId = signal<string | null>(null);
+  isEventValid = computed(() => {
+    const e = this.event();
+    return !!e && e.id !== INVALID_ID;
+  });
+
+  // derived event
+  event = computed<EventData>(() => {
+    const id = this.currentId();
+    if (!id) {
+      return DEFAULT_EVENT_DATA;
+    }
+    const found = this.allEvents.find(e => e.id === id);
+    return found ?? DEFAULT_EVENT_DATA;
+  });
+
+  // derived navigation data
+  itemsData = computed<ItemsData>(() => {
+    const id = this.currentId();
+    const idx = id
+      ? this.allEvents.findIndex(e => e.id === id)
+      : -1;
+
+    return {
+      currentIndex: idx,
+      totalItems: this.allEvents.length
+    };
+  });
+
+  readonly invalidQuote: QuoteData = INVALID_QUOTE;
+
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    let id = this.route.snapshot.params['id'];
-    console.log(id);
-    let event: EventData | undefined = getEventById(id);
-    if (event && event!.id !== INVALID_ID) {
-      this.isEventValid.set(true);
-      this.event.set(event);
-    }
+    this.route.paramMap.subscribe(params => {
+      const id = params.get('id');
+      console.log('searching for id', id);
+      this.currentId.set(id); // triggers recomputation of event & itemsData
+    });
   }
 
   ngAfterViewInit(): void {
@@ -59,9 +94,16 @@ export class DetailComponent implements OnInit, AfterViewInit {
   }
 
   private eventEffect = effect(() => {
-    console.log("Event effect runs.");
     if (this.event() && this.eventCard) {
       this.eventCard.setExpanded(true);
     }
-  })
+  });
+
+  onNewEventIdRequested(requestedIndex: number): void {
+    if (requestedIndex < 0 || requestedIndex >= this.allEvents.length) {
+      return;
+    }
+    const id = this.allEvents[requestedIndex].id;
+    this.router.navigate(['../', id], { relativeTo: this.route });
+  }
 }

@@ -91,5 +91,8 @@
   "close" : "Close",
   "events_anchor": "Events",
   "events_past": "Past Events",
-  "events_upcoming": "Upcoming Events"
+  "events_upcoming": "Upcoming Events",
+  "events_next": "Next Event",
+  "events_previous": "Previous Event",
+  "events_back_to_events": "Back to Events Overview"
 }

@@ -1,4 +1,6 @@
 <app-content-card [width]="'60%'" [backgroundOpacity]="0.95">
+ <app-event-detail-navigation [itemsData]="itemsData()" (requestedIndexEmitted)="onNewEventIdRequested($event)"/>
+  <div class="separator"></div>
   @if (isEventValid()) {
     <app-event-card #eventCard [event]="event()"/>
   } @else {
@@ -7,4 +9,6 @@
       [quote]="invalidQuote"
     />
   }
+  <div class="separator"></div>
+  <app-event-detail-navigation [itemsData]="itemsData()" (requestedIndexEmitted)="onNewEventIdRequested($event)"/>
 </app-content-card>
