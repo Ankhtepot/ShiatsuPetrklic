@@ -91,5 +91,8 @@
   "close" : "Zavřít",
   "events_anchor": "Události",
   "events_upcoming": "Nadcházející události",
-  "events_past": "Minulé události"
+  "events_past": "Minulé události",
+  "events_next": "Následující událost",
+  "events_previous": "Předchozí událost",
+  "events_back_to_events": "Zpět na přehled událostí"
 }
