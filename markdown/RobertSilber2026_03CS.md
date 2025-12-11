@@ -3,9 +3,9 @@
 Vědomá Smyslnost a Moudrost Těla - Retreat
 </div> 
 
-Robert Silber z Hawaie zavítá po letech opět do České Republiky!
+Robert Silber z Havaie zavítá po letech opět do České Republiky!
 
-V bezpečné a důvěryhodné atmosféře se naučíš rozlišovat, co skutečně chceš, od toho, co vychází z tlaku okolí nebo ze strachu. Objevíš, jak přijmout svou pravdu a žít v souladu s ní.
+V bezpečné a důvěrné atmosféře se naučíš rozlišovat, co skutečně chceš, od toho, co vychází z tlaku okolí nebo ze strachu. Objevíš, jak přijmout svou pravdu a žít v souladu s ní.
 
 Součástí programu je i odpočinek, vnitřní reflexe, psaní a sdílení prožitků, které ti pomohou přenést zkušenosti do každodenního života.
 
@@ -35,6 +35,9 @@ Zaměřovat se budeme na tři hlavní oblasti:
 
 Tento retreat se koná v anglickém jazyce s překladem do češtiny.﻿
 
+**Datum konání:** <br>
+17. - 22. března 2026
+
 **Registrace zde:**  
 [Odkaz na registraci](https://docs.google.com/forms/d/e/1FAIpQLSfPVVXd8q44gZiwA-T7OgPeQ_6w0GpICmeyfQPLZTXa0UDIKw/viewform?usp=header&fbclid=IwZXh0bgNhZW0CMTAAYnJpZBEwQmtMT2lTdkhWd2lBYUJVeQEek2ztCx0Bg9oDhBYDtO8HuEZf7yGVf6cUe3HFc--b-S1914x4o5JvdKTkn7Y_aem_VNS9qW4FPjEE6a0VvCb3Ng)
 
@@ -43,7 +46,7 @@ Těšíme se na vás!
 Pro více informací pište na: [petrkliczavodny@gmail.com](mailto:petrkliczavodny@gmail.com)  
 Detaily k pobytu zašleme v e-mailu.
 
-**Více informací o Roberu Silberovi:**  
+**Více informací o Robertu Silberovi:**  
 [Robert Silber](https://www.conscioussensuality.com/about?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBEwQmtMT2lTdkhWd2lBYUJVeQEezeXNuKcxrrnOimIUq5LxDfVnMtSTmzDAz_Wp98_L-BTDUabZVtdi9KlvcCA_aem_PsIArhYvaMxk0CDcNmbbPg)
 
 **Více informací o Katika Kai:** <br>
