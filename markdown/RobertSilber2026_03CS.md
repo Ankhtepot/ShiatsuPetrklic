@@ -3,7 +3,7 @@
 Vědomá Smyslnost a Moudrost Těla - Retreat
 </div> 
 
-Robert Silber z Havaie zavítá po letech opět do České Republiky!
+Robert Silber z Havaje zavítá po letech opět do České Republiky!
 
 V bezpečné a důvěrné atmosféře se naučíš rozlišovat, co skutečně chceš, od toho, co vychází z tlaku okolí nebo ze strachu. Objevíš, jak přijmout svou pravdu a žít v souladu s ní.
 
