@@ -31,7 +31,8 @@ You will practice open feedback, joint decision-making, and recognizing your own
 This workshop is held in English with translation into Czech.﻿
 
 **Register here:**  
-[Registration](https://docs.google.com/forms/d/e/1FAIpQLSfPVVXd8q44gZiwA-T7OgPeQ_6w0GpICmeyfQPLZTXa0UDIKw/viewform?usp=header&fbclid=IwZXh0bgNhZW0CMTAAYnJpZBEwQmtMT2lTdkhWd2lBYUJVeQEek2ztCx0Bg9oDhBYDtO8HuEZf7yGVf6cUe3HFc--b-S1914x4o5JvdKTkn7Y_aem_VNS9qW4FPjEE6a0VvCb3Ng)
+Currently we are doing some changes in registration form, will be available as soon as possible!
+[//]: # ([Registration]&#40;https://docs.google.com/forms/d/e/1FAIpQLSfPVVXd8q44gZiwA-T7OgPeQ_6w0GpICmeyfQPLZTXa0UDIKw/viewform?usp=header&fbclid=IwZXh0bgNhZW0CMTAAYnJpZBEwQmtMT2lTdkhWd2lBYUJVeQEek2ztCx0Bg9oDhBYDtO8HuEZf7yGVf6cUe3HFc--b-S1914x4o5JvdKTkn7Y_aem_VNS9qW4FPjEE6a0VvCb3Ng&#41;)
 
 Looking forward to seeing you!
 
