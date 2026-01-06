@@ -50,10 +50,10 @@ Details about the stay will be sent by email.
 
 ### Price summary:
 
-|                                                |    | CZK   |    | EUR |
-|------------------------------------------------|----|-------|----|-----|
-| Retreat - Basic Price                          | -> | 11,990 | -> | 510 |
-| Retreat - Price when paid before 31.1.2026     | -> | 11,490 | -> | 490 |
-| Retreat - For a person when registering as a couple | -> | 11,490 | -> | 490 |
-| Accomodation and vegetarian/vegan meals        | -> | 5,750 | -> | 250 |
+|                                                |    | EUR |
+|------------------------------------------------|----|-----|
+| Retreat - Basic Price                          | -> | 690 |
+| Retreat - Price when paid before 31.1.2026     | -> | 650 |
+| Retreat - For a person when registering as a couple | -> | 650 |
+| Accomodation and vegetarian/vegan meals        | -> | 250 |
 
