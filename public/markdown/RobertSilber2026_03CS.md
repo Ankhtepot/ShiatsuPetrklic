@@ -39,7 +39,7 @@ Tento retreat se koná v anglickém jazyce s překladem do češtiny.﻿
 17. - 22. března 2026
 
 **Registrace zde:**  
-[Odkaz na registraci](https://docs.google.com/forms/d/e/1FAIpQLSfPVVXd8q44gZiwA-T7OgPeQ_6w0GpICmeyfQPLZTXa0UDIKw/viewform?usp=header&fbclid=IwZXh0bgNhZW0CMTAAYnJpZBEwQmtMT2lTdkhWd2lBYUJVeQEek2ztCx0Bg9oDhBYDtO8HuEZf7yGVf6cUe3HFc--b-S1914x4o5JvdKTkn7Y_aem_VNS9qW4FPjEE6a0VvCb3Ng)
+[Odkaz na registraci](https://smartemailinglinks.seurl.cz/public/web-forms-v2/display-form/7806-ckuywuv8fr3gpjwjpnk3ngsm50du4jidxi3yx8moci8ytjm7p8b6nvy83rcmgdgqv4nf5v028d4ioef7bo9x18zhapvne3sdv6ng)
 
 Těšíme se na vás!
 
