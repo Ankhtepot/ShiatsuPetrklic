@@ -7,7 +7,6 @@ import {
   inject,
   ViewChild, ElementRef
 } from '@angular/core';
-import {CommonModule} from '@angular/common';
 import {Router} from '@angular/router';
 import {QuoteData} from '../../shared/models/quote-data';
 import {LanguageService} from '../../services/language.service';
@@ -19,7 +18,7 @@ import {ButtonReadMoreComponent} from '../button-read-more/button-read-more.comp
 @Component({
   selector: 'app-quote-strip',
   standalone: true,
-  imports: [CommonModule, TextPipe, ButtonReadMoreComponent],
+  imports: [TextPipe, ButtonReadMoreComponent],
   templateUrl: './quote-strip.component.html',
   styleUrls: ['./quote-strip.component.scss']
 })

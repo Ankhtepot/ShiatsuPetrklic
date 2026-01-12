@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {CommonModule} from '@angular/common';
 import {ContentCardComponent} from '../../Components/content-card/content-card.component';
 import {EPages} from '../../services/navigation-link.service';
 import {SeoService} from '../../services/seo.service';
@@ -12,7 +11,7 @@ import {TextPipe} from '../../pipes/text.pipe';
 
 @Component({
   selector: 'app-services',
-  imports: [CommonModule, ContentCardComponent, EventCardComponent, TextPipe],
+  imports: [ContentCardComponent, EventCardComponent, TextPipe],
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.scss'],
   standalone: true
