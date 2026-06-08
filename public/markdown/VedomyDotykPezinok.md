@@ -3,7 +3,7 @@
 Tantrický večer – Vedomý dotyk
 </div>
 <div class="md-image">
-<img src="images/events/VedomyDotykPezinok.jpg" alt="Obrazek udalosti" width="300" height="400">
+<img src="images/events/VedomyDotykPezinok.webp" alt="Obrazek udalosti" width="300" height="400">
 </div>
 <br><br>
 <div class="md-post-event-text">

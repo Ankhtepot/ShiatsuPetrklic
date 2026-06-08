@@ -4,7 +4,7 @@ import {
   input,
   InputSignal,
   computed,
-  signal
+  signal, OnInit
 } from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DEFAULT_EVENT_DATA, EventData} from '../../shared/models/event-data';
@@ -24,8 +24,9 @@ import {ActivatedRoute, Router} from '@angular/router';
   templateUrl: './event-card.component.html',
   styleUrls: ['./event-card.component.scss']
 })
-export class EventCardComponent {
+export class EventCardComponent implements OnInit {
   event: InputSignal<EventData> = input(DEFAULT_EVENT_DATA);
+  expanded = input(false);
 
   isExpanded = signal(false);
 
@@ -57,6 +58,10 @@ export class EventCardComponent {
     private router: Router,
     private route: ActivatedRoute
   ) {}
+
+  ngOnInit(): void {
+    this.isExpanded.set(this.expanded());
+  }
 
   openDetailPage() {
     this.router.navigate(['details', this.event().id], { relativeTo: this.route });

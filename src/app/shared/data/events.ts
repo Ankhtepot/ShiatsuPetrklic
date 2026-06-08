@@ -158,8 +158,8 @@ const events: EventData[] = [
       'Vítaní sú všetci – bez ohľadu na skúsenosti, vek či pohlavie.\n',
     showsMarkdown: true,
     markdownCZContentPath: '/markdown/VedomyDotykPezinok.md',
-    imageUrl: 'images/events/VedomyDotykPezinok.jpg',
-    miniatureUrl: 'images/events/VedomyDotykPezinok.jpg',
+    imageUrl: 'images/events/VedomyDotykPezinok.webp',
+    miniatureUrl: 'images/events/VedomyDotykPezinok.webp',
     postEventTextCs: 'Večer proběhl v příjemné atmosféře, účastníci si užili blízkost a doteky v bezpečném prostředí. Bylo to krásné setkání plné důvěry a respektu.',
-  }
+  },
 ];

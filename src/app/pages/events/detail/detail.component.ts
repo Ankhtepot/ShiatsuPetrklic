@@ -13,14 +13,8 @@ import {DEFAULT_EVENT_DATA, EventData, INVALID_ID} from '../../../shared/models/
 import {ContentCardComponent} from '../../../Components/content-card/content-card.component';
 import {getEvents} from '../../../shared/data/events';
 import {QuoteStripSimpleComponent} from '../../../Components/quote-strip-simple/quote-strip-simple.component';
-import {QuoteData} from '../../../shared/models/quote-data';
+import {INVALID_QUOTE, QuoteData} from '../../../shared/models/quote-data';
 import {EventDetailNavigationComponent, ItemsData} from './event-detail-navigation/event-detail-navigation.component';
-
-const INVALID_QUOTE: QuoteData = {
-  author: 'Shiatsu Petrklic',
-  csText: 'Nastala chybička, tato událost neumí zobrazit své detailní informace.',
-  enText: 'Mistake were made, this event failed to show its detail.'
-}
 
 @Component({
   selector: 'app-detail.component',

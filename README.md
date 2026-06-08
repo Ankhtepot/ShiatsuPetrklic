@@ -30,7 +30,7 @@ Build artifacts are stored in `dist/shiatsu-brno/browser`.
 
 ## Deployment
 
-Deploy to GitHub Pages:
+Deploy to GitHub Pages (with build of the artifacts):
 
 ```bash
 npm run deploy

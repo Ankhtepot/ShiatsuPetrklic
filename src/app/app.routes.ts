@@ -9,6 +9,7 @@ import {PricingComponent} from './pages/pricing/pricing.component';
 import {LanguageRedirectComponent} from './Components/language-redirect.component';
 import {EventsComponent} from './pages/events/events.component';
 import {DetailComponent} from './pages/events/detail/detail.component';
+import {DolinkaSummerComponent} from './pages/dolinka-summer/dolinka-summer';
 
 export const routerOptions: ExtraOptions = {
   onSameUrlNavigation: 'reload',
@@ -27,6 +28,9 @@ const localizedRoutes: Routes = [
   {path: 'events/details/:id', component: DetailComponent},
   {path: 'pricing', component: PricingComponent},
   {path: 'testimonials', component: TestimonialsComponent},
+  // ******* Special Temp Paths (hidden, only direct link to them) ******
+  {path: 'dolinka-summer', component: DolinkaSummerComponent},
+  // ********************************************************************
   {path: 'not-found', component: PageNotFoundComponent},
   {path: '**', redirectTo: 'not-found'}
 ];
