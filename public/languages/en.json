@@ -92,7 +92,11 @@
   "events_anchor": "Events",
   "events_past": "Past Events",
   "events_upcoming": "Upcoming Events",
-  "events_next": "Next Event",
-  "events_previous": "Previous Event",
-  "events_back_to_events": "Back to Events Overview"
+   "events_next": "Next Event",
+   "events_previous": "Previous Event",
+   "events_back_to_events": "Back to Events Overview",
+   "event_subscribe": "Subscribe",
+   "event_subscribe_confirmation": "Do you want to subscribe to the event?",
+   "confirmation_yes": "Yes",
+   "confirmation_no": "No"
 }

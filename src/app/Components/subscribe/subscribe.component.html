@@ -1,0 +1,99 @@
+<div class="subscribe-wrapper">
+  <app-generic-button
+    (click)="onSubscribeClick()"
+    [style]="buttonStyles"
+    [backgroundColor]="AppColors.lightPurple"
+  >
+    <span>{{ T.event_subscribe | text }}</span>
+  </app-generic-button>
+
+  @if (isConfirmationVisible()) {
+    <app-modal (closeModal)="onConfirmationCancelled()">
+      <app-confirmation-popup
+        (confirmed)="onConfirmationConfirmed()"
+        (cancelled)="onConfirmationCancelled()"
+      >
+        <form #subscribeForm="ngForm" novalidate class="subscription-form">
+          <p class="subscription-message">
+            {{ T.event_subscribe_confirmation | text }}<br/>
+            <strong>{{ eventTitle() }}</strong>
+          </p>
+
+          <div class="form-fields">
+            <div class="form-group">
+              <label for="sub-name" class="form-label">{{ T.input_name | text }}</label>
+              <input
+                id="sub-name"
+                name="sub_name"
+                [(ngModel)]="formData.name"
+                #subName="ngModel"
+                required
+                minlength="3"
+                class="form-control"
+                [ngClass]="{ 'is-invalid': subName.invalid && subName.touched }"
+                [disabled]="isSending()"
+              />
+              @if (subName.errors?.['required'] && subName.touched) {
+                <div class="invalid-feedback">
+                  {{ T.input_name_required | text }}
+                </div>
+              }
+              @if (subName.errors?.['minlength'] && subName.touched) {
+                <div class="invalid-feedback">
+                  {{ T.input_name_length | text }}
+                </div>
+              }
+            </div>
+
+            <div class="form-group">
+              <label for="sub-email" class="form-label">{{ T.input_email | text }}</label>
+              <input
+                id="sub-email"
+                type="email"
+                name="sub_email"
+                [(ngModel)]="formData.email"
+                #subEmail="ngModel"
+                required
+                email
+                class="form-control"
+                [ngClass]="{ 'is-invalid': subEmail.invalid && subEmail.touched }"
+                [disabled]="isSending()"
+              />
+              @if (subEmail.errors?.['required'] && subEmail.touched) {
+                <div class="invalid-feedback">
+                  {{ T.input_email_required | text }}
+                </div>
+              }
+              @if (subEmail.errors?.['email'] && subEmail.touched) {
+                <div class="invalid-feedback">
+                  {{ T.input_email_invalid | text }}
+                </div>
+              }
+            </div>
+
+            <div class="form-group">
+              <label for="sub-phone" class="form-label">{{ T.phone_label | text }}</label>
+              <input
+                id="sub-phone"
+                type="tel"
+                name="sub_phone"
+                [(ngModel)]="formData.phone"
+                #subPhone="ngModel"
+                required
+                class="form-control"
+                [ngClass]="{ 'is-invalid': subPhone.invalid && subPhone.touched }"
+                [disabled]="isSending()"
+              />
+              @if (subPhone.errors?.['required'] && subPhone.touched) {
+                <div class="invalid-feedback">
+                  {{ T.phone_label | text }} {{ T.input_name_required | text | lowercase }}
+                </div>
+              }
+            </div>
+          </div>
+        </form>
+      </app-confirmation-popup>
+    </app-modal>
+  }
+</div>
+

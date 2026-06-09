@@ -2,6 +2,11 @@
   <div class="separator"></div>
   @if (isEventValid()) {
     <app-event-card #eventCard [event]="event()" [expanded]="true"/>
+    <app-subscribe
+      [eventTitle]="eventTitle()"
+      [eventId]="event()?.id || 'invalid eventId'"
+      (subscribed)="onSubscribe()"
+    />
   } @else {
     <app-quote-strip-simple
       [id]="'noValidEvent'"
