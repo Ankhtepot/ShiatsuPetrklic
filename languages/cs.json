@@ -92,7 +92,12 @@
   "events_anchor": "Události",
   "events_upcoming": "Nadcházející události",
   "events_past": "Minulé události",
-  "events_next": "Následující událost",
-  "events_previous": "Předchozí událost",
-  "events_back_to_events": "Zpět na přehled událostí"
+   "events_next": "Následující událost",
+   "events_previous": "Předchozí událost",
+   "events_back_to_events": "Zpět na přehled událostí",
+   "event_subscribe": "Přihlásit se",
+   "event_subscribe_confirmation": "Přeješ si přihlásit k události?",
+   "confirmation_yes": "Ano",
+   "confirmation_no": "Ne",
+   "optional": "volitelné"
 }

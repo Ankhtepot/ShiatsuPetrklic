@@ -4,72 +4,66 @@ Léto v Dolince 2026
 </div> 
 
 <div class="md-image">
-<img src="images/events/miniatures/dolinka.webp" alt="Obrazek udalosti" width="480" height="300">
+<img src="images/events/miniatures/dolinka.webp" alt="Obrázek události" width="480" height="300">
 </div>
 <br>
 
-Robert Silber z Havaje zavítá po letech opět do České Republiky!
+Přijeďte si odpočinout, potkat se a hrát si.
 
-V bezpečné a důvěrné atmosféře se naučíš rozlišovat, co skutečně chceš, od toho, co vychází z tlaku okolí nebo ze strachu. Objevíš, jak přijmout svou pravdu a žít v souladu s ní.
+Často slýchám na workshopech od lidí, že je jim vlastně jedno, na co jedou, a že je pro ně cenné potkat se
+s přáteli a poznat nové lidi.
 
-Součástí programu je i odpočinek, vnitřní reflexe, psaní a sdílení prožitků, které ti pomohou přenést zkušenosti do každodenního života.
+Toto setkání je inspirováno touto myšlenkou - potkat se, poznat třeba nové lidi a setkat se s těmi, které už znáš.
 
-Retreat je veden tak, aby posílil tvou vnitřní odolnost, sebevědomí a schopnost ladit se na sebe a na druhé.
+Posdílet mezi sebou, co nás zajímá a co je třeba vyslovit, experimentovat, vyzkoušet něco nového, prostě si hrát.
 
-Díky tomu zažiješ větší pocit bezpečí a svobody ve vztazích, především pak v oblasti vlastní intimity.
+Mohu vystavět program na celé setkání, ale moc by mě potěšilo, kdybychom program vytvořili spolu. Třeba si vyzkoušeli novou lekci,
+nebo ostatním přinesli to, co je pro vás důležité.
+
+Co přináším já, je umění doteku, tanec a vázání Shibari.
+
+To důležité je, že je pro mě nejdůležitější dobrá společnost, hloubka a hravost. Pokud jste dostali pozvání, pak je to proto,
+že vás cítím v souladu s touto ideou 🙂 
+
+Nezvu vás na workshop ani na organizovanou akci do poslední minuty, ale na příjemný odpočinek a setkání s podobně naladěnými lidmi ❤
+
+**Datum:**<br>
+Hlavní akce se bude konat od pátku <b>21. 8.</b> do neděle <b>23. 8.</b>, ale pokud byste chtěli přijet dřív nebo zůstat déle, není problém, jen mi dejte vědět.
+Já plánuji pobyt v Dolince od 20. do pondělí 24., protože to tam mám moc rád 🙂
+
+
+**Místo:**<br> 
+Na setkání nás přivítá nádherné centrum Dolinka blízko Kozelníku či Banské Štiavnice.
+<br>
+<div class="md-image">
+<img src="images/events/dolinka_mapa.png" alt="Mapa cesty k Dolince" width="300" height="300">
+</div>
+
+**Ubytování:**<br> 
+Centrum poskytuje různé možnosti ubytování. Ať už v karavanech, nebo v parádních pokojích pro více lidí.
+<b>Ceny ubytování:</b> 
+- karavan 10 EUR/noc
+- pokoj 25 EUR/noc
 <br>
 
-- lépe poznáš a budeš respektovat své hranice
-- dokážeš rozlišit svá skutečná přání od studu
-- lépe budeš odolávat manipulaci a tlaku na přizpůsobení se
+**Strava:**<br>
+Co si přivezeme, to budeme mít. Na místě se dá vařit, krájet, cokoliv - nástroje tam jsou. 
 
-Robert a Katika tě provedou praktickou a zároveň hlubokou cestou, která ti pomůže víc se propojit se sebou samým i s ostatními. Společně vytvoří prostor pro zdravé, respektující vztahy založené na vědomí, důvěře a autenticitě.
-
-Zaměřovat se budeme na tři hlavní oblasti:
-
-- **Vědomí těla**
-  Prostřednictvím meditací a rituálů se naučíš lépe vnímat své tělo, pocity a smyslové prožitky.
-
-
-- **Emoční uvědomění**
-  Poznáš, jak lépe rozumět svým emocím, potřebám a hranicím – a jak s nimi vědomě pracovat.
-
-
-- **Vědomá komunikace**
-  Procvičíš si otevřenou zpětnou vazbu, společné rozhodování a rozpoznávání vlastních přání v kontaktu s ostatními.
-
-Tento retreat se koná v anglickém jazyce s překladem do češtiny.﻿
-
-**Datum konání:** <br>
-17. - 22. března 2026
-
-**Registrace zde:**  
-[Odkaz na registraci](https://smartemailinglinks.seurl.cz/public/web-forms-v2/display-form/7806-ckuywuv8fr3gpjwjpnk3ngsm50du4jidxi3yx8moci8ytjm7p8b6nvy83rcmgdgqv4nf5v028d4ioef7bo9x18zhapvne3sdv6ng)
-
-Těšíme se na vás!
-
-Pro více informací pište na: [petrkliczavodny@gmail.com](mailto:petrkliczavodny@gmail.com)  
-Detaily k pobytu zašleme v e-mailu.
-
-**Více informací o Robertu Silberovi:**  
-[Robert Silber](https://www.conscioussensuality.com/about?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBEwQmtMT2lTdkhWd2lBYUJVeQEezeXNuKcxrrnOimIUq5LxDfVnMtSTmzDAz_Wp98_L-BTDUabZVtdi9KlvcCA_aem_PsIArhYvaMxk0CDcNmbbPg)
-
-**Více informací o Katika Kai:** <br>
-[Hlavní www stránka Katiky Kai](https://www.katika-kai.com/) <br>
-[Facebook Katiky Kai](https://www.facebook.com/katika.kai?__cft__[0]=AZWYqj4pjRwqlRHYKvJcvs4zb8YzMTSVZ_E7QjxO158p_1KKJkYky7TeCwRw4kc0ZrHN9yJ0x4fnVpmmTOiiOGnjIw5FDFJ9OoHVi5-4u9RwTA&__tn__=q)  
-[www stranky Katiky Kai](https://www.liecivatantra.sk/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBEwQmtMT2lTdkhWd2lBYUJVeQEevHhvdGNTQB98JHjyYK2kJj_xiUTN8E1BAXrUrkYaKuCtRYXChyWIV-n-nbE_aem_8pIm6o8tGz5qjVSDe-QzxQ)
+**Cena:**<br>
+Cena je jen za nájem objektu. Rozpočítá se mezi zúčastněné, odhadem 50-75 EUR za osobu.
 
 ---
 
-<div class="md-title">
-Cena Retreatu:
-</div>
+V centru je sprcha, záchod i wi-fi.
 
-|                                               |    | CZK    |    | EUR |
-|-----------------------------------------------|----|--------|----|-----|
-| Retreat - základní cena                       | -> | 11,990 | -> | 510 |
-| Retreat - Cena při platbě do 31.1.2026        | -> | 11,490 | -> | 490 |
-| Retreat - Cena za osobu při přihlášení v páru | -> | 11,490 | -> | 490 |
-| Ubytování a vegetariánská/veganská strava     | -> | 5,750  | -> | 250 |
+Jako bonus je možnost ochutnat místní mléko, kefír, sýr a tvaroh, když zrovna je 😁
+
+Dotazy prosím na mě 😉
+
+<div class="md-h2-center"><b>
+Moc rád se s vámi uvidím v Dolince a těším se na společně strávený čas ❤
+</b></div>
+
+
 
 </div>
