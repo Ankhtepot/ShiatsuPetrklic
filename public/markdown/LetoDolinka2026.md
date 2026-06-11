@@ -27,6 +27,9 @@ To důležité je, že je pro mě nejdůležitější dobrá společnost, hloubk
 
 Nezvu vás na workshop ani na organizovanou akci do poslední minuty, ale na příjemný odpočinek a setkání s podobně naladěnými lidmi ❤
 
+**Děti:**<br>
+V Dolince žijí 4 děti ve věku asi 3–10 let. Pokud máte děti a chcete je vzít sebou, je to naprosto možné! Bude pro ně i program 🙂
+
 **Datum:**<br>
 Hlavní akce se bude konat od pátku <b>21. 8.</b> do neděle <b>23. 8.</b>, ale pokud byste chtěli přijet dřív nebo zůstat déle, není problém, jen mi dejte vědět.
 Já plánuji pobyt v Dolince od 20. do pondělí 24., protože to tam mám moc rád 🙂
@@ -52,8 +55,6 @@ Co si přivezeme, to budeme mít. Na místě se dá vařit, krájet, cokoliv - n
 **Cena:**<br>
 Cena je jen za nájem objektu. Rozpočítá se mezi zúčastněné, odhadem 50-75 EUR za osobu.
 
----
-
 V centru je sprcha, záchod i wi-fi.
 
 Jako bonus je možnost ochutnat místní mléko, kefír, sýr a tvaroh, když zrovna je 😁
@@ -63,7 +64,6 @@ Dotazy prosím na mě 😉
 <div class="md-h2-center"><b>
 Moc rád se s vámi uvidím v Dolince a těším se na společně strávený čas ❤
 </b></div>
-
 
 
 </div>
