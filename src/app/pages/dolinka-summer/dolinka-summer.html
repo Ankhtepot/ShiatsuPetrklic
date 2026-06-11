@@ -4,7 +4,7 @@
     <app-event-card #eventCard [event]="event()" [expanded]="true"/>
     <app-subscribe
       [eventTitle]="eventTitle()"
-      [eventId]="event()?.id || 'invalid eventId'"
+      [eventId]="event().id || 'invalid eventId'"
       (subscribed)="onSubscribe()"
     />
   } @else {

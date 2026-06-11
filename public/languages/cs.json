@@ -98,5 +98,6 @@
    "event_subscribe": "Přihlásit se",
    "event_subscribe_confirmation": "Přeješ si přihlásit k události?",
    "confirmation_yes": "Ano",
-   "confirmation_no": "Ne"
+   "confirmation_no": "Ne",
+   "optional": "volitelné"
 }

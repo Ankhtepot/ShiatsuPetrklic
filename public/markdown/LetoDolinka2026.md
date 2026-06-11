@@ -4,56 +4,64 @@ Léto v Dolince 2026
 </div> 
 
 <div class="md-image">
-<img src="images/events/miniatures/dolinka.webp" alt="Obrazek udalosti" width="480" height="300">
+<img src="images/events/miniatures/dolinka.webp" alt="Obrázek události" width="480" height="300">
 </div>
 <br>
 
-Prijedte si odpocinout, potkat se, hrat si.
+Přijeďte si odpočinout, potkat se a hrát si.
 
-Casto slysim na workshopech od lidi, ze je jim vlastne jedno na co jedou, ze je pro ne cenne se potkat
-s prateli a poznat lidi.
+Často slýchám na workshopech od lidí, že je jim vlastně jedno, na co jedou, a že je pro ně cenné potkat se
+s přáteli a poznat nové lidi.
 
-Toto setkani je inspirovano touto myslenkou - potkat se, poznat treba nove lidi a potkat se s temi, ktere uz znas.
+Toto setkání je inspirováno touto myšlenkou - potkat se, poznat třeba nové lidi a setkat se s těmi, které už znáš.
 
-Posdilet mezi sebou co nas zajima a co je treba vyslovit, experimentovat, zkusit neco noveho, proste si hrat.
+Posdílet mezi sebou, co nás zajímá a co je třeba vyslovit, experimentovat, vyzkoušet něco nového, prostě si hrát.
 
-Mohu vystavet program na cele setkani, ale moc by me potesilo, kdyby jsme program vytvorili spolu. Treba si vyzkouseli novou lekci,
-nebo ostatnim prinesli co je pro vas dulezite.
+Mohu vystavět program na celé setkání, ale moc by mě potěšilo, kdybychom program vytvořili spolu. Třeba si vyzkoušeli novou lekci,
+nebo ostatním přinesli to, co je pro vás důležité.
 
-Co prinasim ja je umeni doteku, tanec, vazani Shibari.
+Co přináším já, je umění doteku, tanec a vázání Shibari.
 
-Dulezite je pro to, ze nejdulezitejsi je pro me dobra spolecnost, hloubka a hravost. Pokud jste dostali pozvani, pak je to proto,
-ze vas citim v souladu s touto ideou 🙂 
+To důležité je, že je pro mě nejdůležitější dobrá společnost, hloubka a hravost. Pokud jste dostali pozvání, pak je to proto,
+že vás cítím v souladu s touto ideou 🙂 
 
-Nezvu vas na workshop, na organizvanou akci do posledni minuty, ale na prijemny oddych a setkani s podobne naladenymi lidmi ❤
+Nezvu vás na workshop ani na organizovanou akci do poslední minuty, ale na příjemný odpočinek a setkání s podobně naladěnými lidmi ❤
 
-**Datum:**
-Hlavni akce se bude konat od patku <b>21.8.</b> do nedele <b>23.8.</b>, ale pokud byste chteli prijet driv, nebo zustat dele, neni problem, jen mi dejte vedet.
-Ja planuji pobyt v Dolince od 20. do pondeli 24., protoze to tam mam moc rad 🙂
+**Datum:**<br>
+Hlavní akce se bude konat od pátku <b>21. 8.</b> do neděle <b>23. 8.</b>, ale pokud byste chtěli přijet dřív nebo zůstat déle, není problém, jen mi dejte vědět.
+Já plánuji pobyt v Dolince od 20. do pondělí 24., protože to tam mám moc rád 🙂
 
 
-**Misto:** 
-Na setkani nas privita nadherne centrum Dolinka blizko Kozelniku, ci Banske Stiavnice.
+**Místo:**<br> 
+Na setkání nás přivítá nádherné centrum Dolinka blízko Kozelníku či Banské Štiavnice.
 <br>
 <div class="md-image">
-<img src="images/events/dolinka_mapa.png" alt="mapa cesty k Dolince" width="300" height="300">
+<img src="images/events/dolinka_mapa.png" alt="Mapa cesty k Dolince" width="300" height="300">
 </div>
 
-**Ubytovani:** 
-Centrum poskytuje ruzne moznosti ubytovani. At uz v karavanech, nebo v paradnich pokojich po vycero lidech.
-<b>Ceny ubytovani:</b> 
+**Ubytování:**<br> 
+Centrum poskytuje různé možnosti ubytování. Ať už v karavanech, nebo v parádních pokojích pro více lidí.
+<b>Ceny ubytování:</b> 
 - karavan 10 EUR/noc
 - pokoj 25 EUR/noc
 <br>
 
-V centru je sprcha, zachod i wi-fi.
+**Strava:**<br>
+Co si přivezeme, to budeme mít. Na místě se dá vařit, krájet, cokoliv - nástroje tam jsou. 
 
-Jako bonus je moznost ochutnat mistni mleko, kefir, syr, tvaroh, kdyz zrovna je 😁
+**Cena:**<br>
+Cena je jen za nájem objektu. Rozpočítá se mezi zúčastněné, odhadem 50-75 EUR za osobu.
 
-Dotazy prosim na me 😉
+---
+
+V centru je sprcha, záchod i wi-fi.
+
+Jako bonus je možnost ochutnat místní mléko, kefír, sýr a tvaroh, když zrovna je 😁
+
+Dotazy prosím na mě 😉
 
 <div class="md-h2-center"><b>
-Moc rad se s vami uvidim v Dolince a tesim se na spolecne straveny cas ❤
+Moc rád se s vámi uvidím v Dolince a těším se na společně strávený čas ❤
 </b></div>
 
 

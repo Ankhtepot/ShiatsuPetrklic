@@ -46,7 +46,8 @@ export class SubscribeComponent {
   formData = {
     name: '',
     email: '',
-    phone: ''
+    phone: '',
+    message: '',
   };
 
   protected readonly T = T;
@@ -88,7 +89,8 @@ export class SubscribeComponent {
     this.formData = {
       name: '',
       email: '',
-      phone: ''
+      phone: '',
+      message: '',
     };
     if (this.subscribeForm) {
       this.subscribeForm.resetForm();
@@ -99,12 +101,18 @@ export class SubscribeComponent {
   private sendSubscriptionEmail(): void {
     this.isSending.set(true);
 
+    const note: string = `This person left a message: ${this.formData.message}`;
+    let message: string = `This person subscribed to an event ${this.eventTitle()}: ${this.eventId()}. Their phone number is ${this.formData.phone}.`;
+
+    if (this.formData.message.trim() !== '')
+      message += `\n\n${note}`;
+
     const body = {
       to_name: 'Petr',
       web_name: 'Shiatsu Petrklic',
       from_name: this.formData.name,
       email: this.formData.email,
-      message: `This person subscribed to an event ${this.eventTitle()}: ${this.eventId()}. Their phone number is ${this.formData.phone}.`,
+      message: message,
       time: new Date().toLocaleString(),
     };
 

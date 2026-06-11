@@ -33,8 +33,9 @@ export class DolinkaSummerComponent {
     descriptionCs: '',
     showsMarkdown: true,
     markdownCZContentPath: '/markdown/LetoDolinka2026.md',
-    imageUrl: 'images/events/VedomyDotykPezinok.webp',
-    miniatureUrl: 'images/events/VedomyDotykPezinok.webp',
+    markdownENContentPath: '/markdown/LetoDolinka2026EN.md',
+    imageUrl: 'images/events/dolinka.webp',
+    miniatureUrl: 'images/events/miniatures/dolinka.webp',
     // postEventTextCs: null,
   });
 
