@@ -38,6 +38,12 @@
   margin-top: 1em;
 }
 
+@media (max-width: 400px) {
+  .md-h2-center {
+    font-size: 1.5em;
+  }
+}
+
 .md-post-event-text {
   font-family: "Roboto", sans-serif;
   color: black;
