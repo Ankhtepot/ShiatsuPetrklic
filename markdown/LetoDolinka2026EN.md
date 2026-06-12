@@ -4,7 +4,7 @@ Summer in Dolinka 2026
 </div> 
 
 <div class="md-image">
-<img src="images/events/miniatures/dolinka.webp" alt="Event image" width="480" height="300">
+<img src="images/events/miniatures/dolinka.webp" alt="Event image" width="300" height="250">
 </div>
 <br>
 

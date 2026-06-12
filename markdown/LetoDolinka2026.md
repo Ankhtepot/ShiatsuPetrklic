@@ -4,7 +4,7 @@ Léto v Dolince 2026
 </div> 
 
 <div class="md-image">
-<img src="images/events/miniatures/dolinka.webp" alt="Obrázek události" width="480" height="300">
+<img src="images/events/miniatures/dolinka.webp" alt="Obrázek události" width="300" height="250">
 </div>
 <br>
 
