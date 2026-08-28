@@ -144,5 +144,9 @@ export function getTestimonials(): QuoteData[] {
       "I greatly appreciate Peter's interest in the person and his broader perspective on the situation; thank you for his insights. They were very enriching and supportive. This is also a very important part of the process.\n" +
       "I am already looking forward to the next treatment, which will again be different because each part of the body, each meridian in the body is unique ☺.\n",
       "Luci", 16),
+    createQuoteData(
+      "Aj keď Tvoje ošetrenie bolo kratšie, vnímam ho veľmi pozitívne. Páči sa mi, že  nevyvijaš takmer žiadny tlak, robíš to v jemnosti, a pritom s veľkým účinkom na telo.💫 Pre mňa je to moc príjemné ošetrenie. Cítim,  že sa mi ramená jemne uvoľnili. Moc ďakujem 🙏🙌",
+      "Even though your treatment was shorter, I perceive it very positively. I like that you apply almost no pressure, doing it gently, yet with a great effect on the body.💫 For me, it is a very pleasant treatment. I feel that my shoulders have gently relaxed. Thank you very much 🙏🙌",
+      "Iva", 17),
   ]
 }
