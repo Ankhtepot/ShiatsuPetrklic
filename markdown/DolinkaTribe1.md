@@ -63,7 +63,7 @@ Centrum poskytuje různé možnosti ubytování. Ať už v karavanech, nebo v pa
 Co si přivezeme, to budeme mít. Na místě se dá vařit, krájet, cokoliv - nástroje tam jsou. 
 
 **Cena:**<br>
-Cena je jen za nájem objektu a náklady spojené s pobytem - základ je 50EUR za hlavní část. Ostatní náklady se
+Cena je jen za nájem objektu a náklady spojené s pobytem - základ je 50EUR za hlavní část. Ostatní náklady se rozpočítají
 mezi zúčastněné, odhadem 50-100 EUR za osobu. Pravděpodobně se bude více topit, takže se cena může mírně navýšit.
 
 V centru je sprcha, záchod i wi-fi.
