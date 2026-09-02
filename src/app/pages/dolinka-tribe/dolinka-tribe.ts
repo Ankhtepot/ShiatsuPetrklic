@@ -5,25 +5,29 @@ import {QuoteStripSimpleComponent} from "../../Components/quote-strip-simple/quo
 import {INVALID_QUOTE, QuoteData} from '../../shared/models/quote-data';
 import {EventData, INVALID_ID} from '../../shared/models/event-data';
 import {TextService} from '../../services/text.service';
-import {SubscribeComponent} from '../../Components/subscribe/subscribe.component';
 import {LanguageService} from '../../services/language.service';
+import {ButtonOpenLinkComponent} from '../../Components/button-open-link/button-open-link.component';
+import {TextPipe} from '../../pipes/text.pipe';
+import {T} from '../../shared/constants/text.tokens';
 
 @Component({
-  selector: 'app-dolinka-summer',
+  selector: 'app-dolinka-tribe',
   imports: [
     ContentCardComponent,
     EventCardComponent,
     QuoteStripSimpleComponent,
-    SubscribeComponent,
+    ButtonOpenLinkComponent,
+    TextPipe,
   ],
-  templateUrl: './dolinka-summer.html',
-  styleUrl: './dolinka-summer.scss',
+  templateUrl: './dolinka-tribe.html',
+  styleUrls: ['./dolinka-tribe.scss'],
 })
-export class DolinkaSummerComponent {
+export class DolinkaTribeComponent {
   textService = inject(TextService);
   languageService = inject(LanguageService);
 
   readonly invalidQuote: QuoteData = INVALID_QUOTE;
+  readonly link: string = 'https://forms.gle/HJVa43VwwL7rpHBA7';
 
   readonly event = signal<EventData>({
     id: 'LetoDolinka2026',
@@ -32,8 +36,8 @@ export class DolinkaSummerComponent {
     titleEn: "Summer Dolinka 2026",
     descriptionCs: '',
     showsMarkdown: true,
-    markdownCZContentPath: '/markdown/LetoDolinka2026.md',
-    markdownENContentPath: '/markdown/LetoDolinka2026EN.md',
+    markdownCZContentPath: '/markdown/DolinkaTribe1.md',
+    markdownENContentPath: '/markdown/DolinkaTribe1.md',
     imageUrl: 'images/events/dolinka.webp',
     miniatureUrl: 'images/events/miniatures/dolinka.webp',
     // postEventTextCs: null,
@@ -51,4 +55,7 @@ export class DolinkaSummerComponent {
   protected onSubscribe() {
     // Nothing for now
   }
+
+  protected readonly TextService = TextService;
+  protected readonly T = T;
 }
