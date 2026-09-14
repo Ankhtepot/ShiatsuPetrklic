@@ -1,32 +1,25 @@
-import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {TextPipe} from '../../pipes/text.pipe';
-import {T} from '../../shared/constants/text.tokens';
-import {GenericButtonComponent} from '../button-general/button-generic.component';
+import {Component, output} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-modal',
   standalone: true,
-  imports: [CommonModule, TextPipe, GenericButtonComponent],
+  imports: [CommonModule],
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent {
-  @Output() close = new EventEmitter<void>();
-  @Input() isCloseButtonShown: boolean = true;
+  closeModal = output<void>();
 
-  closeButtonStyle = {
-    width: '80%',
-    margin: ' 0.5em auto',
-  }
-
-  @HostListener('document:click', ['$event'])
-  onClickOutside(event: MouseEvent) {
-    const target = event.target as HTMLElement;
-    if (target.classList.contains('modal-backdrop')) {
-      this.close.emit();
+  /**
+   * Handle clicks outside the modal content to close the modal
+   */
+  onBackdropClick(event: MouseEvent): void {
+    // Only close if clicking on the backdrop itself, not on child elements
+    if (event.target === event.currentTarget) {
+      this.closeModal.emit();
     }
   }
-
-  protected readonly T = T;
 }
+
+

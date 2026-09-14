@@ -31,7 +31,7 @@ You will practice open feedback, joint decision-making, and recognizing your own
 This workshop is held in English with translation into Czech.﻿
 
 **Register here:**  
-[Registration](https://docs.google.com/forms/d/e/1FAIpQLSfPVVXd8q44gZiwA-T7OgPeQ_6w0GpICmeyfQPLZTXa0UDIKw/viewform?usp=header&fbclid=IwZXh0bgNhZW0CMTAAYnJpZBEwQmtMT2lTdkhWd2lBYUJVeQEek2ztCx0Bg9oDhBYDtO8HuEZf7yGVf6cUe3HFc--b-S1914x4o5JvdKTkn7Y_aem_VNS9qW4FPjEE6a0VvCb3Ng)
+[Registration](https://smartemailinglinks.seurl.cz/public/web-forms-v2/display-form/7806-8e19bx7q81r1cgpd9eeqma1r28ov945yz61jzv4q1qdj7gwazw4vr8r13d7bp6e465rmm5s97ih6c6bjfly5s39r1wm3psa4gwve)
 
 Looking forward to seeing you!
 
@@ -50,10 +50,10 @@ Details about the stay will be sent by email.
 
 ### Price summary:
 
-|                                                |    | CZK   |    | EUR |
-|------------------------------------------------|----|-------|----|-----|
-| Retreat - Basic Price                          | -> | 11,990 | -> | 510 |
-| Retreat - Price when paid before 31.1.2026     | -> | 11,490 | -> | 490 |
-| Retreat - For a person when registering as a couple | -> | 11,490 | -> | 490 |
-| Accomodation and vegetarian/vegan meals        | -> | 5,750 | -> | 250 |
+|                                                |    | EUR |
+|------------------------------------------------|----|-----|
+| Retreat - Basic Price                          | -> | 690 |
+| Retreat - Price when paid before 31.1.2026     | -> | 650 |
+| Retreat - For a person when registering as a couple | -> | 650 |
+| Accomodation and vegetarian/vegan meals        | -> | 250 |
 

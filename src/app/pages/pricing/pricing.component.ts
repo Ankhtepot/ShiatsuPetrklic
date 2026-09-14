@@ -1,5 +1,4 @@
 import {Component, inject, OnInit, signal} from '@angular/core';
-import {CommonModule} from '@angular/common';
 import {ContentCardComponent} from '../../Components/content-card/content-card.component';
 import {EHeaderPosition, PricingTableComponent, TableData} from '../../Components/table/table.component';
 import {T} from '../../shared/constants/text.tokens';
@@ -9,7 +8,7 @@ import {EPages} from '../../services/navigation-link.service';
 
 @Component({
   selector: 'app-pricing',
-  imports: [CommonModule, ContentCardComponent, PricingTableComponent],
+  imports: [ContentCardComponent, PricingTableComponent],
   templateUrl: './pricing.component.html',
   styleUrls: ['./pricing.component.scss'],
   standalone: true

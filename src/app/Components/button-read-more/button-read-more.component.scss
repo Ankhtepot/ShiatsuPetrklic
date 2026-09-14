@@ -1,21 +1,28 @@
 @use '../../../../src/styles/colors' as *;
 
+$background-color: $light-purple;
+$text-color: $deep-navy;
+
 .read-more-wrapper {
   button {
-    background: $deep-navy;
-    border: 1px solid #ffd8b0;
-    color: #ffd8b0;
+    background: rgba($background-color, 1);
+    //border: 1px solid #ffd8b0;
+    color: $text-color;
     font-size: 0.9rem;
     font-weight: 500;
     padding: 0.2rem 0.6rem;
-    border-radius: 6px;
+    border-radius: 1em;
     opacity: 0;
-    transition: opacity 0.4s ease, background-color 0.3s ease;
+    transition: opacity 0.4s ease, background-color 0.3s ease, color 0.3s ease;
     pointer-events: none;
     cursor: pointer;
+    text-decoration: none;
+    box-shadow: -5px 0px 10px rgba($background-color, 1);
 
     &:hover {
-      background-color: rgba(255, 216, 176, 0.2);
+      background-color: rgba($text-color, 0.9);
+      color: $background-color;
+      border: 1px solid $text-color;
     }
   }
 
@@ -31,5 +38,13 @@
     opacity: 1 !important;
     pointer-events: auto !important;
     transition-delay: 0s;
+  }
+}
+
+@media (max-width: 800px) {
+  .read-more-wrapper {
+    button {
+      box-shadow: -3px 0px 5px rgba($background-color, .5);
+    }
   }
 }

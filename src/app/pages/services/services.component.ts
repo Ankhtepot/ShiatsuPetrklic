@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {CommonModule} from '@angular/common';
 import {ContentCardComponent} from '../../Components/content-card/content-card.component';
 import {EPages} from '../../services/navigation-link.service';
 import {SeoService} from '../../services/seo.service';
@@ -8,7 +7,7 @@ import {T} from '../../shared/constants/text.tokens';
 
 @Component({
   selector: 'app-services',
-  imports: [CommonModule, ContentCardComponent],
+  imports: [ContentCardComponent],
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss'],
   standalone: true

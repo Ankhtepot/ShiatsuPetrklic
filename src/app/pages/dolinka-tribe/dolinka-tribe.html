@@ -1,0 +1,23 @@
+<app-content-card [width]="'60%'" [backgroundOpacity]="0.95">
+  <div class="separator"></div>
+  @if (isEventValid()) {
+    <app-event-card #eventCard [event]="event()" [expanded]="true"/>
+    <app-button-open-link
+      [link]="link"
+    >
+      <span>{{ T.event_subscribe | text }}</span>
+    </app-button-open-link>
+<!--    <app-subscribe-->
+<!--      [eventTitle]="eventTitle()"-->
+<!--      [eventId]="event().id || 'invalid eventId'"-->
+<!--      (subscribed)="onSubscribe()"-->
+<!--    />-->
+  } @else {
+    <app-quote-strip-simple
+      [id]="'noValidEvent'"
+      [quote]="invalidQuote"
+    />
+  }
+  <div class="separator"></div>
+  <div style="width: 100%; height: 5em"></div>
+</app-content-card>

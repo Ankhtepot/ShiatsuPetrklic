@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, OnInit, QueryList, Renderer2, ViewChildren} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ContentCardComponent} from '../../Components/content-card/content-card.component';
-import {QuoteData} from '../../Models/quote-data';
+import {QuoteData} from '../../shared/models/quote-data';
 import {getTestimonials} from '../../shared/data/testimonials';
 import {QuoteStripComponent} from '../../Components/quote-strip/quote-strip.component';
 import {ActivatedRoute} from '@angular/router';
@@ -50,7 +50,6 @@ export class TestimonialsComponent implements AfterViewInit, OnInit{
         setTimeout(() => {
           const el = document.getElementById(fragment);
           if (el) {
-            // el.scrollIntoView({ behavior: 'smooth', block: 'start' });
             const yOffset = -150; // adjust based on your fixed header height
             const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });

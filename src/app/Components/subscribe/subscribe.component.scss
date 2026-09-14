@@ -1,0 +1,110 @@
+.subscribe-wrapper {
+  height: 2em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.subscription-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 500px;
+
+  .subscription-message {
+    font-size: 1.1em;
+    color: #4a235a;
+    margin: 0;
+    line-height: 1.5;
+    font-weight: 500;
+    text-align: center;
+
+    strong {
+      color: #4a235a;
+    }
+  }
+
+  .form-fields {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: left;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+
+      .form-label {
+        color: #4a235a;
+        font-weight: 500;
+        font-size: 0.95em;
+      }
+
+      .form-control {
+        padding: 0.5rem 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+        font-size: 0.95em;
+        color: #333;
+        background-color: white;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+        &:focus {
+          outline: none;
+          border-color: #ff8c00;
+          box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.25);
+        }
+
+        &:disabled {
+          background-color: #e9ecef;
+          opacity: 0.65;
+          cursor: not-allowed;
+        }
+
+        &.is-invalid {
+          border-color: #dc3545;
+
+          &:focus {
+            box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+          }
+        }
+      }
+
+      .invalid-feedback {
+        color: #dc3545;
+        font-size: 0.85em;
+        margin-top: 0.25rem;
+        display: block;
+      }
+    }
+  }
+
+  .form-warning {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 0.75rem 1rem;
+    border: 1px solid #f5c6cb;
+    border-radius: 0.25rem;
+    font-size: 0.95em;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .subscribe-wrapper {
+    gap: 0.1em;
+  }
+
+  .subscription-form {
+    max-width: 100%;
+  }
+}
+

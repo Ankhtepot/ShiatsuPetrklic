@@ -31,8 +31,8 @@ export class HeaderProfessionalComponent implements OnDestroy {
 
   public showHeader = signal(true);
   public mediaBreakpoint = signal('');
-  menuOpen = signal(false);
-  showMobileMenu = computed(() => this.menuOpen());
+  isMenuOpen = signal(false);
+  showMobileMenu = computed(() => this.isMenuOpen());
 
   hasDropdowns = computed(() =>
     !!this.configuration.dropdownsConfigurations?.length
@@ -136,6 +136,6 @@ export class HeaderProfessionalComponent implements OnDestroy {
     return {'color': (this.configuration.textColor || '#000')}; // Default text color if not provided
   }
 
-  toggleMobileMenu = () => this.menuOpen.update(v => !v);
-  closeMobileMenu = () => this.menuOpen.set(false);
+  toggleMobileMenu = () => this.isMenuOpen.update(v => !v);
+  closeMobileMenu = () => this.isMenuOpen.set(false);
 }

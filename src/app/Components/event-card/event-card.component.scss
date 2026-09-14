@@ -64,10 +64,9 @@
       right: 0.25em;
     }
   }
-
 }
 
-.event-modal-content {
+.expanded-content {
   background-color: $glass-white;
   padding: 2em;
 
@@ -79,10 +78,9 @@
     width: 100%;
     gap: 1em;
 
-    .modal-image {
+    .expanded-image {
       width: auto;
       height: 10em;
-      //max-height: 20em;
       object-fit: cover;
       border-radius: 0.5em;
       margin-bottom: 1em;
@@ -166,11 +164,11 @@
     }
   }
 
-  .event-modal-content {
+  .expanded-content {
     .image-and-text-wrapper {
       flex-direction: column;
 
-      .modal-image {
+      .expanded-image {
         width: 100%;
         max-height: 20em;
       }

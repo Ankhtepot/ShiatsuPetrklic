@@ -1,0 +1,19 @@
+<div class="controls-wrapper">
+  <app-generic-button
+    (click)="requestedIndexEmitted.emit(previousEventIndex())"
+    [disabled]="previousEventIndex() === -1"
+    [style]="buttonStyles"
+    [backgroundColor]="AppColors.lightPurple"
+  >
+    <span>{{ T.events_previous | text }}</span>
+  </app-generic-button>
+
+    <app-generic-button
+      (click)="requestedIndexEmitted.emit(nextEventIndex())"
+      [disabled]="nextEventIndex() === -1"
+      [style]="buttonStyles"
+      [backgroundColor]="AppColors.lightPurple"
+    >
+      <span>{{ T.events_next | text }}</span>
+    </app-generic-button>
+</div>

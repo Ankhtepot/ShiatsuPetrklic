@@ -11,6 +11,10 @@
   z-index: 20;
   color: styles.$text-on-orange;
 
+  @media (max-width: 1200px) {
+    width: auto;
+  }
+
   @media (max-width: 768px) {
     margin-top: 120px; // Smaller shift on mobile
     width: auto;

@@ -1,59 +1,77 @@
-import {Component, inject, Input, OnInit, signal, WritableSignal} from '@angular/core';
+import {
+  Component,
+  inject,
+  input,
+  InputSignal,
+  computed,
+  signal, OnInit
+} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {EventData} from '../../Models/event-data';
-import {ModalComponent} from '../modal/modal.component';
+import {DEFAULT_EVENT_DATA, EventData} from '../../shared/models/event-data';
 import {ELanguage, LanguageService} from '../../services/language.service';
 import {cutAtLastWholeWord} from '../../shared/utilities/string-extensions';
 import {ButtonReadMoreComponent} from '../button-read-more/button-read-more.component';
 import {T} from '../../shared/constants/text.tokens';
 import {TextPipe} from '../../pipes/text.pipe';
-import {of} from 'rxjs';
-import {ContentItem, ContentItemHyperlink, ContentItemText, EContentItem} from '../../Models/content-item';
+import {ContentItem, ContentItemHyperlink, ContentItemText, EContentItem} from '../../shared/models/content-item';
 import {MarkdownComponent} from 'ngx-markdown';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-event-card',
   standalone: true,
-  imports: [CommonModule, ModalComponent, ButtonReadMoreComponent, TextPipe, MarkdownComponent],
+  imports: [CommonModule, ButtonReadMoreComponent, TextPipe, MarkdownComponent],
   templateUrl: './event-card.component.html',
   styleUrls: ['./event-card.component.scss']
 })
 export class EventCardComponent implements OnInit {
-  @Input() event!: EventData;
+  event: InputSignal<EventData> = input(DEFAULT_EVENT_DATA);
+  expanded = input(false);
 
   isExpanded = signal(false);
-  description: WritableSignal<string> = signal('');
-  title: WritableSignal<string> = signal('');
-  postEventText: WritableSignal<string> = signal('');
 
-  languageService = inject(LanguageService);
+  private languageService = inject(LanguageService);
 
-  ngOnInit() {
-    if (!this.event) {
-      console.error('Event data is not provided to the EventCardComponent');
-      return;
-    }
+  title = computed(() =>
+    this.resolveText(
+      this.event().titleCs,
+      this.event().titleEn,
+      25
+    )
+  );
 
-    this.resolveTexts();
+  description = computed(() =>
+    this.resolveText(
+      this.event().descriptionCs,
+      this.event().descriptionEn
+    )
+  );
+
+  postEventText = computed(() =>
+    this.resolveText(
+      this.event().postEventTextCs,
+      this.event().postEventTextEn
+    )
+  );
+
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
+
+  ngOnInit(): void {
+    this.isExpanded.set(this.expanded());
   }
 
-  resolveTexts() {
-    this.description.set(this.resolveText(this.event.descriptionCs, this.event.descriptionEn));
-    this.title.set(this.resolveText(this.event.titleCs, this.event.titleEn, 25));
-    this.postEventText.set(this.resolveText(this.event.postEventTextCs, this.event.postEventTextEn));
+  openDetailPage() {
+    this.router.navigate(['details', this.event().id], { relativeTo: this.route });
   }
 
-  openModal() {
-    this.isExpanded.set(true);
-    this.resolveTexts();
+  setExpanded(isExpanded: boolean) {
+    this.isExpanded.set(isExpanded);
   }
 
-  closeModal() {
-    this.isExpanded.set(false);
-    this.resolveTexts();
-  }
-
-  public resolveText(textCs?: string, textEn?: string, cutoffText?: number): string {
+  resolveText(textCs?: string, textEn?: string, cutoffText?: number): string {
     if (!textCs && !textEn) {
       return '';
     }
@@ -78,11 +96,11 @@ export class EventCardComponent implements OnInit {
   }
 
   GetMarkdown() {
-    let path = '';
-    if (this.event.markdownCZContentPath) {
-      path = this.event.markdownCZContentPath;
-      if (this.languageService.current === ELanguage.En && this.event.markdownENContentPath) {
-        path = this.event.markdownENContentPath;
+    let path: string | undefined = '';
+    if (this.event().markdownCZContentPath) {
+      path = this.event().markdownCZContentPath;
+      if (this.languageService.current === ELanguage.En && this.event().markdownENContentPath) {
+        path = this.event().markdownENContentPath;
       }
     }
 
@@ -90,5 +108,4 @@ export class EventCardComponent implements OnInit {
   }
 
   protected readonly T = T;
-  protected readonly of = of;
 }

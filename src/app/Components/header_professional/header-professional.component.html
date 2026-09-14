@@ -57,7 +57,11 @@
       </div>
 
       <!-- Hamburger (mobile only, controlled via CSS) -->
-      <button class="hamburger d-md-none" (click)="toggleMobileMenu()">
+      <button
+        class="hamburger d-md-none"
+        (click)="toggleMobileMenu()"
+        [ngClass]="{ active: isMenuOpen() }"
+      >
         <i class="bi bi-list fs-3"></i>
       </button>
     </div>

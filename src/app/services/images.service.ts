@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {ImageData} from "../Models/image-data";
+import {ImageData} from "../shared/models/image-data";
 
 export enum Category {
   All = "All",

@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {TextService} from "../../services/text.service";
 import {T} from "../../shared/constants/text.tokens";
-import {CommonModule} from '@angular/common';
 import {ContactFormComponent} from './contact-form/contact-form.component';
 import {TextPipe} from '../../pipes/text.pipe';
 import {ContactInformationComponent} from './contact-information.component/contact-information.component';
@@ -14,7 +13,7 @@ import {EPages} from '../../services/navigation-link.service';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
   standalone: true,
-  imports: [CommonModule, ContactFormComponent, ContactInformationComponent, TextPipe, ContentCardComponent]
+  imports: [ContactFormComponent, ContactInformationComponent, TextPipe, ContentCardComponent]
 })
 export class ContactComponent implements OnInit{
   protected readonly T = T;

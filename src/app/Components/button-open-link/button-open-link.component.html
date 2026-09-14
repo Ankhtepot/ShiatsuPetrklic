@@ -1,0 +1,18 @@
+<div class="button-open-link-wrapper">
+  <a
+    class="custom-button"
+    [ngStyle]="styles()"
+    [href]="link() || null"
+    [target]="target()"
+    [attr.rel]="target() === '_blank' ? 'noopener noreferrer' : null"
+    [class.disabled]="disabled() || !link().trim()"
+    (click)="onLinkClick($event)"
+  >
+    @if(label()) {
+      {{ label() }}
+    } @else {
+      <ng-content></ng-content>
+    }
+  </a>
+</div>
+
