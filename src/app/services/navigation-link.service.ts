@@ -8,7 +8,7 @@ export enum EPages {
   AboutMe = 'about-me',
   Testimonials = 'testimonials',
   Pricing = 'pricing',
-  Services = 'services',
+  Services = 'tanec-tantra',
   Events = 'events',
   Contact = 'contact',
   NotFound = '401',
@@ -30,7 +30,6 @@ export class NavigationLinkService {
   }
 
   readonly headerLinks = computed<HeaderLinkConfiguration[]>(() => {
-    const lang = this.lang.current;
     return [
       {
         navigationString: this.getPageLink(EPages.Home),
@@ -45,13 +44,9 @@ export class NavigationLinkService {
         textString: this.text.get(T.testimonials_anchor)
       },
       {
-        navigationString: this.getPageLink(EPages.Pricing),
-        textString: this.text.get(T.pricing_anchor)
+        navigationString: this.getPageLink(EPages.Services),
+        textString: this.text.get(T.tanec_tantra_anchor)
       },
-      // {
-      //   navigationString: this.getPageLink(EPages.Services),
-      //   textString: this.text.get(T.services_anchor)
-      // },
       {
         navigationString: this.getPageLink(EPages.Events),
         textString: this.text.get(T.events_anchor)

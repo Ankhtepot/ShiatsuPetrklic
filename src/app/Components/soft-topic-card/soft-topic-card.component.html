@@ -1,0 +1,16 @@
+<section class="soft-topic-card" [attr.id]="anchorId">
+  <div class="soft-topic-card__shell">
+    <div class="soft-topic-card__header">
+      <div class="soft-topic-card__icon" aria-hidden="true">
+        <i class="bi" [ngClass]="icon"></i>
+      </div>
+
+      <div class="soft-topic-card__title-block">
+        <p class="soft-topic-card__eyebrow">{{ eyebrow }}</p>
+        <h2>{{ title }}</h2>
+      </div>
+    </div>
+
+    <markdown class="soft-topic-card__markdown" [src]="getMarkdownPath()"></markdown>
+  </div>
+</section>

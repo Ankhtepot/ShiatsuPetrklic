@@ -1,3 +1,33 @@
-<app-content-card>
-  <p> SERVICES WORK!</p>
+<app-content-card [backgroundOpacity]="0.92" width="1100px">
+  <section class="tanec-tantra-page">
+    <p class="tanec-tantra-page__eyebrow">{{ T.tanec_tantra_page_eyebrow | text }}</p>
+    <h1>{{ T.tanec_tantra_page_heading | text }}</h1>
+    <p class="tanec-tantra-page__intro">{{ T.tanec_tantra_page_intro_1 | text }}</p>
+    <p class="tanec-tantra-page__intro">{{ T.tanec_tantra_page_intro_2 | text }}</p>
+
+    <nav #sectionNav class="section-nav" aria-label="Tanec a Tantra">
+      @for (section of sections(); track section.id) {
+        <a
+          class="section-nav__pill"
+          [routerLink]="[]"
+          [fragment]="section.id"
+        >
+          {{ section.label }}
+        </a>
+      }
+    </nav>
+  </section>
 </app-content-card>
+
+<div class="sections-stack">
+  @for (section of sections(); track section.id) {
+    <app-soft-topic-card
+      [anchorId]="section.id"
+      [icon]="section.icon"
+      [eyebrow]="section.eyebrow"
+      [title]="section.title"
+      [markdownCsPath]="section.markdownCsPath"
+      [markdownEnPath]="section.markdownEnPath"
+    />
+  }
+</div>

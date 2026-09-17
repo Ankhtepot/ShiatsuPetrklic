@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, computed, OnInit} from '@angular/core';
 import {TextPipe} from '../../pipes/text.pipe';
 import {T} from '../../shared/constants/text.tokens';
 import {ContentCardComponent} from '../../Components/content-card/content-card.component';
@@ -13,11 +13,13 @@ import {AppColors} from '../../../styles/colors.gen';
 import {SeoService} from '../../services/seo.service';
 import {EPages} from '../../services/navigation-link.service';
 import {TextService} from '../../services/text.service';
+import {PricingTableComponent} from '../../Components/table/table.component';
+import {getShiatsuPricingTableData} from '../../shared/data/pricing';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [TextPipe, ContentCardComponent, QuoteStripComponent, QuoteStripSimpleComponent],
+  imports: [TextPipe, ContentCardComponent, QuoteStripComponent, QuoteStripSimpleComponent, PricingTableComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
@@ -33,6 +35,8 @@ export class HomeComponent implements OnInit {
   };
 
   constructor(private seo: SeoService, private textService: TextService) {}
+
+  pricingData = computed(() => getShiatsuPricingTableData(this.textService));
 
   ngOnInit(): void {
     this.seo.setSeo({
