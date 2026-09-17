@@ -45,3 +45,11 @@
     </div>
   </div>
 </app-content-card>
+
+<app-content-card [backgroundOpacity]="0.94">
+  <section id="pricing" class="pricing-section">
+    <h2>{{ T.home_pricing_title | text }}</h2>
+    <p class="lead">{{ T.home_pricing_intro | text }}</p>
+    <app-table [data]="pricingData()" />
+  </section>
+</app-content-card>

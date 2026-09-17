@@ -17,6 +17,23 @@
     }
   }
 
+  .pricing-section {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    scroll-margin-top: 150px;
+
+    h2 {
+      margin-bottom: 1rem;
+      color: styles.$text-on-text_background;
+    }
+
+    .lead {
+      margin: 0 auto 1.5rem;
+      max-width: 680px;
+    }
+  }
+
   blockquote {
     font-style: italic;
     border-left: 4px solid #b95c1b;
