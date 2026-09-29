@@ -29,5 +29,10 @@
       [markdownCsPath]="section.markdownCsPath"
       [markdownEnPath]="section.markdownEnPath"
     />
+    @if (section.pricingData) {
+    <app-pricing-table
+      [data]="section.pricingData"
+    />
+      }
   }
 </div>

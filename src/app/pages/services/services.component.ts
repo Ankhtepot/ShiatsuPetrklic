@@ -18,6 +18,9 @@ import {TextPipe} from '../../pipes/text.pipe';
 import {SoftTopicCardComponent} from '../../Components/soft-topic-card/soft-topic-card.component';
 import {ActivatedRoute, RouterLink} from '@angular/router';
 import {toSignal} from '@angular/core/rxjs-interop';
+import {getShibariPricingTableData} from '../../shared/data/pricing';
+import {PricingTableComponent} from '../../Components/pricing-table/pricing-table.component';
+import {TableData} from '../../Components/table/table.component';
 
 interface TanecTantraSection {
   id: string;
@@ -27,11 +30,17 @@ interface TanecTantraSection {
   title: string;
   markdownCsPath: string;
   markdownEnPath: string;
+  pricingData?: TableData;
 }
 
 @Component({
   selector: 'app-services',
-  imports: [ContentCardComponent, TextPipe, SoftTopicCardComponent, RouterLink],
+  imports: [ContentCardComponent,
+    TextPipe,
+    SoftTopicCardComponent,
+    RouterLink,
+    PricingTableComponent,
+  ],
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss'],
   standalone: true
@@ -43,6 +52,10 @@ export class ServicesComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private injector = inject(Injector);
   private fragment = toSignal(this.route.fragment, {initialValue: null});
+
+  protected shibariPricingData = computed(() => {
+    return getShibariPricingTableData(this.textService);
+  });
 
   constructor(private seo: SeoService, private textService: TextService) {
     effect(() => {
@@ -66,6 +79,16 @@ export class ServicesComponent implements OnInit {
 
   sections = computed<TanecTantraSection[]>(() => [
     {
+      id: 'therapeutic-shibari',
+      icon: 'bi-link-45deg',
+      label: this.textService.get(T.tanec_tantra_nav_therapeutic_shibari),
+      eyebrow: this.textService.get(T.tanec_tantra_section_2_eyebrow),
+      title: this.textService.get(T.tanec_tantra_section_2_title),
+      markdownCsPath: '/markdown/services/therapeutic-shibari.cs.md',
+      markdownEnPath: '/markdown/services/therapeutic-shibari.en.md',
+      pricingData: this.shibariPricingData()
+    },
+    {
       id: 'tantric-massages',
       icon: 'bi-flower1',
       label: this.textService.get(T.tanec_tantra_nav_tantric_massages),
@@ -73,15 +96,6 @@ export class ServicesComponent implements OnInit {
       title: this.textService.get(T.tanec_tantra_section_1_title),
       markdownCsPath: '/markdown/services/tantric-massages.cs.md',
       markdownEnPath: '/markdown/services/tantric-massages.en.md'
-    },
-    {
-      id: 'therapeutic-shibari',
-      icon: 'bi-link-45deg',
-      label: this.textService.get(T.tanec_tantra_nav_therapeutic_shibari),
-      eyebrow: this.textService.get(T.tanec_tantra_section_2_eyebrow),
-      title: this.textService.get(T.tanec_tantra_section_2_title),
-      markdownCsPath: '/markdown/services/therapeutic-shibari.cs.md',
-      markdownEnPath: '/markdown/services/therapeutic-shibari.en.md'
     },
     {
       id: 'dancing',

@@ -1,0 +1,7 @@
+<app-content-card [backgroundOpacity]="backgroundOpacity()">
+  <section class="pricing-section" [attr.id]="sectionId() || null">
+    <h2>{{ T.home_pricing_title | text }}</h2>
+    <p class="lead">{{ T.home_pricing_intro | text }}</p>
+    <app-table [data]="data()" />
+  </section>
+</app-content-card>
