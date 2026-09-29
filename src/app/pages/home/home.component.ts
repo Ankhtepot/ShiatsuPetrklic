@@ -13,7 +13,7 @@ import {AppColors} from '../../../styles/colors.gen';
 import {SeoService} from '../../services/seo.service';
 import {EPages} from '../../services/navigation-link.service';
 import {TextService} from '../../services/text.service';
-import {PricingTableComponent} from '../../Components/table/table.component';
+import {PricingTableComponent} from '../../Components/pricing-table/pricing-table.component';
 import {getShiatsuPricingTableData} from '../../shared/data/pricing';
 
 @Component({
@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private seo: SeoService, private textService: TextService) {}
 
-  pricingData = computed(() => getShiatsuPricingTableData(this.textService));
+  readonly pricingData = computed(() => getShiatsuPricingTableData(this.textService));
 
   ngOnInit(): void {
     this.seo.setSeo({

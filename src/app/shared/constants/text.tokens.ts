@@ -143,4 +143,8 @@ export enum T {
   events_previous = 'events_previous',
   events_back_to_events = 'events_back_to_events',
   optional = 'optional',
+  pricing_shibari_row_1_price = 'pricing_shibari_row_1_price',
+  pricing_shibari_row_1_description = 'pricing_shibari_row_1_description',
+  pricing_shibari_row_2_price = 'pricing_shibari_row_2_price',
+  pricing_shibari_row_2_description = 'pricing_shibari_row_2_description'
 }

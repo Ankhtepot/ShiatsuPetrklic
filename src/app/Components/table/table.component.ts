@@ -20,7 +20,7 @@ export enum EHeaderPosition {
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss']
 })
-export class PricingTableComponent {
+export class TableComponent {
   @Input({ required: true }) data!: TableData;
 
   // Compute the maximum number of columns in all rows
