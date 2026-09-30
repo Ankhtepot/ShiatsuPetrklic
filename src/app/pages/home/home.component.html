@@ -43,7 +43,11 @@
         <li> {{ T.home_benefits_11 | text }}</li>
       </ul>
     </div>
+
+    <app-pricing-table
+      [data]="pricingData()"
+      [tableTitle]="T.pricing_shiatsu_table_title | text"
+      [embedded]="true"
+    />
   </div>
 </app-content-card>
-
-<app-pricing-table [data]="pricingData()" />

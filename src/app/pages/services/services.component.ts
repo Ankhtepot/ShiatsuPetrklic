@@ -24,6 +24,7 @@ import {TextService} from '../../services/text.service';
 import {T} from '../../shared/constants/text.tokens';
 import {getShibariPricingTableData} from '../../shared/data/pricing';
 import {DanceTantraSection} from '../../shared/models/common';
+import {SpanExpandableComponent} from '../../Components/span-expandable/span-expandable.component';
 import {ServicesNavigation} from './services-navigation/services-navigation';
 
 @Component({
@@ -33,7 +34,8 @@ import {ServicesNavigation} from './services-navigation/services-navigation';
     TextPipe,
     SoftTopicCardComponent,
     PricingTableComponent,
-    ServicesNavigation,
+    SpanExpandableComponent,
+    ServicesNavigation
   ],
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss'],
@@ -55,10 +57,12 @@ export class ServicesComponent implements OnInit, AfterViewInit {
 
   readonly showFloatingNavigation = signal(false);
   readonly floatingNavigationTop = signal(0);
-
-  protected shibariPricingData = computed(() => {
-    return getShibariPricingTableData(this.textService);
-  });
+  protected readonly shibariPricingCollapsedText = 'How much does therapeutic shibari cost?';
+  protected readonly shibariPricingExpandedText = 'The exact price depends on the chosen format and length. Expand this note to keep a longer explanation inline without breaking the surrounding paragraph layout.';
+  protected readonly shibariPricingData = computed(() => ({
+    ...getShibariPricingTableData(this.textService),
+    introHtml: `<p class="lead">${this.textService.get(T.tanec_tantra_section_2_lead)}</p>`
+  }));
 
   constructor(private seo: SeoService, private textService: TextService) {
     effect(() => {

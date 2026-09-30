@@ -71,6 +71,15 @@
   z-index: 1;
 }
 
+.soft-topic-card__extra-content {
+  position: relative;
+  z-index: 1;
+}
+
+.soft-topic-card__extra-content:empty {
+  display: none;
+}
+
 :host ::ng-deep .soft-topic-card__markdown {
   p,
   li {
@@ -115,6 +124,23 @@
   }
 }
 
+:host ::ng-deep .soft-topic-card__extra-content {
+  p,
+  li {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: styles.$text-on-orange;
+  }
+
+  p {
+    margin: 0 0 1rem;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .soft-topic-card {
     width: min(100%, calc(100% - 1rem));
@@ -146,6 +172,13 @@
     ul {
       gap: 0.6rem;
       margin-bottom: 1.2rem;
+    }
+  }
+
+  :host ::ng-deep .soft-topic-card__extra-content {
+    p,
+    li {
+      font-size: 1rem;
     }
   }
 }

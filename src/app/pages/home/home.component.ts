@@ -36,7 +36,10 @@ export class HomeComponent implements OnInit {
 
   constructor(private seo: SeoService, private textService: TextService) {}
 
-  readonly pricingData = computed(() => getShiatsuPricingTableData(this.textService));
+  readonly pricingData = computed(() => ({
+    ...getShiatsuPricingTableData(this.textService),
+    introHtml: `<p class="lead">${this.textService.get(T.home_pricing_intro)}</p>`
+  }));
 
   ngOnInit(): void {
     this.seo.setSeo({

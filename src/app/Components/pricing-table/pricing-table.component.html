@@ -1,7 +1,25 @@
-<app-content-card [backgroundOpacity]="backgroundOpacity()">
-  <section class="pricing-section" [attr.id]="sectionId() || null">
-    <h2>{{ T.home_pricing_title | text }}</h2>
-    <p class="lead">{{ T.home_pricing_intro | text }}</p>
-    <app-table [data]="data()" />
+@if (embedded()) {
+  <section class="pricing-section pricing-section--embedded" [attr.id]="sectionId() || null">
+    @if (tableTitle() || data().title) {
+      <h2>{{ tableTitle() || data().title }}</h2>
+    }
+    @if (data().introHtml) {
+      <div [innerHTML]="data().introHtml"></div>
+    }
+    <ng-content></ng-content>
+    <app-table [data]="data()"/>
   </section>
-</app-content-card>
+} @else {
+  <app-content-card [backgroundOpacity]="backgroundOpacity()">
+    <section class="pricing-section" [attr.id]="sectionId() || null">
+      @if (tableTitle() || data().title) {
+        <h2>{{ tableTitle() || data().title }}</h2>
+      }
+      @if (data().introHtml) {
+        <div [innerHTML]="data().introHtml"></div>
+      }
+      <ng-content></ng-content>
+      <app-table [data]="data()"/>
+    </section>
+  </app-content-card>
+}
