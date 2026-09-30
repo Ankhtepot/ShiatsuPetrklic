@@ -2,6 +2,8 @@ import { Component, Input, computed } from '@angular/core';
 import {CommonModule} from '@angular/common';
 
 export interface TableData {
+  title: string;
+  introHtml?: string;
   headers?: string[];
   headerPosition?: EHeaderPosition;
   rows: string[][];
@@ -12,6 +14,17 @@ export enum EHeaderPosition {
   Left = 'left',
   Right = 'right'
 }
+
+export const DefaultTableData: TableData = {
+  title: 'Default Table Title',
+  headers: ['Header 1', 'Header 2'],
+  headerPosition: EHeaderPosition.Center,
+  rows: [
+    ['Row 1, Column 1', 'Row 1, Column 2'],
+    ['Row 2, Column 1', 'Row 2, Column 2'],
+    ['Row 3, Column 1', 'Row 3, Column 2']
+  ]
+};
 
 @Component({
   selector: 'app-table',

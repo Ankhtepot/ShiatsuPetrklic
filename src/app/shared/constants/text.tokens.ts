@@ -147,6 +147,12 @@ export enum T {
   pricing_shibari_row_1_description = 'pricing_shibari_row_1_description',
   pricing_shibari_row_2_price = 'pricing_shibari_row_2_price',
   pricing_shibari_row_2_description = 'pricing_shibari_row_2_description',
+  pricing_1200kc = 'pricing_1200kc',
   pricing_1500kc = 'pricing_1500kc',
-  pricing_2500kc = 'pricing_2500kc'
+  pricing_2500kc = 'pricing_2500kc',
+  pricing_shiatsu_table_title = 'pricing_shiatsu_table_title',
+  pricing_shibari_table_title = 'pricing_shibari_table_title',
+  pricing_dancing_table_title = 'pricing_dancing_table_title',
+  pricing_dearmouring_table_title = 'pricing_dearmouring_table_title',
+  pricing_tantra_massages_table_title = 'pricing_tantra_massages_table_title'
 }

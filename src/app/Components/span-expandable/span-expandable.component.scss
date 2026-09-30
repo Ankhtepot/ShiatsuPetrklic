@@ -1,0 +1,137 @@
+@use "../../../styles/index" as styles;
+
+:host {
+  display: inline;
+  vertical-align: baseline;
+}
+
+.span-expandable {
+  position: relative;
+  display: inline;
+  vertical-align: baseline;
+}
+
+.span-expandable__trigger {
+  display: inline;
+  padding: 0.04em 0.28em 0.08em;
+  border: 0;
+  border-radius: 0.45em;
+  background: rgba(255, 216, 176, 0.7);
+  color: styles.$text-on-text_background;
+  font: inherit;
+  line-height: inherit;
+  text-align: left;
+  vertical-align: baseline;
+  white-space: normal;
+  cursor: pointer;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: rgba(255, 216, 176, 0.95);
+    box-shadow: inset 0 0 0 1px rgba(185, 92, 27, 0.14);
+    outline: none;
+  }
+}
+
+.span-expandable__content {
+  transition: color 0.3s ease;
+}
+
+.span-expandable__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -0.1em;
+  width: 1em;
+  height: 1em;
+  margin-inline-start: 0.3em;
+  vertical-align: middle;
+  padding: 0.18em;
+  border-radius: 50%;
+  border: 1px solid rgba(185, 92, 27, 0.28);
+  background: rgba(255, 255, 255, 0.92);
+  color: styles.$text-on-text_background;
+  box-shadow: 0 0.08em 0.24em rgba(74, 35, 90, 0.12);
+  font-size: 0.82em;
+  line-height: 1;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.span-expandable__icon {
+  display: block;
+  color: inherit;
+  line-height: 1;
+}
+
+.span-expandable__tooltip {
+  position: absolute;
+  inset-block-end: calc(100% + 0.45rem);
+  inset-inline-start: 0;
+  z-index: 5;
+  inline-size: max-content;
+  max-inline-size: min(28rem, 80vw);
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(185, 92, 27, 0.18);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 0.9rem 2rem rgba(74, 35, 90, 0.18);
+  color: styles.$text-on-orange;
+  font-size: 0.95em;
+  line-height: 1.45;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.35rem);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.span-expandable__tooltip::after {
+  content: '';
+  position: absolute;
+  inset-block-start: calc(100% - 1px);
+  inset-inline-start: 1.15rem;
+  border-width: 0.45rem 0.4rem 0;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.97) transparent transparent;
+}
+
+.span-expandable:not(.span-expandable--expanded):hover .span-expandable__tooltip,
+.span-expandable:not(.span-expandable--expanded):focus-within .span-expandable__tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.span-expandable--expanded .span-expandable__trigger {
+  background: rgba(255, 236, 214, 0.92);
+}
+
+.span-expandable--expanded .span-expandable__badge {
+  border-color: rgba(74, 35, 90, 0.24);
+  background: rgba(255, 255, 255, 0.98);
+  transform: translateY(-0.02em);
+}
+
+.span-expandable__trigger:hover .span-expandable__badge,
+.span-expandable__trigger:focus-visible .span-expandable__badge {
+  border-color: rgba(185, 92, 27, 0.4);
+  box-shadow: 0 0.14em 0.35em rgba(74, 35, 90, 0.16);
+}
+
+@media (max-width: 768px) {
+  .span-expandable__tooltip {
+    max-inline-size: min(22rem, 85vw);
+  }
+}

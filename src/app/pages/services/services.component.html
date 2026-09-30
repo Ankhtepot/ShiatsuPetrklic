@@ -34,11 +34,20 @@
       [title]="section.title"
       [markdownCsPath]="section.markdownCsPath"
       [markdownEnPath]="section.markdownEnPath"
-    />
-    @if (section.pricingData) {
-    <app-pricing-table
-      [data]="section.pricingData"
-    />
+    >
+      @if (section.pricingData) {
+        <app-pricing-table
+          [data]="section.pricingData"
+          [embedded]="true"
+        >
+          @if (section.id === 'therapeutic-shibari') {
+            <p>Prefix text to test <span-expandable
+              [collapsedText]="shibariPricingCollapsedText"
+              [expandedText]="shibariPricingExpandedText"
+            /> Postfix text to test</p>
+          }
+        </app-pricing-table>
       }
+    </app-soft-topic-card>
   }
 </div>
