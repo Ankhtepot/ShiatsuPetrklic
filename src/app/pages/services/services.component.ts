@@ -1,57 +1,60 @@
 import {
+  AfterViewInit,
   afterNextRender,
   Component,
   computed,
   effect,
   ElementRef,
+  HostListener,
   inject,
   Injector,
   OnInit,
+  signal,
   ViewChild
 } from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {toSignal} from '@angular/core/rxjs-interop';
 import {ContentCardComponent} from '../../Components/content-card/content-card.component';
+import {PricingTableComponent} from '../../Components/pricing-table/pricing-table.component';
+import {SoftTopicCardComponent} from '../../Components/soft-topic-card/soft-topic-card.component';
+import {TextPipe} from '../../pipes/text.pipe';
 import {EPages} from '../../services/navigation-link.service';
 import {SeoService} from '../../services/seo.service';
 import {TextService} from '../../services/text.service';
 import {T} from '../../shared/constants/text.tokens';
-import {TextPipe} from '../../pipes/text.pipe';
-import {SoftTopicCardComponent} from '../../Components/soft-topic-card/soft-topic-card.component';
-import {ActivatedRoute, RouterLink} from '@angular/router';
-import {toSignal} from '@angular/core/rxjs-interop';
 import {getShibariPricingTableData} from '../../shared/data/pricing';
-import {PricingTableComponent} from '../../Components/pricing-table/pricing-table.component';
-import {TableData} from '../../Components/table/table.component';
-
-interface TanecTantraSection {
-  id: string;
-  icon: string;
-  label: string;
-  eyebrow: string;
-  title: string;
-  markdownCsPath: string;
-  markdownEnPath: string;
-  pricingData?: TableData;
-}
+import {DanceTantraSection} from '../../shared/models/common';
+import {ServicesNavigation} from './services-navigation/services-navigation';
 
 @Component({
   selector: 'app-services',
-  imports: [ContentCardComponent,
+  imports: [
+    ContentCardComponent,
     TextPipe,
     SoftTopicCardComponent,
-    RouterLink,
     PricingTableComponent,
+    ServicesNavigation,
   ],
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss'],
   standalone: true
 })
-export class ServicesComponent implements OnInit {
+export class ServicesComponent implements OnInit, AfterViewInit {
   protected readonly T = T;
-  @ViewChild('sectionNav') private sectionNav?: ElementRef<HTMLElement>;
+  private readonly floatingNavigationGapDesktop = -30;
+  private readonly floatingNavigationGapMobile = -30;
+  private readonly sectionScrollSpacing = 24;
+
+  @ViewChild('tanecTantraPage') private tanecTantraPage?: ElementRef<HTMLElement>;
+  @ViewChild('floatingSectionNav') private floatingSectionNav?: ElementRef<HTMLElement>;
 
   private route = inject(ActivatedRoute);
+  private router = inject(Router);
   private injector = inject(Injector);
   private fragment = toSignal(this.route.fragment, {initialValue: null});
+
+  readonly showFloatingNavigation = signal(false);
+  readonly floatingNavigationTop = signal(0);
 
   protected shibariPricingData = computed(() => {
     return getShibariPricingTableData(this.textService);
@@ -77,7 +80,11 @@ export class ServicesComponent implements OnInit {
     this.seo.setCanonicalPage(EPages.Services);
   }
 
-  sections = computed<TanecTantraSection[]>(() => [
+  ngAfterViewInit(): void {
+    afterNextRender(() => this.updateFloatingNavigation(), {injector: this.injector});
+  }
+
+  sections = computed<DanceTantraSection[]>(() => [
     {
       id: 'therapeutic-shibari',
       icon: 'bi-link-45deg',
@@ -96,6 +103,8 @@ export class ServicesComponent implements OnInit {
       title: this.textService.get(T.tanec_tantra_section_1_title),
       markdownCsPath: '/markdown/services/tantric-massages.cs.md',
       markdownEnPath: '/markdown/services/tantric-massages.en.md'
+      // markdownCsPath: '/markdown/services/default.cs.md',
+      // markdownEnPath: '/markdown/services/default.en.md'
     },
     {
       id: 'dancing',
@@ -105,6 +114,8 @@ export class ServicesComponent implements OnInit {
       title: this.textService.get(T.tanec_tantra_section_3_title),
       markdownCsPath: '/markdown/services/dancing.cs.md',
       markdownEnPath: '/markdown/services/dancing.en.md'
+      // markdownCsPath: '/markdown/services/default.cs.md',
+      // markdownEnPath: '/markdown/services/default.en.md'
     },
     {
       id: 'dearmouring',
@@ -114,8 +125,30 @@ export class ServicesComponent implements OnInit {
       title: this.textService.get(T.tanec_tantra_section_4_title),
       markdownCsPath: '/markdown/services/dearmouring.cs.md',
       markdownEnPath: '/markdown/services/dearmouring.en.md'
+      // markdownCsPath: '/markdown/services/default.cs.md',
+      // markdownEnPath: '/markdown/services/default.en.md'
     }
   ]);
+
+  @HostListener('window:scroll')
+  @HostListener('window:resize')
+  onViewportChange(): void {
+    this.updateFloatingNavigation();
+  }
+
+  navigateToSection(sectionId: string): void {
+    const sameFragment = this.fragment() === sectionId;
+
+    void this.router.navigate([], {
+      relativeTo: this.route,
+      fragment: sectionId,
+      queryParamsHandling: 'preserve'
+    }).then(() => {
+      if (sameFragment) {
+        this.scrollToFragment(sectionId);
+      }
+    });
+  }
 
   private scrollToFragment(fragment: string): void {
     const target = document.getElementById(fragment);
@@ -123,13 +156,49 @@ export class ServicesComponent implements OnInit {
       return;
     }
 
-    const navHeight = this.sectionNav?.nativeElement.offsetHeight ?? 0;
-    const yOffset = navHeight + 104;
+    const yOffset = this.getScrollOffset();
     const y = target.getBoundingClientRect().top + window.scrollY - yOffset;
 
     window.scrollTo({
       top: Math.max(y, 0),
       behavior: 'smooth'
     });
+  }
+
+  private updateFloatingNavigation(): void {
+    const section = this.tanecTantraPage?.nativeElement;
+    if (!section) {
+      return;
+    }
+
+    const headerBottom = this.getHeaderBottom();
+    const verticalGap = this.getNavigationGap();
+
+    this.floatingNavigationTop.set(headerBottom + verticalGap);
+
+    const sectionBottom = section.getBoundingClientRect().bottom;
+    this.showFloatingNavigation.set(sectionBottom <= headerBottom + verticalGap + 8);
+  }
+
+  private getScrollOffset(): number {
+    const headerBottom = this.getHeaderBottom();
+    const floatingNavHeight = this.floatingSectionNav?.nativeElement.offsetHeight ?? 0;
+
+    return headerBottom + floatingNavHeight + this.getNavigationGap() + this.sectionScrollSpacing;
+  }
+
+  private getHeaderBottom(): number {
+    const header = document.querySelector('.header') as HTMLElement | null;
+    if (!header) {
+      return 0;
+    }
+
+    return Math.max(header.getBoundingClientRect().bottom, 0);
+  }
+
+  private getNavigationGap(): number {
+    return window.innerWidth <= 768
+      ? this.floatingNavigationGapMobile
+      : this.floatingNavigationGapDesktop;
   }
 }

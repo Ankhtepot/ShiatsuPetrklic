@@ -30,11 +30,11 @@ export function getShibariPricingTableData(textService: TextService): TableData 
     rows: [
       [
         textService.get(T.pricing_shibari_row_1_description),
-        textService.get(T.pricing_shibari_row_1_price)
+        textService.get(T.pricing_1500kc)
       ],
       [
         textService.get(T.pricing_shibari_row_2_description),
-        textService.get(T.pricing_shibari_row_2_price)
+        textService.get(T.pricing_2500kc)
       ],
     ]
   };

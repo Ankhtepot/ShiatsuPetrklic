@@ -1,0 +1,11 @@
+<nav class="section-nav" [class.section-nav--floating]="floating()" aria-label="Tanec a Tantra">
+  @for (section of sections(); track section.id) {
+    <button
+      type="button"
+      class="section-nav__pill"
+      (click)="onSectionClick(section.id)"
+    >
+      {{ section.label }}
+    </button>
+  }
+</nav>
