@@ -146,5 +146,7 @@ export enum T {
   pricing_shibari_row_1_price = 'pricing_shibari_row_1_price',
   pricing_shibari_row_1_description = 'pricing_shibari_row_1_description',
   pricing_shibari_row_2_price = 'pricing_shibari_row_2_price',
-  pricing_shibari_row_2_description = 'pricing_shibari_row_2_description'
+  pricing_shibari_row_2_description = 'pricing_shibari_row_2_description',
+  pricing_1500kc = 'pricing_1500kc',
+  pricing_2500kc = 'pricing_2500kc'
 }

@@ -1,23 +1,29 @@
 <app-content-card [backgroundOpacity]="0.92" width="1100px">
-  <section class="tanec-tantra-page">
+  <section #tanecTantraPage class="tanec-tantra-page">
     <p class="tanec-tantra-page__eyebrow">{{ T.tanec_tantra_page_eyebrow | text }}</p>
     <h1>{{ T.tanec_tantra_page_heading | text }}</h1>
     <p class="tanec-tantra-page__intro">{{ T.tanec_tantra_page_intro_1 | text }}</p>
     <p class="tanec-tantra-page__intro">{{ T.tanec_tantra_page_intro_2 | text }}</p>
 
-    <nav #sectionNav class="section-nav" aria-label="Tanec a Tantra">
-      @for (section of sections(); track section.id) {
-        <a
-          class="section-nav__pill"
-          [routerLink]="[]"
-          [fragment]="section.id"
-        >
-          {{ section.label }}
-        </a>
-      }
-    </nav>
+    <app-services-navigation
+      [sections]="sections()"
+      (navigateToSection)="navigateToSection($event)"
+    />
   </section>
 </app-content-card>
+
+<div
+  #floatingSectionNav
+  class="floating-section-nav"
+  [class.floating-section-nav--visible]="showFloatingNavigation()"
+  [style.top.px]="floatingNavigationTop()"
+>
+  <app-services-navigation
+    [sections]="sections()"
+    [floating]="true"
+    (navigateToSection)="navigateToSection($event)"
+  />
+</div>
 
 <div class="sections-stack">
   @for (section of sections(); track section.id) {

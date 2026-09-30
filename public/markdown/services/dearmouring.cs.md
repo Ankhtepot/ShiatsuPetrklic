@@ -1,4 +1,6 @@
 *Jemná a vědomá práce s místy, kde se v těle dlouhodobě drží obranné napětí, stud nebo potlačené emoce.*
+<br>
+**Více informací připravuji a bude uvedeno v nejbližších dnech!**
 
 - uvolnění napětí
 - respektující tempo
