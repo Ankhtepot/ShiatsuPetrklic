@@ -1,27 +1,32 @@
-import {ChangeDetectionStrategy, Component, effect, input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, effect, input, signal} from '@angular/core';
+import {TextPipe} from '../../pipes/text.pipe';
+import {T} from '../../shared/constants/text.tokens';
 
 @Component({
   selector: 'span-expandable',
   standalone: true,
+  imports: [TextPipe],
   templateUrl: './span-expandable.component.html',
   styleUrls: ['./span-expandable.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SpanExpandableComponent {
+  protected readonly T = T;
+
   readonly collapsedText = input.required<string>();
   readonly expandedText = input.required<string>();
   readonly initialExpanded = input<boolean>(false);
 
-  protected isExpanded = false;
+  protected readonly isExpanded = signal(false);
 
   constructor() {
     effect(() => {
-      this.isExpanded = this.initialExpanded();
+      this.isExpanded.set(this.initialExpanded());
     });
   }
 
   protected toggleExpanded(): void {
-    this.isExpanded = !this.isExpanded;
+    this.isExpanded.update((expanded) => !expanded);
   }
 
   protected handleKeydown(event: KeyboardEvent): void {

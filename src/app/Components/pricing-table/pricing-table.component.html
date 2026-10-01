@@ -1,25 +1,18 @@
-@if (embedded()) {
-  <section class="pricing-section pricing-section--embedded" [attr.id]="sectionId() || null">
+<app-content-card [backgroundOpacity]="backgroundOpacity()" [passthrough]="embedded()">
+  <section
+    class="pricing-section"
+    [class.pricing-section--embedded]="embedded()"
+    [attr.id]="sectionId() || null"
+  >
     @if (tableTitle() || data().title) {
       <h2>{{ tableTitle() || data().title }}</h2>
     }
-    @if (data().introHtml) {
+    @if (data().introHtml && !hasProjectedContent()) {
       <div [innerHTML]="data().introHtml"></div>
     }
-    <ng-content></ng-content>
+    <div #projectedContent class="pricing-section__projected-content">
+      <ng-content></ng-content>
+    </div>
     <app-table [data]="data()"/>
   </section>
-} @else {
-  <app-content-card [backgroundOpacity]="backgroundOpacity()">
-    <section class="pricing-section" [attr.id]="sectionId() || null">
-      @if (tableTitle() || data().title) {
-        <h2>{{ tableTitle() || data().title }}</h2>
-      }
-      @if (data().introHtml) {
-        <div [innerHTML]="data().introHtml"></div>
-      }
-      <ng-content></ng-content>
-      <app-table [data]="data()"/>
-    </section>
-  </app-content-card>
-}
+</app-content-card>

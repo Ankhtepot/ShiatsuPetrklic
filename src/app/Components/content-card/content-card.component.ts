@@ -11,8 +11,9 @@ import {NgStyle} from '@angular/common';
 export class ContentCardComponent implements AfterViewInit {
   @Input() width: string = '800px'; // Can be '80%', '60%', '500px', etc.
   backgroundOpacity = input<number>(0.7);
+  passthrough = input(false);
 
-  readonly style = computed(() => this.isMobile() ? {} : { width: this.width });
+  readonly style = computed(() => this.passthrough() || this.isMobile() ? {} : { width: this.width });
   readonly isMobile = signal(window.innerWidth < 768);
 
   ngAfterViewInit(): void {

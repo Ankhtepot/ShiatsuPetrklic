@@ -108,8 +108,8 @@
   border-color: rgba(255, 255, 255, 0.97) transparent transparent;
 }
 
-.span-expandable:not(.span-expandable--expanded):hover .span-expandable__tooltip,
-.span-expandable:not(.span-expandable--expanded):focus-within .span-expandable__tooltip {
+.span-expandable:hover .span-expandable__tooltip,
+.span-expandable:focus-within .span-expandable__tooltip {
   opacity: 1;
   transform: translateY(0);
 }
