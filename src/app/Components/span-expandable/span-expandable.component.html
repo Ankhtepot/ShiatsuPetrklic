@@ -1,19 +1,19 @@
-<span class="span-expandable" [class.span-expandable--expanded]="isExpanded">
+<span class="span-expandable" [class.span-expandable--expanded]="isExpanded()">
   <span
     role="button"
     tabindex="0"
     class="span-expandable__trigger"
-    [attr.aria-expanded]="isExpanded"
-    [attr.aria-label]="isExpanded ? 'Collapse expanded text' : 'Expand text'"
+    [attr.aria-expanded]="isExpanded()"
+    [attr.aria-label]="(isExpanded() ? T.span_expandable_aria_collapse : T.span_expandable_aria_expand) | text"
     (click)="toggleExpanded()"
     (keydown)="handleKeydown($event)"
   >
     <span class="span-expandable__content">
-      {{ isExpanded ? expandedText() : collapsedText() }}
+      {{ isExpanded() ? expandedText() : collapsedText() }}
     </span>
 
     <span class="span-expandable__badge" aria-hidden="true">
-      @if (isExpanded) {
+      @if (isExpanded()) {
         <i class="bi bi-arrows-angle-contract span-expandable__icon"></i>
       } @else {
         <i class="bi bi-arrows-angle-expand span-expandable__icon"></i>
@@ -21,9 +21,7 @@
     </span>
   </span>
 
-  @if (!isExpanded) {
     <span class="span-expandable__tooltip" role="tooltip">
-      {{ expandedText() }}
+      {{ isExpanded() ? collapsedText() : expandedText() }}
     </span>
-  }
 </span>

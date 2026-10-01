@@ -41,10 +41,10 @@
           [embedded]="true"
         >
           @if (section.id === 'therapeutic-shibari') {
-            <p>Prefix text to test <span-expandable
-              [collapsedText]="shibariPricingCollapsedText"
-              [expandedText]="shibariPricingExpandedText"
-            /> Postfix text to test</p>
+            <p><span-expandable
+              [collapsedText]="T.shibari_intro_session_pricing_collapsed_text | text"
+              [expandedText]="T.shibari_intro_session_pricing_expanded_text | text"
+            /></p>
           }
         </app-pricing-table>
       }

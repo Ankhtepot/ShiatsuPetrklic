@@ -1,4 +1,4 @@
-*Čas na to se nechat podržet.*
+*Čas nechat se podržet.*
 
 - práce s hranicemi
 - ponoření do sebe

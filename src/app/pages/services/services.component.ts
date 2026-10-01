@@ -57,12 +57,7 @@ export class ServicesComponent implements OnInit, AfterViewInit {
 
   readonly showFloatingNavigation = signal(false);
   readonly floatingNavigationTop = signal(0);
-  protected readonly shibariPricingCollapsedText = 'How much does therapeutic shibari cost?';
-  protected readonly shibariPricingExpandedText = 'The exact price depends on the chosen format and length. Expand this note to keep a longer explanation inline without breaking the surrounding paragraph layout.';
-  protected readonly shibariPricingData = computed(() => ({
-    ...getShibariPricingTableData(this.textService),
-    introHtml: `<p class="lead">${this.textService.get(T.tanec_tantra_section_2_lead)}</p>`
-  }));
+  protected readonly shibariPricingData = computed(() => getShibariPricingTableData(this.textService));
 
   constructor(private seo: SeoService, private textService: TextService) {
     effect(() => {
