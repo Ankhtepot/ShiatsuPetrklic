@@ -1,4 +1,6 @@
 *A space for spontaneous movement, self-contact, joy and the return of natural aliveness to the body.*
+<br>
+**More information is being prepared and will be provided in the coming days!**
 
 - authentic movement
 - breath and rhythm
