@@ -1,4 +1,6 @@
 *Gentle, conscious work with places where protective tension, shame or suppressed emotion have been held in the body for a long time.*
+<br>
+**More information is being prepared and will be provided in the coming days!**
 
 - releasing tension
 - respectful pacing

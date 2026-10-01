@@ -1,4 +1,6 @@
 *Sensitive rope work as a tool for releasing tension and deepening your sense of boundaries, trust and embodied support.*
+<br>
+**More information is being prepared and will be provided in the coming days!**
 
 - boundary work
 - nervous system
