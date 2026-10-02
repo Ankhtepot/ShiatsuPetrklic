@@ -19,6 +19,17 @@
   text-align: center;
 }
 
+.md-alert {
+  font-family: "Roboto", sans-serif;
+  color: $text-on-text_background;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  background-color: rgba(255, 216, 176, 0.95);
+  border-radius: 1rem;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
 .md-image {
   width: 100%;
   max-height: 400px;

@@ -41,7 +41,7 @@
           [embedded]="true"
         >
           @if (section.id === 'therapeutic-shibari') {
-            <p><span-expandable
+            <p>{{ T.shibari_intro_prefix | text }}<span-expandable
               [collapsedText]="T.shibari_intro_session_pricing_collapsed_text | text"
               [expandedText]="T.shibari_intro_session_pricing_expanded_text | text"
             /></p>
