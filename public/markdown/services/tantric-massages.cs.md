@@ -1,6 +1,6 @@
 *Individuální setkání zaměřená na hluboké uvolnění, lepší vnímání těla a vědomější kontakt se sebou.*
 <br>
-**Více informací připravuji a bude uvedeno v nejbližších dnech!**
+<div class="md-alert">Více informací připravuji a bude uvedeno v nejbližších dnech!</div>
 
 - vědomý dotek
 - bezpečný rámec

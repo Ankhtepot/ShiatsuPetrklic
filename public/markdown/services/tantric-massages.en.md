@@ -1,6 +1,6 @@
 *One-to-one sessions focused on deep relaxation, better body awareness and a more conscious connection with yourself.*
 <br>
-**More information is being prepared and will be provided in the coming days!**
+<div class="md-alert">More information is being prepared and will be provided in the coming days!</div>
 
 - conscious touch
 - safe container

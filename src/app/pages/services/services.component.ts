@@ -95,17 +95,6 @@ export class ServicesComponent implements OnInit, AfterViewInit {
       pricingData: this.shibariPricingData()
     },
     {
-      id: 'tantric-massages',
-      icon: 'bi-flower1',
-      label: this.textService.get(T.tanec_tantra_nav_tantric_massages),
-      eyebrow: this.textService.get(T.tanec_tantra_section_1_eyebrow),
-      title: this.textService.get(T.tanec_tantra_section_1_title),
-      markdownCsPath: '/markdown/services/tantric-massages.cs.md',
-      markdownEnPath: '/markdown/services/tantric-massages.en.md'
-      // markdownCsPath: '/markdown/services/default.cs.md',
-      // markdownEnPath: '/markdown/services/default.en.md'
-    },
-    {
       id: 'dancing',
       icon: 'bi-music-note-beamed',
       label: this.textService.get(T.tanec_tantra_nav_dancing),
@@ -113,6 +102,17 @@ export class ServicesComponent implements OnInit, AfterViewInit {
       title: this.textService.get(T.tanec_tantra_section_3_title),
       markdownCsPath: '/markdown/services/dancing.cs.md',
       markdownEnPath: '/markdown/services/dancing.en.md'
+      // markdownCsPath: '/markdown/services/default.cs.md',
+      // markdownEnPath: '/markdown/services/default.en.md'
+    },
+    {
+      id: 'tantric-massages',
+      icon: 'bi-flower1',
+      label: this.textService.get(T.tanec_tantra_nav_tantric_massages),
+      eyebrow: this.textService.get(T.tanec_tantra_section_1_eyebrow),
+      title: this.textService.get(T.tanec_tantra_section_1_title),
+      markdownCsPath: '/markdown/services/tantric-massages.cs.md',
+      markdownEnPath: '/markdown/services/tantric-massages.en.md'
       // markdownCsPath: '/markdown/services/default.cs.md',
       // markdownEnPath: '/markdown/services/default.en.md'
     },

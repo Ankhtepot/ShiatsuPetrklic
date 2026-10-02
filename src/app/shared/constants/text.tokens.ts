@@ -126,5 +126,6 @@ export enum T {
   testimonials_page_description = 'testimonials_page_description',
   testimonials_page_title = 'testimonials_page_title',
   value_copied = 'value_copied',
-  write_me = 'write_me'
+  write_me = 'write_me',
+  shibari_intro_prefix = "shibari_intro_prefix"
 }

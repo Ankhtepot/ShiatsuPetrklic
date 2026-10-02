@@ -1,11 +1,16 @@
 *Prostor pro spontánní pohyb, kontakt se sebou, radost a návrat přirozené živosti do těla.*
 <br>
-**Více informací připravuji a bude uvedeno v nejbližších dnech!**
+<div class="md-alert">Více informací připravuji a bude uvedeno v nejbližších dnech!</div>
 
 - autentický pohyb
 - dech a rytmus
 - živost těla
 
-Tanec zde není o technice ani o tom, jak pohyb vypadá zvenku. Je to cesta, jak znovu rozhýbat dech, emoce a vitalitu, které bývají pod vrstvami každodenní kontroly a únavy utlumené.
+Svobodný párový tanec je tanec dvou lidí, který není omezený žádným konkrétním stylem ani technikou. Může v něm být CI, swing, klasika, naučené figury i pohyby, které přirozeně vzniknou mezi vámi dvěma teď a tady. Všechny formy jsou vítané.
 
-Může mít podobu volného pohybu, vedených cvičení i jemné práce ve dvojici. Důraz je na autenticitě, vnímání a propojení s tím, co se chce v těle přirozeně pohnout.
+Je to především dialog pohybem – učí vnímat druhého, reagovat na něj a zároveň zůstávat v kontaktu se sebou. Učí rozumět tomu, co znamená vést i co znamená odevzdat se vedení.
+
+Je to fantastický prostředek pro meditaci v pohybu a přenesení se do čisté přítomnosti. Trénuje pozornost i tělo a může být hluboce naplňující a vyživující pro tělo i duši.
+
+<div class="md-alert">V současnosti připravuji otevřenou skupinu pro tento úžasný druh tance, v případě zájmu prosím vyplňte
+<a class="md-link" href="https://tally.so/r/rj7BMl">následující formulář</a>, děkuji!</div>
