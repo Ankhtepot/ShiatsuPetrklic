@@ -1,6 +1,5 @@
 *Prostor pro spontánní pohyb, kontakt se sebou, radost a návrat přirozené živosti do těla.*
 <br>
-<div class="md-alert">Více informací připravuji a bude uvedeno v nejbližších dnech!</div>
 
 - autentický pohyb
 - dech a rytmus
