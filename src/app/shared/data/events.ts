@@ -206,6 +206,7 @@ const events: EventData[] = [
     descriptionEn: '',
     imageUrl: 'images/events/tantric_circle.webp',
     miniatureUrl: 'images/events/miniatures/tantric_circle.webp',
+    postEventTextCs: "Večer proběhl v příjemné atmosféře, sešla se úžasná skupina lidí v pozornosti a respektu k sobě navzájem. Bylo to krásné setkání a věřím, že přání účastníků byly naplněny. Děkuji všem za účast, byli jste skvělí!",
     postEventTextEn: undefined,
     contentItems: [
       {
