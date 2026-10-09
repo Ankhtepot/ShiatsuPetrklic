@@ -1,4 +1,4 @@
-*One-to-one sessions focused on deep relaxation, better body awareness and a more conscious connection with yourself.*
+*Individual sessions focused on deep relaxation, better body awareness and a more conscious connection with yourself.*
 <br>
 <div class="md-alert">More information is being prepared and will be provided in the coming days!</div>
 
@@ -6,6 +6,6 @@
 - safe container
 - deep relaxation
 
-A tantric massage can create space where inner pressure slows down and the body can feel softness, safety and energy flow again. Presence, sensitive communication and working at a pace that feels natural to you are essential.
+Tantric massage can be a space where inner pressure slows down and the body gets a chance to feel softness, safety and the flow of energy again. Presence, sensitive communication and working at a pace that feels natural for you are essential.
 
-The session can be held as a relaxing experience or with a more therapeutic focus. The intention is that you leave feeling more settled, connected and trusting in your own body.
+The session can be approached in a relaxing way or in a more therapeutic way. Its intention is for you to leave feeling settled, connected and with greater trust in your own body.

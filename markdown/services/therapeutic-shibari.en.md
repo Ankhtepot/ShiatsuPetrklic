@@ -1,11 +1,19 @@
-*Sensitive rope work as a tool for releasing tension and deepening your sense of boundaries, trust and embodied support.*
-<br>
-**More information is being prepared and will be provided in the coming days!**
+*A time to let yourself be held.*
 
 - boundary work
-- nervous system
+- turning inward
 - conscious surrender
 
-Therapeutic shibari is not built around performance or aesthetics at any cost. It is slow, conscious work in which the ropes offer support, clarity and an opportunity to let go of part of the control in a safe environment.
+Are you used to holding everything together? Knowing what is needed and taking care of it? What if you could allow yourself to stop struggling with life and simply be?
 
-This format may support people who want to explore trust, regulation of the nervous system, boundaries or the need to feel held. Everything is created through agreement and with respect for your experience.
+Therapeutic shibari is not about performance or enduring something.
+
+First, we create a space together where your boundaries are clear and respected. Only then do the ropes come in - slowly, with attention to what you need.
+
+You do not have to let go of yourself, only of the need to control everything. Breathe. Feel. Let yourself be cared for.
+
+I hold the rope, the space and the attention. You have time to turn inward.
+
+Surrender does not mean losing safety or freedom - often quite the opposite. Instead of restriction, there can be relief in not having to do anything right now. You may discover that you can be vulnerable and still safe. You may experience a feeling of coming home...
+
+Know that sometimes it is possible to release even what has been tightly held for a long time.
