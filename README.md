@@ -54,6 +54,8 @@ Create a snapshot for SEO purposes:
 npx tsx snapshot.ts
 ```
 
+The snapshot script serves the production build on a temporary free port, so it does not collide with `ng serve`.
+
 ## Testing
 
 Run unit tests with Karma:
@@ -71,4 +73,3 @@ ng generate component component-name
 ## Resources
 
 - [Angular CLI Documentation](https://angular.dev/tools/cli)
-

@@ -10,12 +10,26 @@ import { routesToPrerender } from './public/prerender-routes';
 // 🛠️ Config
 const distFolder = 'dist/shiatsu-brno/browser';
 const outputFolder = distFolder;
-const port = 4201;
+
+function startSnapshotServer(): Promise<{ server: ReturnType<typeof createServer>; port: number }> {
+  const server = createServer({ root: distFolder });
+
+  return new Promise((resolve, reject) => {
+    server.server.once('error', reject);
+    server.listen(0, () => {
+      const address = server.server.address();
+      if (!address || typeof address === 'string') {
+        reject(new Error('Snapshot server did not expose a numeric port.'));
+        return;
+      }
+
+      resolve({ server, port: address.port });
+    });
+  });
+}
 
 async function createSnapshots() {
-  // Start local server
-  const server = createServer({ root: distFolder });
-  server.listen(port);
+  const { server, port } = await startSnapshotServer();
 
   const browser = await puppeteer.launch({ headless: 'shell' });
   const page = await browser.newPage();
@@ -27,6 +41,12 @@ async function createSnapshots() {
     await page.goto(url, { waitUntil: 'networkidle0' });
 
     const html = await page.content();
+    if (html.includes('/@vite/client')) {
+      throw new Error(
+        `Snapshot for "${route}" captured Vite dev-server assets instead of the production build.`
+      );
+    }
+
     const outputPath = join(outputFolder, route, 'index.html');
 
     await outputFile(outputPath, html);
