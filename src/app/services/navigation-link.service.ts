@@ -8,7 +8,7 @@ export enum EPages {
   AboutMe = 'about-me',
   Testimonials = 'testimonials',
   Pricing = 'pricing',
-  Services = 'tanec-tantra',
+  Services = 'dance-tantra',
   Events = 'events',
   Contact = 'contact',
   NotFound = '401',

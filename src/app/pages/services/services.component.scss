@@ -4,7 +4,7 @@
   display: block;
 }
 
-.tanec-tantra-page {
+.services-page {
   max-width: 960px;
   margin: 0 auto;
   text-align: center;
@@ -16,7 +16,7 @@
   }
 }
 
-.tanec-tantra-page__eyebrow {
+.services-page__eyebrow {
   margin-bottom: 0.65rem;
   font-size: 0.9rem;
   font-weight: 700;
@@ -25,7 +25,7 @@
   color: rgba(74, 35, 90, 0.8);
 }
 
-.tanec-tantra-page__intro {
+.services-page__intro {
   margin: 0 auto 1rem;
   max-width: 760px;
   font-size: 1.08rem;
@@ -57,7 +57,7 @@
 }
 
 @media (max-width: 768px) {
-  .tanec-tantra-page__intro {
+  .services-page__intro {
     font-size: 1rem;
   }
 

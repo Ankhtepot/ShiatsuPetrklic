@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://shiatsubrno.cz/sitemap.xml
+
+Sitemap: https://shiatsupetrklic.com/sitemap.xml

@@ -47,7 +47,7 @@ export class ServicesComponent implements OnInit, AfterViewInit {
   private readonly floatingNavigationGapMobile = -30;
   private readonly sectionScrollSpacing = 24;
 
-  @ViewChild('tanecTantraPage') private tanecTantraPage?: ElementRef<HTMLElement>;
+  @ViewChild('servicesPage') private servicesPage?: ElementRef<HTMLElement>;
   @ViewChild('floatingSectionNav') private floatingSectionNav?: ElementRef<HTMLElement>;
 
   private route = inject(ActivatedRoute);
@@ -165,7 +165,7 @@ export class ServicesComponent implements OnInit, AfterViewInit {
   }
 
   private updateFloatingNavigation(): void {
-    const section = this.tanecTantraPage?.nativeElement;
+    const section = this.servicesPage?.nativeElement;
     if (!section) {
       return;
     }
