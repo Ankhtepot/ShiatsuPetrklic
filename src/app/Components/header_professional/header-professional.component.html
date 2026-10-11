@@ -59,10 +59,12 @@
       <!-- Hamburger (mobile only, controlled via CSS) -->
       <button
         class="hamburger d-md-none"
+        aria-label="Menu"
+        [attr.aria-expanded]="isMenuOpen()"
         (click)="toggleMobileMenu()"
         [ngClass]="{ active: isMenuOpen() }"
       >
-        <i class="bi bi-list fs-3"></i>
+        <i class="bi bi-list fs-3" aria-hidden="true"></i>
       </button>
     </div>
 

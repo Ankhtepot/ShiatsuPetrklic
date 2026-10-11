@@ -1,3 +1,8 @@
 <div class="read-more-wrapper" [class.always-show]="alwaysShow">
-  <button class="btn btn-link">{{ label }}</button>
+  @if (link) {
+    <!-- real link, so crawlers can discover the target page -->
+    <a class="btn btn-link" [routerLink]="link">{{ label }}</a>
+  } @else {
+    <button class="btn btn-link">{{ label }}</button>
+  }
 </div>

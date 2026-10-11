@@ -3,6 +3,7 @@ import {
   Component,
   computed,
   effect,
+  inject,
   OnInit,
   signal,
   ViewChild,
@@ -15,6 +16,11 @@ import {getEvents} from '../../../shared/data/events';
 import {QuoteStripSimpleComponent} from '../../../Components/quote-strip-simple/quote-strip-simple.component';
 import {INVALID_QUOTE, QuoteData} from '../../../shared/models/quote-data';
 import {EventDetailNavigationComponent, ItemsData} from './event-detail-navigation/event-detail-navigation.component';
+import {SeoService, SITE_ORIGIN} from '../../../services/seo.service';
+import {EPages} from '../../../services/navigation-link.service';
+import {ELanguage, LanguageService} from '../../../services/language.service';
+import {T} from '../../../shared/constants/text.tokens';
+import {cutAtLastWholeWord} from '../../../shared/utilities/string-extensions';
 
 @Component({
   selector: 'app-detail.component',
@@ -68,6 +74,9 @@ export class DetailComponent implements OnInit, AfterViewInit {
 
   readonly invalidQuote: QuoteData = INVALID_QUOTE;
 
+  private seo = inject(SeoService);
+  private languageService = inject(LanguageService);
+
   constructor(
     private route: ActivatedRoute,
     private router: Router
@@ -76,9 +85,57 @@ export class DetailComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       const id = params.get('id');
-      console.log('searching for id', id);
       this.currentId.set(id); // triggers recomputation of event & itemsData
+      this.updateSeo(id);
     });
+  }
+
+  private updateSeo(id: string | null): void {
+    if (!this.isEventValid()) {
+      this.seo.setPage({
+        page: EPages.NotFound,
+        title: T.page_not_found_title,
+        description: T.page_not_found_description,
+        noindex: true
+      });
+      return;
+    }
+
+    this.seo.setPage({
+      page: EPages.Events,
+      subPath: `details/${id}`,
+      title: () => `${this.localized(this.event().titleCs, this.event().titleEn)} – Shiatsu Petrklíč`,
+      description: () => this.shortDescription(),
+      jsonLd: () => this.eventStructuredData(id!)
+    });
+  }
+
+  // English texts are often missing, fall back to Czech like the event card does.
+  private localized(textCs?: string, textEn?: string): string {
+    return (this.languageService.current === ELanguage.En && textEn) ? textEn : (textCs ?? '');
+  }
+
+  private shortDescription(): string {
+    const event = this.event();
+    const text = this.localized(event.descriptionCs, event.descriptionEn).replace(/\s+/g, ' ').trim();
+    return cutAtLastWholeWord(text, 160);
+  }
+
+  private eventStructuredData(id: string): object {
+    const event = this.event();
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Event',
+      name: this.localized(event.titleCs, event.titleEn),
+      description: this.shortDescription(),
+      startDate: event.date.toISOString(),
+      eventStatus: 'https://schema.org/EventScheduled',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      url: this.seo.getPageUrl(EPages.Events, this.languageService.current, `details/${id}`),
+      ...(event.imageUrl && {image: `${SITE_ORIGIN}/${event.imageUrl.replace(/^\//, '')}`}),
+      ...(event.location && {location: {'@type': 'Place', name: event.location, address: event.location}}),
+      organizer: {'@type': 'Organization', name: 'Shiatsu Petrklíč', url: SITE_ORIGIN}
+    };
   }
 
   ngAfterViewInit(): void {

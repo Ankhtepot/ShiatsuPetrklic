@@ -4,7 +4,7 @@ $background-color: $light-purple;
 $text-color: $deep-navy;
 
 .read-more-wrapper {
-  button {
+  button, a {
     background: rgba($background-color, 1);
     //border: 1px solid #ffd8b0;
     color: $text-color;
@@ -27,14 +27,16 @@ $text-color: $deep-navy;
   }
 
   // Enable on hover from the quote block (default behavior)
-  :host-context(blockquote:hover) & button {
+  :host-context(blockquote:hover) & button,
+  :host-context(blockquote:hover) & a {
     opacity: 1;
     pointer-events: auto;
     transition-delay: 0.1s;
   }
 
   // If alwaysShow is set to true, button is always shown
-  &.always-show button {
+  &.always-show button,
+  &.always-show a {
     opacity: 1 !important;
     pointer-events: auto !important;
     transition-delay: 0s;
@@ -43,7 +45,7 @@ $text-color: $deep-navy;
 
 @media (max-width: 800px) {
   .read-more-wrapper {
-    button {
+    button, a {
       box-shadow: -3px 0px 5px rgba($background-color, .5);
     }
   }

@@ -46,7 +46,7 @@ export class AppComponent {
     showLogo: true,
     showTitle: true,
     title: 'Shiatsu Petrklíč',
-    logoPath: 'images/appIcon.png',
+    logoPath: 'images/appIcon.webp',
     dynamicShow: false,
     textColor: AppColors.textOnOrange,
     backgroundGradientStart: `rgba(255,255,255, .95) 50%, rgba(255,255,255, .8)`,

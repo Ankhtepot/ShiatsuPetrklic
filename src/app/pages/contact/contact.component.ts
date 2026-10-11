@@ -22,12 +22,11 @@ export class ContactComponent implements OnInit{
   constructor(private textService: TextService, private seo: SeoService) { }
 
   ngOnInit(): void {
-    this.seo.setSeo({
-      title: this.textService.get(T.contact_page_title),
-      description: this.textService.get(T.contact_page_description)
-      // description: 'Get in touch for appointments, inquiries, or more information about Shiatsu therapy in Brno.'
+    this.seo.setPage({
+      page: EPages.Contact,
+      title: T.contact_page_title,
+      description: T.contact_page_description
     });
-    this.seo.setCanonicalPage(EPages.Contact);
   }
 
   getText(address_value: T) {

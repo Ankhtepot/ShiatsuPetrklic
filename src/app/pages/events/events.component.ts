@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {ContentCardComponent} from '../../Components/content-card/content-card.component';
 import {EPages} from '../../services/navigation-link.service';
 import {SeoService} from '../../services/seo.service';
-import {TextService} from '../../services/text.service';
 import {T} from '../../shared/constants/text.tokens';
 import {EventData} from '../../shared/models/event-data';
 import {getEvents} from '../../shared/data/events';
@@ -20,17 +19,16 @@ export class EventsComponent implements OnInit {
   public upcomingEvents : EventData[] = [];
   public pastEvents : EventData[] = [];
 
-  constructor(private seo: SeoService, private textService: TextService) {
+  constructor(private seo: SeoService) {
     this.categorizeEvents();
   }
 
   ngOnInit(): void {
-    this.seo.setSeo({
-      title: this.textService.get(T.services_page_title),
-      description: this.textService.get(T.services_page_description)
+    this.seo.setPage({
+      page: EPages.Events,
+      title: T.events_page_title,
+      description: T.events_page_description
     });
-
-    this.seo.setCanonicalPage(EPages.Contact);
   }
 
   private categorizeEvents(): void {

@@ -11,7 +11,7 @@ export enum EPages {
   Services = 'dance-tantra',
   Events = 'events',
   Contact = 'contact',
-  NotFound = '401',
+  NotFound = 'not-found',
 }
 
 export interface HeaderLinkConfiguration {

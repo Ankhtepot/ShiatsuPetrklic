@@ -8,7 +8,6 @@ import {randomizeArray} from '../../shared/utilities/randomize';
 import {getTestimonials} from '../../shared/data/testimonials';
 import {SeoService} from '../../services/seo.service';
 import {EPages} from '../../services/navigation-link.service';
-import {TextService} from '../../services/text.service';
 
 @Component({
   selector: 'app-about-me',
@@ -22,20 +21,17 @@ export class AboutMeComponent implements OnInit {
 
   constructor(
     private imagesService: ImagesService,
-    private seo: SeoService,
-    private textService: TextService
+    private seo: SeoService
   ) {
   }
 
   ngOnInit(): void {
     this.profileImagePath = this.imagesService.getRandomImageUrl(Category.Profile, ImageSize.Full) || '';
-    this.seo.setSeo({
-      title: this.textService.get(T.about_me_page_title),
-      description: this.textService.get(T.about_me_page_description)
-      // description: 'Learn more about the practitioner and their holistic Shiatsu therapy approach in Brno.'
+    this.seo.setPage({
+      page: EPages.AboutMe,
+      title: T.about_me_page_title,
+      description: T.about_me_page_description
     });
-
-    this.seo.setCanonicalPage(EPages.AboutMe);
   }
 
   get randomizedTestimonials() {

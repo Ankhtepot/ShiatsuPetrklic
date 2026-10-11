@@ -28,6 +28,8 @@ export enum T {
   event_subscribe_confirmation = 'event_subscribe_confirmation',
   events_anchor = 'events_anchor',
   events_next = 'events_next',
+  events_page_description = 'events_page_description',
+  events_page_title = 'events_page_title',
   events_past = 'events_past',
   events_previous = 'events_previous',
   events_upcoming = 'events_upcoming',

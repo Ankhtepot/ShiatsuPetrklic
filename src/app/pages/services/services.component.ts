@@ -71,12 +71,11 @@ export class ServicesComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    this.seo.setSeo({
-      title: this.textService.get(T.services_page_title),
-      description: this.textService.get(T.services_page_description)
+    this.seo.setPage({
+      page: EPages.Services,
+      title: T.services_page_title,
+      description: T.services_page_description
     });
-
-    this.seo.setCanonicalPage(EPages.Services);
   }
 
   ngAfterViewInit(): void {

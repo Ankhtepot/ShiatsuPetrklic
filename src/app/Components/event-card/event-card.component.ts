@@ -15,7 +15,7 @@ import {T} from '../../shared/constants/text.tokens';
 import {TextPipe} from '../../pipes/text.pipe';
 import {ContentItem, ContentItemHyperlink, ContentItemText, EContentItem} from '../../shared/models/content-item';
 import {MarkdownComponent} from 'ngx-markdown';
-import {ActivatedRoute, Router} from '@angular/router';
+import {EPages, NavigationLinkService} from '../../services/navigation-link.service';
 
 @Component({
   selector: 'app-event-card',
@@ -31,6 +31,11 @@ export class EventCardComponent implements OnInit {
   isExpanded = signal(false);
 
   private languageService = inject(LanguageService);
+  private navigationLinkService = inject(NavigationLinkService);
+
+  detailLink = computed(() =>
+    `${this.navigationLinkService.getPageLink(EPages.Events)}/details/${this.event().id}`
+  );
 
   title = computed(() =>
     this.resolveText(
@@ -54,17 +59,8 @@ export class EventCardComponent implements OnInit {
     )
   );
 
-  constructor(
-    private router: Router,
-    private route: ActivatedRoute
-  ) {}
-
   ngOnInit(): void {
     this.isExpanded.set(this.expanded());
-  }
-
-  openDetailPage() {
-    this.router.navigate(['details', this.event().id], { relativeTo: this.route });
   }
 
   setExpanded(isExpanded: boolean) {

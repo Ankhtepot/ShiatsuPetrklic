@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 import { T } from '../shared/constants/text.tokens';
 import { StorageService, EStorageKey } from './storage.service';
-import { Router, UrlSegment } from '@angular/router';
+import { NavigationEnd, Router, UrlSegment } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 export enum ELanguage {
   Cs = 'cs',
@@ -28,23 +29,32 @@ export class LanguageService {
     private storage: StorageService,
     private router: Router
   ) {
+    // The URL (/cs/..., /en/...) wins over the stored preference, so every localized URL
+    // always renders in its own language – required for crawlers and prerendered snapshots.
     const storedLang = this.storage.get(EStorageKey.Language);
-    const initialLang = storedLang.success && SUPPORTED_LANGUAGES.includes(storedLang.value as Language)
-      ? storedLang.value as Language
-      : ELanguage.Cs;
+    const initialLang = this.getLanguageFromPath(window.location.pathname)
+      ?? (storedLang.success && this.isSupported(storedLang.value) ? storedLang.value : ELanguage.Cs);
 
     this.languageSignal.set(initialLang);
     document.documentElement.lang = initialLang;
     // ⛔️ Do not fetch translations here; wait for loadInitialLanguage() from APP_INITIALIZER
+
+    // Keep language in sync when the URL changes without setLang (back button, plain links).
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(event => {
+        const urlLang = this.getLanguageFromPath(event.urlAfterRedirects);
+        if (urlLang && urlLang !== this.current) {
+          this.applyLanguage(urlLang);
+        }
+      });
   }
 
   setLang(language: Language) {
-    if (!SUPPORTED_LANGUAGES.includes(language)) return;
+    if (!this.isSupported(language)) return;
 
     this.storage.set(EStorageKey.Language, language);
-    this.languageSignal.set(language);
-    document.documentElement.lang = language;
-    this.loadTranslations(language);
+    this.applyLanguage(language);
 
     // Replace current :lang segment in the URL
     const tree = this.router.parseUrl(this.router.url);
@@ -57,6 +67,21 @@ export class LanguageService {
     }
   }
 
+
+  private applyLanguage(language: Language) {
+    this.languageSignal.set(language);
+    document.documentElement.lang = language;
+    this.loadTranslations(language);
+  }
+
+  private getLanguageFromPath(path: string): Language | null {
+    const firstSegment = path.split(/[/?#]/).find(segment => segment.length > 0) ?? '';
+    return this.isSupported(firstSegment) ? firstSegment : null;
+  }
+
+  private isSupported(value: string): value is Language {
+    return SUPPORTED_LANGUAGES.includes(value as Language);
+  }
 
   get current(): Language {
     return this.languageSignal();

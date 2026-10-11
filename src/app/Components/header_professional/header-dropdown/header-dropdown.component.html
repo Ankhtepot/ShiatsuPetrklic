@@ -4,9 +4,10 @@
     type="button"
     (click)="toggleDropdown()"
     [attr.aria-expanded]="dropdownOpen()"
+    [attr.aria-label]="displayItem().text"
   >
     @if (displayItem().imageUrl) {
-      <img [src]="displayItem().imageUrl" alt="icon" class="dropdown-image" />
+      <img [src]="displayItem().imageUrl" alt="" width="36" height="24" class="dropdown-image" />
     }
 
     @if (displayItem().icon && displayItem().iconPosition !== 'right' && !displayItem().imageUrl) {
@@ -31,7 +32,7 @@
           (click)="selectItem(action)"
         >
           @if (action.imageUrl) {
-            <img [src]="action.imageUrl" alt="icon" class="dropdown-image" />
+            <img [src]="action.imageUrl" alt="" width="36" height="24" class="dropdown-image" />
           }
 
           @if (action.icon && action.iconPosition !== 'right' && !action.imageUrl) {

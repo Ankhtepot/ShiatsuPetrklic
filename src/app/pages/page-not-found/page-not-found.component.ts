@@ -4,7 +4,6 @@ import {RouterModule} from '@angular/router';
 import {T} from '../../shared/constants/text.tokens';
 import {EPages, NavigationLinkService} from '../../services/navigation-link.service';
 import {SeoService} from '../../services/seo.service';
-import {TextService} from '../../services/text.service';
 
 @Component({
   selector: 'app-page-not-found',
@@ -22,15 +21,14 @@ export class PageNotFoundComponent implements OnInit {
   protected readonly NavigationLinkService = NavigationLinkService;
   protected readonly EPages = EPages;
 
-  constructor(private seo: SeoService, private textService: TextService) {}
+  constructor(private seo: SeoService) {}
 
   ngOnInit(): void {
-    this.seo.setSeo({
-      title: this.textService.get(T.page_not_found_title),
-      description: this.textService.get(T.page_not_found_description)
-      // description: 'The page you are looking for does not exist. Please check the URL or return to the home page.'
+    this.seo.setPage({
+      page: EPages.NotFound,
+      title: T.page_not_found_title,
+      description: T.page_not_found_description,
+      noindex: true
     });
-
-    this.seo.setCanonicalPage(EPages.NotFound);
   }
 }

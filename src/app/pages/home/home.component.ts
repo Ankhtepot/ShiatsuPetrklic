@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
     backgroundColor: AppColors.glassWhiteSoft,
     textColor: '#555555',
     quoteMarkColor: '#777',
-    footerColor: '#888888',
+    footerColor: '#595959', // #888 failed WCAG contrast on the light card
     verticalMarkColor: '#cccccc',
   };
 
@@ -42,13 +42,11 @@ export class HomeComponent implements OnInit {
   }));
 
   ngOnInit(): void {
-    this.seo.setSeo({
-      title: this.textService.get(T.home_page_title),
-      description: this.textService.get(T.home_page_description)
-      // description: 'Welcome to Shiatsu Brno, your destination for holistic Shiatsu therapy. Explore our services, learn about the practitioner, and read testimonials from satisfied clients.'
+    this.seo.setPage({
+      page: EPages.Home,
+      title: T.home_page_title,
+      description: T.home_page_description
     });
-
-    this.seo.setCanonicalPage(EPages.Home);
   }
 
   get randomizedTestimonials() {

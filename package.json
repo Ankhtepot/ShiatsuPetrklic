@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "snapshot": "tsx snapshot.ts",
-    "deploy": "ng build --configuration production --base-href=/ && npm run snapshot && npx angular-cli-ghpages --dir=dist/shiatsu-brno/browser",
+    "deploy": "ng build --configuration production --base-href=/ && npm run snapshot && npx angular-cli-ghpages --dir=dist/shiatsu-brno/browser --no-notfound",
     "watch:colors": "node watch-scss-colors.js"
   },
   "private": true,

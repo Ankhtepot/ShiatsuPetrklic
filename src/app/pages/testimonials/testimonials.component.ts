@@ -7,7 +7,6 @@ import {QuoteStripComponent} from '../../Components/quote-strip/quote-strip.comp
 import {ActivatedRoute} from '@angular/router';
 import {SeoService} from '../../services/seo.service';
 import {EPages} from '../../services/navigation-link.service';
-import {TextService} from '../../services/text.service';
 import {T} from '../../shared/constants/text.tokens';
 
 @Component({
@@ -23,8 +22,7 @@ export class TestimonialsComponent implements AfterViewInit, OnInit{
   constructor(
     private route: ActivatedRoute,
     private renderer: Renderer2,
-    private seo: SeoService,
-    private textService: TextService
+    private seo: SeoService
   ) {}
 
   testimonials: QuoteData[] = getTestimonials()
@@ -35,13 +33,11 @@ export class TestimonialsComponent implements AfterViewInit, OnInit{
     }));
 
   ngOnInit(): void {
-    this.seo.setSeo({
-      title: this.textService.get(T.testimonials_page_title),
-      description: this.textService.get(T.testimonials_page_description)
-      // description: 'Read testimonials from clients who have experienced the benefits of Shiatsu therapy in Brno. Discover how Shiatsu has helped others and what you can expect from your sessions.'
+    this.seo.setPage({
+      page: EPages.Testimonials,
+      title: T.testimonials_page_title,
+      description: T.testimonials_page_description
     });
-
-    this.seo.setCanonicalPage(EPages.Contact);
   }
 
   ngAfterViewInit(): void {
