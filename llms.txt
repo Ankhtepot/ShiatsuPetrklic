@@ -10,21 +10,21 @@ The website is bilingual: Czech (`/cs/...`, primary) and English (`/en/...`). Ev
 
 ## Pages (English)
 
-- [Home – Shiatsu and pricing](https://www.shiatsupetrklic.com/en/home/): what Shiatsu is, who it helps, current Shiatsu prices
-- [About me](https://www.shiatsupetrklic.com/en/about-me/): background, training and approach of the practitioner
-- [Dance & Tantra](https://www.shiatsupetrklic.com/en/dance-tantra/): therapeutic shibari (with prices), conscious dance, tantric massages, dearmouring
-- [Events](https://www.shiatsupetrklic.com/en/events/): upcoming and past events with detail pages
-- [Testimonials](https://www.shiatsupetrklic.com/en/testimonials/): client feedback
-- [Contact](https://www.shiatsupetrklic.com/en/contact/): contact details and contact form
+- [Home – Shiatsu and pricing](https://www.shiatsupetrklic.com/en/home): what Shiatsu is, who it helps, current Shiatsu prices
+- [About me](https://www.shiatsupetrklic.com/en/about-me): background, training and approach of the practitioner
+- [Dance & Tantra](https://www.shiatsupetrklic.com/en/dance-tantra): therapeutic shibari (with prices), conscious dance, tantric massages, dearmouring
+- [Events](https://www.shiatsupetrklic.com/en/events): upcoming and past events with detail pages
+- [Testimonials](https://www.shiatsupetrklic.com/en/testimonials): client feedback
+- [Contact](https://www.shiatsupetrklic.com/en/contact): contact details and contact form
 
 ## Pages (Czech)
 
-- [Domů](https://www.shiatsupetrklic.com/cs/home/)
-- [O mně](https://www.shiatsupetrklic.com/cs/about-me/)
-- [Tanec & Tantra](https://www.shiatsupetrklic.com/cs/dance-tantra/)
-- [Události](https://www.shiatsupetrklic.com/cs/events/)
-- [Reference](https://www.shiatsupetrklic.com/cs/testimonials/)
-- [Kontakt](https://www.shiatsupetrklic.com/cs/contact/)
+- [Domů](https://www.shiatsupetrklic.com/cs/home)
+- [O mně](https://www.shiatsupetrklic.com/cs/about-me)
+- [Tanec & Tantra](https://www.shiatsupetrklic.com/cs/dance-tantra)
+- [Události](https://www.shiatsupetrklic.com/cs/events)
+- [Reference](https://www.shiatsupetrklic.com/cs/testimonials)
+- [Kontakt](https://www.shiatsupetrklic.com/cs/contact)
 
 ## Service descriptions (Markdown source)
 
