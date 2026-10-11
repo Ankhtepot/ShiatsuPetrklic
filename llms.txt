@@ -1,0 +1,40 @@
+# Shiatsu Petrklíč
+
+> Traditional Japanese Shiatsu massage and holistic bodywork in Brno, Czech Republic, by Petr Závodný (practicing professionally since 2009). Also offers tantric massages, therapeutic shibari, conscious dance and dearmouring, and runs events such as tantric evenings and conscious touch workshops.
+
+The website is bilingual: Czech (`/cs/...`, primary) and English (`/en/...`). Every page is available as prerendered static HTML. Sessions are booked by phone, e-mail or the contact form; there is no online booking system.
+
+- Address: Jana Uhra 177/19, 602 00 Brno, Czech Republic
+- Phone: +420 775 915 121
+- E-mail: shiatsu@napismi.cz
+
+## Pages (English)
+
+- [Home – Shiatsu and pricing](https://www.shiatsupetrklic.com/en/home/): what Shiatsu is, who it helps, current Shiatsu prices
+- [About me](https://www.shiatsupetrklic.com/en/about-me/): background, training and approach of the practitioner
+- [Dance & Tantra](https://www.shiatsupetrklic.com/en/dance-tantra/): therapeutic shibari (with prices), conscious dance, tantric massages, dearmouring
+- [Events](https://www.shiatsupetrklic.com/en/events/): upcoming and past events with detail pages
+- [Testimonials](https://www.shiatsupetrklic.com/en/testimonials/): client feedback
+- [Contact](https://www.shiatsupetrklic.com/en/contact/): contact details and contact form
+
+## Pages (Czech)
+
+- [Domů](https://www.shiatsupetrklic.com/cs/home/)
+- [O mně](https://www.shiatsupetrklic.com/cs/about-me/)
+- [Tanec & Tantra](https://www.shiatsupetrklic.com/cs/dance-tantra/)
+- [Události](https://www.shiatsupetrklic.com/cs/events/)
+- [Reference](https://www.shiatsupetrklic.com/cs/testimonials/)
+- [Kontakt](https://www.shiatsupetrklic.com/cs/contact/)
+
+## Service descriptions (Markdown source)
+
+- [Therapeutic shibari](https://www.shiatsupetrklic.com/markdown/services/therapeutic-shibari.en.md)
+- [Conscious dance](https://www.shiatsupetrklic.com/markdown/services/dancing.en.md)
+- [Tantric massages](https://www.shiatsupetrklic.com/markdown/services/tantric-massages.en.md)
+- [Dearmouring](https://www.shiatsupetrklic.com/markdown/services/dearmouring.en.md)
+
+## Optional
+
+- [Sitemap](https://www.shiatsupetrklic.com/sitemap.xml): all pages including event details, with language alternates
+- [Facebook](https://www.facebook.com/Vessago/)
+- [Instagram](https://www.instagram.com/petr_klicz/)

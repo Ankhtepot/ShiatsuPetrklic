@@ -1,4 +1,7 @@
+# All crawlers, including search engines and AI agents, are welcome.
 User-agent: *
 Allow: /
+Disallow: /preview.html
 
-Sitemap: https://shiatsupetrklic.com/sitemap.xml
+# Site summary for AI agents / LLMs: https://www.shiatsupetrklic.com/llms.txt
+Sitemap: https://www.shiatsupetrklic.com/sitemap.xml
