@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.shiatsupetrklic.com/cs/home</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/home"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/home"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/home"/>
-  </url>
-  <url>
     <loc>https://www.shiatsupetrklic.com/cs/about-me</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/about-me"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/about-me"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/about-me"/>
+  </url>
+  <url>
+    <loc>https://www.shiatsupetrklic.com/cs/contact</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/contact"/>
   </url>
   <url>
     <loc>https://www.shiatsupetrklic.com/cs/dance-tantra</loc>
@@ -19,22 +19,34 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/dance-tantra"/>
   </url>
   <url>
-    <loc>https://www.shiatsupetrklic.com/cs/testimonials</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/testimonials"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/testimonials"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/testimonials"/>
-  </url>
-  <url>
     <loc>https://www.shiatsupetrklic.com/cs/events</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events"/>
   </url>
   <url>
-    <loc>https://www.shiatsupetrklic.com/cs/contact</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/contact"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/contact"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/contact"/>
+    <loc>https://www.shiatsupetrklic.com/cs/events/details/DD-2</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/DD-2"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/DD-2"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/DD-2"/>
+  </url>
+  <url>
+    <loc>https://www.shiatsupetrklic.com/cs/events/details/Pezinok-1</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/Pezinok-1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/Pezinok-1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/Pezinok-1"/>
+  </url>
+  <url>
+    <loc>https://www.shiatsupetrklic.com/cs/events/details/RS-1</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/RS-1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/RS-1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/RS-1"/>
+  </url>
+  <url>
+    <loc>https://www.shiatsupetrklic.com/cs/events/details/ST-1</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/ST-1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/ST-1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/ST-1"/>
   </url>
   <url>
     <loc>https://www.shiatsupetrklic.com/cs/events/details/TV-1</loc>
@@ -55,30 +67,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/TV-3"/>
   </url>
   <url>
-    <loc>https://www.shiatsupetrklic.com/cs/events/details/ST-1</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/ST-1"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/ST-1"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/ST-1"/>
-  </url>
-  <url>
-    <loc>https://www.shiatsupetrklic.com/cs/events/details/DD-2</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/DD-2"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/DD-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/DD-2"/>
-  </url>
-  <url>
-    <loc>https://www.shiatsupetrklic.com/cs/events/details/RS-1</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/RS-1"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/RS-1"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/RS-1"/>
-  </url>
-  <url>
-    <loc>https://www.shiatsupetrklic.com/cs/events/details/Pezinok-1</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/Pezinok-1"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/Pezinok-1"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/Pezinok-1"/>
-  </url>
-  <url>
     <loc>https://www.shiatsupetrklic.com/cs/events/details/TV-4</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/TV-4"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/TV-4"/>
@@ -91,10 +79,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/TV-5"/>
   </url>
   <url>
-    <loc>https://www.shiatsupetrklic.com/en/home</loc>
+    <loc>https://www.shiatsupetrklic.com/cs/home</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/home"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/home"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/home"/>
+  </url>
+  <url>
+    <loc>https://www.shiatsupetrklic.com/cs/testimonials</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/testimonials"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/testimonials"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/testimonials"/>
   </url>
   <url>
     <loc>https://www.shiatsupetrklic.com/en/about-me</loc>
@@ -103,16 +97,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/about-me"/>
   </url>
   <url>
+    <loc>https://www.shiatsupetrklic.com/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/contact"/>
+  </url>
+  <url>
     <loc>https://www.shiatsupetrklic.com/en/dance-tantra</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/dance-tantra"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/dance-tantra"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/dance-tantra"/>
-  </url>
-  <url>
-    <loc>https://www.shiatsupetrklic.com/en/testimonials</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/testimonials"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/testimonials"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/testimonials"/>
   </url>
   <url>
     <loc>https://www.shiatsupetrklic.com/en/events</loc>
@@ -121,10 +115,28 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events"/>
   </url>
   <url>
-    <loc>https://www.shiatsupetrklic.com/en/contact</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/contact"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/contact"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/contact"/>
+    <loc>https://www.shiatsupetrklic.com/en/events/details/DD-2</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/DD-2"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/DD-2"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/DD-2"/>
+  </url>
+  <url>
+    <loc>https://www.shiatsupetrklic.com/en/events/details/Pezinok-1</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/Pezinok-1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/Pezinok-1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/Pezinok-1"/>
+  </url>
+  <url>
+    <loc>https://www.shiatsupetrklic.com/en/events/details/RS-1</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/RS-1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/RS-1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/RS-1"/>
+  </url>
+  <url>
+    <loc>https://www.shiatsupetrklic.com/en/events/details/ST-1</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/ST-1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/ST-1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/ST-1"/>
   </url>
   <url>
     <loc>https://www.shiatsupetrklic.com/en/events/details/TV-1</loc>
@@ -145,30 +157,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/TV-3"/>
   </url>
   <url>
-    <loc>https://www.shiatsupetrklic.com/en/events/details/ST-1</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/ST-1"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/ST-1"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/ST-1"/>
-  </url>
-  <url>
-    <loc>https://www.shiatsupetrklic.com/en/events/details/DD-2</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/DD-2"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/DD-2"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/DD-2"/>
-  </url>
-  <url>
-    <loc>https://www.shiatsupetrklic.com/en/events/details/RS-1</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/RS-1"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/RS-1"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/RS-1"/>
-  </url>
-  <url>
-    <loc>https://www.shiatsupetrklic.com/en/events/details/Pezinok-1</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/Pezinok-1"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/Pezinok-1"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/Pezinok-1"/>
-  </url>
-  <url>
     <loc>https://www.shiatsupetrklic.com/en/events/details/TV-4</loc>
     <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/TV-4"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/TV-4"/>
@@ -179,5 +167,17 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/events/details/TV-5"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/events/details/TV-5"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/events/details/TV-5"/>
+  </url>
+  <url>
+    <loc>https://www.shiatsupetrklic.com/en/home</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/home"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/home"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/home"/>
+  </url>
+  <url>
+    <loc>https://www.shiatsupetrklic.com/en/testimonials</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.shiatsupetrklic.com/cs/testimonials"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.shiatsupetrklic.com/en/testimonials"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shiatsupetrklic.com/cs/testimonials"/>
   </url>
 </urlset>
