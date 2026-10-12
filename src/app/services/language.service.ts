@@ -1,4 +1,5 @@
-import { Injectable, computed, signal } from '@angular/core';
+import { DOCUMENT, Injectable, computed, inject, signal } from '@angular/core';
+import { PlatformLocation } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 import { T } from '../shared/constants/text.tokens';
@@ -23,6 +24,7 @@ export class LanguageService {
   readonly t = computed(() => this.translations());
 
   private loadedLanguages = new Map<Language, Map<T, string>>();
+  private document = inject(DOCUMENT);
 
   constructor(
     private http: HttpClient,
@@ -32,11 +34,12 @@ export class LanguageService {
     // The URL (/cs/..., /en/...) wins over the stored preference, so every localized URL
     // always renders in its own language – required for crawlers and prerendered snapshots.
     const storedLang = this.storage.get(EStorageKey.Language);
-    const initialLang = this.getLanguageFromPath(window.location.pathname)
+    // PlatformLocation works both in the browser and during build-time prerendering
+    const initialLang = this.getLanguageFromPath(inject(PlatformLocation).pathname)
       ?? (storedLang.success && this.isSupported(storedLang.value) ? storedLang.value : ELanguage.Cs);
 
     this.languageSignal.set(initialLang);
-    document.documentElement.lang = initialLang;
+    this.document.documentElement.lang = initialLang;
     // ⛔️ Do not fetch translations here; wait for loadInitialLanguage() from APP_INITIALIZER
 
     // Keep language in sync when the URL changes without setLang (back button, plain links).
@@ -70,7 +73,7 @@ export class LanguageService {
 
   private applyLanguage(language: Language) {
     this.languageSignal.set(language);
-    document.documentElement.lang = language;
+    this.document.documentElement.lang = language;
     this.loadTranslations(language);
   }
 
@@ -114,9 +117,9 @@ export class LanguageService {
       return this.loadedLanguages.get(language)!;
     }
 
-    const baseHref = document.getElementsByTagName('base')[0]?.href || '';
+    // Relative to <base href>; same URL in the browser and during prerendering, so the hydration transfer cache can reuse it
     const data = await firstValueFrom(
-      this.http.get<Record<string, string>>(`${baseHref}languages/${language}.json`)
+      this.http.get<Record<string, string>>(`languages/${language}.json`)
     );
 
     const map = new Map<T, string>();

@@ -13,7 +13,9 @@ import {TextPipe} from '../../pipes/text.pipe';
   imports: [ContentCardComponent, EventCardComponent, TextPipe],
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.scss'],
-  standalone: true
+  standalone: true,
+  // Upcoming/past split depends on the visit date, not the build date – render fresh instead of hydrating
+  host: {ngSkipHydration: 'true'}
 })
 export class EventsComponent implements OnInit {
   public upcomingEvents : EventData[] = [];

@@ -8,7 +8,8 @@ import {provideRouter, withRouterConfig} from '@angular/router';
 
 import {routerOptions, routes} from './app.routes';
 import {ScreenService} from './services/screen.service';
-import {provideHttpClient} from '@angular/common/http';
+import {provideHttpClient, withFetch} from '@angular/common/http';
+import {provideClientHydration, withEventReplay} from '@angular/platform-browser';
 import {LanguageService} from './services/language.service';
 import {provideMarkdown} from 'ngx-markdown';
 
@@ -18,7 +19,9 @@ function preloadTranslations(langService: LanguageService): () => Promise<void> 
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideHttpClient(),
+    provideHttpClient(withFetch()),
+    // Reuse the prerendered HTML instead of re-rendering it; also reuses HTTP responses (translations, markdown) fetched at build time
+    provideClientHydration(withEventReplay()),
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideRouter(routes, withRouterConfig(routerOptions)),

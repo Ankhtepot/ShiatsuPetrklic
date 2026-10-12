@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, PLATFORM_ID, inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 export enum EStorageKey {
   Language = 'ShiatsuPetrklic - language'
@@ -6,7 +7,11 @@ export enum EStorageKey {
 
 @Injectable({ providedIn: 'root' })
 export class StorageService {
+  // localStorage does not exist while prerendering at build time
+  private isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
+
   set(key: EStorageKey, value: string): void {
+    if (!this.isBrowser) return;
     try {
       localStorage.setItem(key, value);
     } catch (e) {
@@ -15,6 +20,7 @@ export class StorageService {
   }
 
   get(key: EStorageKey): { success: true, value: string } | { success: false } {
+    if (!this.isBrowser) return { success: false };
     try {
       const value = localStorage.getItem(key);
       return value !== null
@@ -27,6 +33,7 @@ export class StorageService {
   }
 
   remove(key: EStorageKey): void {
+    if (!this.isBrowser) return;
     try {
       localStorage.removeItem(key);
     } catch (e) {
@@ -35,6 +42,7 @@ export class StorageService {
   }
 
   clearAll(): void {
+    if (!this.isBrowser) return;
     try {
       localStorage.clear();
     } catch (e) {

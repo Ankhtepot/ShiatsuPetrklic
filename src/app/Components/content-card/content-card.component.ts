@@ -1,5 +1,5 @@
-import {AfterViewInit, Component, computed, input, Input, signal} from '@angular/core';
-import {NgStyle} from '@angular/common';
+import {AfterViewInit, Component, computed, inject, input, Input, PLATFORM_ID, signal} from '@angular/core';
+import {isPlatformBrowser, NgStyle} from '@angular/common';
 
 @Component({
   selector: 'app-content-card',
@@ -14,9 +14,11 @@ export class ContentCardComponent implements AfterViewInit {
   passthrough = input(false);
 
   readonly style = computed(() => this.passthrough() || this.isMobile() ? {} : { width: this.width });
-  readonly isMobile = signal(window.innerWidth < 768);
+  private isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
+  readonly isMobile = signal(this.isBrowser && window.innerWidth < 768);
 
   ngAfterViewInit(): void {
+    if (!this.isBrowser) return;
     window.addEventListener('resize', () => {
       const newWidth = window.innerWidth;
       this.isMobile.set(newWidth < 1200);

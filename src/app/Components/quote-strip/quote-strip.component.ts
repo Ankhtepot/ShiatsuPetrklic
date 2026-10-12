@@ -5,8 +5,9 @@ import {
   OnInit,
   OnDestroy,
   inject,
-  ViewChild, ElementRef
+  ViewChild, ElementRef, PLATFORM_ID
 } from '@angular/core';
+import {isPlatformBrowser} from '@angular/common';
 import {Router} from '@angular/router';
 import {QuoteData} from '../../shared/models/quote-data';
 import {LanguageService} from '../../services/language.service';
@@ -20,7 +21,9 @@ import {ButtonReadMoreComponent} from '../button-read-more/button-read-more.comp
   standalone: true,
   imports: [TextPipe, ButtonReadMoreComponent],
   templateUrl: './quote-strip.component.html',
-  styleUrls: ['./quote-strip.component.scss']
+  styleUrls: ['./quote-strip.component.scss'],
+  // Quotes are randomized, so the browser's order differs from the prerendered one – render fresh instead of hydrating
+  host: {ngSkipHydration: 'true'}
 })
 export class QuoteStripComponent implements OnInit, OnDestroy {
   @Input() id?: string; // for static quote
@@ -31,6 +34,7 @@ export class QuoteStripComponent implements OnInit, OnDestroy {
   private router = inject(Router);
   private languageService = inject(LanguageService);
   private intervalId: any;
+  private isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
 
   isUsingEllipsis = false;
   fadeTime = 400; // ms
@@ -47,7 +51,9 @@ export class QuoteStripComponent implements OnInit, OnDestroy {
       this.currentQuote.set(this.quote);
     } else if (this.quotes.length > 0) {
       this.currentQuote.set(this.quotes[0]);
-      this.startRotation();
+      if (this.isBrowser) {
+        this.startRotation();
+      }
     }
   }
 

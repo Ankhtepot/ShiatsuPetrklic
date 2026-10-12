@@ -1,10 +1,11 @@
-import { Injectable, Signal, WritableSignal, signal } from '@angular/core';
+import { Injectable, PLATFORM_ID, Signal, WritableSignal, inject, signal } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 export type SCREEN_BREAKPOINTS = 'xs' | "sm" | "md" | "lg" | "xl" | "xxl";
 
 @Injectable()
 export class ScreenService {
-  private lastScrollY = window.scrollY;
+  private lastScrollY = 0;
   private resizeTimeout: any = null;
   private lastMediaBreakpoint = '';
 
@@ -28,6 +29,10 @@ export class ScreenService {
   headerVisibilityChanged: Signal<boolean> = this._headerVisibility.asReadonly();
 
   constructor() {
+    // No window while prerendering at build time – keep the defaults there
+    if (!isPlatformBrowser(inject(PLATFORM_ID))) return;
+
+    this.lastScrollY = window.scrollY;
     this.initResize();
     this.initScroll();
     this._setScreenWidth(window.innerWidth);

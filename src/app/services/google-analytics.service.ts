@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, PLATFORM_ID, inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
@@ -11,7 +12,9 @@ declare global {
 @Injectable({ providedIn: 'root' })
 export class GoogleAnalyticsService {
   constructor(private router: Router) {
-    this.listenForRouteChanges();
+    if (isPlatformBrowser(inject(PLATFORM_ID))) {
+      this.listenForRouteChanges();
+    }
   }
 
   private listenForRouteChanges() {

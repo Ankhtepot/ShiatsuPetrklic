@@ -46,15 +46,17 @@ Generate TypeScript color definitions from `_colors.scss`:
 npm run watch:colors
 ```
 
-## Site Snapshot
+## Prerendering (SEO)
 
-Create a snapshot for SEO purposes:
+`ng build` prerenders all public pages into static HTML at build time (routes are listed in `src/app/app.routes.server.ts`); in the browser the app hydrates that HTML instead of re-rendering it. No server runs in production.
+
+After the build, adapt the output for GitHub Pages (`.html` copies of each route, `404.html` fallback, `sitemap.xml`):
 
 ```bash
-npx tsx snapshot.ts
+npm run postbuild
 ```
 
-The snapshot script serves the production build on a temporary free port, so it does not collide with `ng serve`.
+`npm run deploy` runs both steps and publishes.
 
 ## Testing
 
