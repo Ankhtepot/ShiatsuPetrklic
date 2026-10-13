@@ -8,6 +8,8 @@ import { T } from '../shared/constants/text.tokens';
 // Must match the host in public/CNAME – the apex domain only 301-redirects here.
 export const SITE_ORIGIN = 'https://www.shiatsupetrklic.com';
 export const DEFAULT_LANGUAGE = ELanguage.Cs;
+/** 1200×630 JPG shared on Facebook, WhatsApp etc. Pages can pass their own, see public/images/og */
+export const DEFAULT_OG_IMAGE = 'images/og/preview_image_1200x630.jpg';
 
 const OG_LOCALES: Record<ELanguage, string> = {
   [ELanguage.Cs]: 'cs_CZ',
@@ -24,6 +26,8 @@ export interface SeoPageConfig {
   description: SeoText;
   /** Pages that must not appear in search results (e.g. 404) */
   noindex?: boolean;
+  /** Share image, path relative to the site root (1200×630 JPG); defaults to DEFAULT_OG_IMAGE */
+  image?: string;
   /** Optional schema.org structured data for this page */
   jsonLd?: () => object | null;
 }
@@ -78,6 +82,9 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:locale', content: OG_LOCALES[lang] });
     this.meta.updateTag({ name: 'twitter:title', content: title });
     this.meta.updateTag({ name: 'twitter:description', content: description });
+    const image = `${SITE_ORIGIN}/${(config.image ?? DEFAULT_OG_IMAGE).replace(/^\//, '')}`;
+    this.meta.updateTag({ property: 'og:image', content: image });
+    this.meta.updateTag({ name: 'twitter:image', content: image });
 
     this.removeHeadElements("link[rel='canonical'], link[rel='alternate'][hreflang]");
     if (!config.noindex) {

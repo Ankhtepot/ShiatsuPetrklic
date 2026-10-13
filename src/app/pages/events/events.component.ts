@@ -29,7 +29,8 @@ export class EventsComponent implements OnInit {
     this.seo.setPage({
       page: EPages.Events,
       title: T.events_page_title,
-      description: T.events_page_description
+      description: T.events_page_description,
+      image: 'images/og/events.jpg'
     });
   }
 

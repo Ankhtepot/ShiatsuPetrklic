@@ -74,7 +74,8 @@ export class ServicesComponent implements OnInit, AfterViewInit {
     this.seo.setPage({
       page: EPages.Services,
       title: T.services_page_title,
-      description: T.services_page_description
+      description: T.services_page_description,
+      image: 'images/og/dance-tantra.jpg'
     });
   }
 

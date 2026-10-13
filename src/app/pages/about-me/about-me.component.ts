@@ -30,7 +30,8 @@ export class AboutMeComponent implements OnInit {
     this.seo.setPage({
       page: EPages.AboutMe,
       title: T.about_me_page_title,
-      description: T.about_me_page_description
+      description: T.about_me_page_description,
+      image: 'images/og/about-me.jpg'
     });
   }
 

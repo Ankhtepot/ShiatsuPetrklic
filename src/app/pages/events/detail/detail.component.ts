@@ -108,6 +108,8 @@ export class DetailComponent implements OnInit, AfterViewInit {
       description: () => this.shortDescription(),
       // Past events without a post-event text did not take place – keep them out of search results
       noindex: this.event().date < new Date() && !this.event().postEventTextCs,
+      // Share images generated from the event photos: images/events/x.webp -> images/og/events/x.jpg
+      image: this.event().imageUrl?.replace(/^\/?images\/events\/(.+)\.\w+$/, 'images/og/events/$1.jpg'),
       jsonLd: () => this.eventStructuredData(id!)
     });
   }
