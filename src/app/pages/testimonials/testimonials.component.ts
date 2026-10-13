@@ -8,15 +8,18 @@ import {ActivatedRoute} from '@angular/router';
 import {SeoService} from '../../services/seo.service';
 import {EPages} from '../../services/navigation-link.service';
 import {T} from '../../shared/constants/text.tokens';
+import {TextPipe} from '../../pipes/text.pipe';
 
 @Component({
   selector: 'app-testimonials.component',
   standalone: true,
-  imports: [CommonModule, ContentCardComponent, QuoteStripComponent],
+  imports: [CommonModule, ContentCardComponent, QuoteStripComponent, TextPipe],
   templateUrl: './testimonials.component.html',
   styleUrls: ['./testimonials.component.scss'],
 })
 export class TestimonialsComponent implements AfterViewInit, OnInit{
+  protected readonly T = T;
+
   @ViewChildren(QuoteStripComponent) quoteStrips!: QueryList<QuoteStripComponent>;
 
   constructor(

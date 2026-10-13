@@ -1,8 +1,6 @@
 <app-content-card [backgroundOpacity]="0.9">
   <div class="text-section" style="text-align: center">
-    <h1 class="fw-bold">{{ T.home_title_1 | text }}</h1>
-    <h1 class="fw-bold">•</h1>
-    <h1 class="fw-bold">{{ T.home_title_2 | text }}</h1>
+    <h1 class="fw-bold">{{ T.home_title | text }}</h1>
 
     <p class="lead">
       {{ T.about_me_part2_1 | text }}
@@ -42,12 +40,26 @@
         <li> {{ T.home_benefits_10 | text }}</li>
         <li> {{ T.home_benefits_11 | text }}</li>
       </ul>
+      <p class="medical-note">{{ T.home_medical_note | text }}</p>
     </div>
+
+    <p class="lead training">
+      {{ trainingText() }}
+      <a [routerLink]="aboutMeLink">{{ T.home_training_link | text }}</a>
+    </p>
 
     <app-pricing-table
       [data]="pricingData()"
       [tableTitle]="T.pricing_shiatsu_table_title | text"
       [embedded]="true"
     />
+
+    <section class="faq-section" id="faq">
+      <h2 class="h3 mt-5">{{ T.faq_title | text }}</h2>
+      @for (item of faqItems; track item.question) {
+        <app-button-faq [question]="item.question | text" [answer]="item.answer | text" />
+      }
+      <a class="custom-button faq-cta" [routerLink]="contactLink">{{ T.faq_cta | text }}</a>
+    </section>
   </div>
 </app-content-card>

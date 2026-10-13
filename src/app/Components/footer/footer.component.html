@@ -1,0 +1,16 @@
+<footer class="footer">
+  <address class="footer__info">
+    <strong>{{ businessName }}</strong>
+    <span>{{ address }}</span>
+    <span class="footer__transport">{{ T.footer_transport | text }}</span>
+    <span>
+      <a [href]="phoneHref">{{ phone }}</a>
+      ·
+      <a [href]="'mailto:' + email">{{ email }}</a>
+    </span>
+    <span>{{ T.footer_hours | text }}</span>
+  </address>
+  @if (showCta()) {
+    <a class="custom-button footer__cta" [routerLink]="contactLink()">{{ T.faq_cta | text }}</a>
+  }
+</footer>

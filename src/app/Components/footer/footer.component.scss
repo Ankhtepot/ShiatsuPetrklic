@@ -1,0 +1,45 @@
+@use "../../../styles/index" as styles;
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem 2rem;
+  max-width: 1000px;
+  margin: 2rem auto 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  background: styles.$glass-white-strong;
+  box-shadow: 0 0.3rem 1rem rgba(74, 35, 90, 0.08);
+  color: styles.$text-on-orange;
+  font-size: 0.9rem;
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin: 0;
+  font-style: normal;
+
+  a {
+    color: inherit;
+  }
+}
+
+.footer__transport {
+  opacity: 0.8;
+}
+
+.footer__cta {
+  background-color: styles.$light-purple;
+  color: styles.$text-on-orange;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin-inline: 0.75rem;
+    text-align: center;
+  }
+}

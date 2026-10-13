@@ -1,0 +1,26 @@
+<div class="faq" [class.faq--expanded]="isExpanded()">
+  <h3 class="faq__heading">
+    <button
+      type="button"
+      class="custom-button faq__button"
+      [attr.aria-expanded]="isExpanded()"
+      [attr.aria-controls]="answerId"
+      (click)="toggleExpanded()"
+    >
+      <span>{{ question() }}</span>
+      <span class="faq__badge" aria-hidden="true">
+        @if (isExpanded()) {
+          <i class="bi bi-chevron-up"></i>
+        } @else {
+          <i class="bi bi-chevron-down"></i>
+        }
+      </span>
+    </button>
+  </h3>
+
+  <div class="faq__panel" [id]="answerId" role="region">
+    <div class="faq__panel-inner">
+      <div class="faq__answer" [innerHTML]="answer()"></div>
+    </div>
+  </div>
+</div>

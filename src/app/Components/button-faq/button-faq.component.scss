@@ -1,0 +1,101 @@
+@use "../../../styles/index" as styles;
+
+$grow-time: 0.4s;
+$fade-time: 0.3s;
+
+:host {
+  display: block;
+  margin-block: 0.75rem;
+}
+
+// The field around the button – grows to the height of the answer
+.faq {
+  display: grid;
+  grid-template-rows: auto 0fr;
+  padding: 0.5rem;
+  border: 1px solid rgba(styles.$text-on-orange, 0.15);
+  border-radius: 1rem;
+  background: styles.$glass-white-strong;
+  box-shadow: 0 0.3rem 1rem rgba(74, 35, 90, 0.08);
+  text-align: left;
+  // Closing: wait for the text to fade out, then shrink
+  transition: grid-template-rows $grow-time ease $fade-time;
+}
+
+.faq--expanded {
+  grid-template-rows: auto 1fr;
+  // Opening: grow immediately
+  transition-delay: 0s;
+}
+
+.faq__heading {
+  margin: 0;
+  font: inherit;
+}
+
+// Standard .custom-button (src/styles/_buttons.scss) in the purple of the other buttons (e.g. event previous/next);
+// it never changes, only the icon and the field around it
+.faq__button {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6em;
+  width: 100%;
+  border: 0;
+  background-color: styles.$light-purple;
+  color: styles.$text-on-orange;
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+}
+
+// Badge shaped like span-expandable's, in the button's purple
+.faq__badge {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  padding: 0.18em;
+  border-radius: 50%;
+  border: 1px solid rgba(styles.$text-on-orange, 0.28);
+  background: rgba(255, 255, 255, 0.92);
+  color: styles.$text-on-orange;
+  box-shadow: 0 0.08em 0.24em rgba(74, 35, 90, 0.12);
+  font-size: 0.82em;
+  line-height: 1;
+}
+
+.faq__panel {
+  min-height: 0;
+  overflow: hidden;
+}
+
+// Text fades in only after the field has fully grown
+.faq__panel-inner {
+  padding: 0.75rem 0.7rem 0.25rem;
+  color: styles.$text-on-orange;
+  line-height: 1.5;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $fade-time ease, visibility 0s linear $fade-time;
+}
+
+.faq--expanded .faq__panel-inner {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity $fade-time ease $grow-time, visibility 0s linear 0s;
+}
+
+.faq__answer :last-child {
+  margin-bottom: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq,
+  .faq__panel-inner,
+  .faq--expanded,
+  .faq--expanded .faq__panel-inner {
+    transition: none;
+  }
+}

@@ -1,4 +1,5 @@
 <app-content-card [width]="'80%'">
+  <h1 class="visually-hidden">{{ T.testimonials_page_heading | text }}</h1>
   <div class="testimonials-grid">
     <div class="testimonial-column left">
       @for (quote of testimonials; let i = $index; track quote) {

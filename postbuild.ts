@@ -1,5 +1,6 @@
 // postbuild.ts – runs after `ng build` (which prerenders all pages, see src/app/app.routes.server.ts)
 // and adapts the static output for GitHub Pages:
+//  0. / redirects to the homepage in the stored language
 //  1. cs/home/index.html -> also cs/home.html, so /cs/home is served with 200 instead of a 301 to /cs/home/
 //  2. 404.html = client-side shell, so non-prerendered URLs still boot the Angular app
 //  3. sitemap.xml generated from the prerendered pages
@@ -16,6 +17,29 @@ const browserFolder = join(distFolder, 'browser');
 const routes = Object.keys(
   JSON.parse(readFileSync(join(distFolder, 'prerendered-routes.json'), 'utf-8')).routes
 ) as string[];
+
+// 0. Root: Angular prerenders "/" as a plain redirect to the default language. Replace it with one that
+//    sends returning visitors to their stored language (key = EStorageKey.Language) and tells crawlers
+//    the homepage is the canonical page.
+writeFileSync(join(browserFolder, 'index.html'), `<!DOCTYPE html>
+<html lang="${DEFAULT_LANGUAGE}">
+<head>
+  <meta charset="utf-8">
+  <title>Shiatsu Brno – Petrklíč</title>
+  <link rel="canonical" href="${SITE_ORIGIN}/${DEFAULT_LANGUAGE}/home">
+  <script>
+    try {
+      var lang = localStorage.getItem('ShiatsuPetrklic - language');
+      if (${JSON.stringify(LANGUAGES)}.indexOf(lang) > -1) location.replace('/' + lang + '/home');
+    } catch (e) {}
+  </script>
+  <meta http-equiv="refresh" content="0; url=/${DEFAULT_LANGUAGE}/home">
+</head>
+<body>
+  <a href="/${DEFAULT_LANGUAGE}/home">Shiatsu Brno – Petrklíč</a>
+</body>
+</html>
+`);
 
 // 1. Extension-less URLs
 for (const route of routes.filter(route => route !== '/')) {

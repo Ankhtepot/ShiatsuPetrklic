@@ -106,6 +106,8 @@ export class DetailComponent implements OnInit, AfterViewInit {
       subPath: `details/${id}`,
       title: () => `${this.localized(this.event().titleCs, this.event().titleEn)} – Shiatsu Petrklíč`,
       description: () => this.shortDescription(),
+      // Past events without a post-event text did not take place – keep them out of search results
+      noindex: this.event().date < new Date() && !this.event().postEventTextCs,
       jsonLd: () => this.eventStructuredData(id!)
     });
   }

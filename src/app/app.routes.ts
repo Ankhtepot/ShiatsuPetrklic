@@ -1,3 +1,4 @@
+import {inject} from '@angular/core';
 import {ExtraOptions, Routes} from '@angular/router';
 import {AboutMeComponent} from './pages/about-me/about-me.component';
 import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
@@ -6,7 +7,7 @@ import {HomeComponent} from './pages/home/home.component';
 import {ServicesComponent} from './pages/services/services.component';
 import {TestimonialsComponent} from './pages/testimonials/testimonials.component';
 import {PricingComponent} from './pages/pricing/pricing.component';
-import {LanguageRedirectComponent} from './Components/language-redirect.component';
+import {LanguageService} from './services/language.service';
 import {EventsComponent} from './pages/events/events.component';
 import {DetailComponent} from './pages/events/detail/detail.component';
 import {DolinkaTribeComponent} from './pages/dolinka-tribe/dolinka-tribe';
@@ -38,7 +39,8 @@ const localizedRoutes: Routes = [
 ];
 
 export const routes: Routes = [
-  {path: '', component:LanguageRedirectComponent, pathMatch: 'full'},
+  // Prerendered as a redirect page to /cs/home; postbuild.ts adds the stored-language redirect for the browser
+  {path: '', pathMatch: 'full', redirectTo: () => `/${inject(LanguageService).current}/home`},
   {
     path: ':lang',
     children: localizedRoutes

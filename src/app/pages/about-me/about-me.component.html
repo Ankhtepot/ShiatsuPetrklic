@@ -1,9 +1,10 @@
 <app-content-card [backgroundOpacity]="0.9">
+  <h1 class="visually-hidden">{{ T.about_me_page_heading | text }}</h1>
   <div class="profile-section">
     <div class="profile-text">
       <img
         [src]="profileImagePath"
-        alt="Profile Image"
+        [alt]="T.about_me_photo_alt | text"
         class="img-fluid mb-3"
         style="max-width: 200px;"
       />

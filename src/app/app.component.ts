@@ -12,11 +12,12 @@ import {ELanguage, LanguageService} from './services/language.service';
 // import {InConstructionComponent} from './Components/in-construction/in-construction.component';
 import {GoogleAnalyticsService} from './services/google-analytics.service';
 import {NgStyle} from '@angular/common';
+import {FooterComponent} from './Components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   // imports: [RouterOutlet, HeaderProfessionalComponent, BackgroundTiledComponent, InConstructionComponent, NgStyle],
-  imports: [RouterOutlet, HeaderProfessionalComponent, NgStyle],
+  imports: [RouterOutlet, HeaderProfessionalComponent, NgStyle, FooterComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true
