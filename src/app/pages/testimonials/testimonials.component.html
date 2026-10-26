@@ -5,6 +5,7 @@
       @for (quote of testimonials; let i = $index; track quote) {
         @if (i % 2 === 0) {
           <app-quote-strip
+            popIn
             [quote]="quote"
             [id]="'testimonial-anchor-' + (i + 1)">
           </app-quote-strip>
@@ -20,6 +21,7 @@
       @for (quote of testimonials; let i = $index; track quote) {
         @if (i % 2 === 1) {
           <app-quote-strip
+            popIn
             [quote]="quote"
             [id]="'testimonial-anchor-' + (i + 1)"
             [ngClass]="{ 'offset-first': i === 1 }">

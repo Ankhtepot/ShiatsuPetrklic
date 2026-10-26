@@ -1,0 +1,13 @@
+// Pop-in on first scroll into view, see shared/directives/pop-in.directive.ts
+.pop-in {
+  opacity: 0;
+  transform: translateY(28px) scale(0.97);
+  transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--pop-in-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.pop-in--visible {
+  opacity: 1;
+  transform: none;
+}

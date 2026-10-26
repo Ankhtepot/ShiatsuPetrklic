@@ -116,17 +116,17 @@ export class ServicesComponent implements OnInit, AfterViewInit {
       // markdownCsPath: '/markdown/services/default.cs.md',
       // markdownEnPath: '/markdown/services/default.en.md'
     },
-    {
-      id: 'dearmouring',
-      icon: 'bi-heart',
-      label: this.textService.get(T.tanec_tantra_nav_dearmouring),
-      eyebrow: this.textService.get(T.tanec_tantra_section_4_eyebrow),
-      title: this.textService.get(T.tanec_tantra_section_4_title),
-      markdownCsPath: '/markdown/services/dearmouring.cs.md',
-      markdownEnPath: '/markdown/services/dearmouring.en.md'
-      // markdownCsPath: '/markdown/services/default.cs.md',
-      // markdownEnPath: '/markdown/services/default.en.md'
-    }
+    // {
+    //   id: 'dearmouring',
+    //   icon: 'bi-heart',
+    //   label: this.textService.get(T.tanec_tantra_nav_dearmouring),
+    //   eyebrow: this.textService.get(T.tanec_tantra_section_4_eyebrow),
+    //   title: this.textService.get(T.tanec_tantra_section_4_title),
+    //   markdownCsPath: '/markdown/services/dearmouring.cs.md',
+    //   markdownEnPath: '/markdown/services/dearmouring.en.md'
+    //   // markdownCsPath: '/markdown/services/default.cs.md',
+    //   // markdownEnPath: '/markdown/services/default.en.md'
+    // }
   ]);
 
   @HostListener('window:scroll')

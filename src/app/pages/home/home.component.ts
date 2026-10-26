@@ -17,6 +17,7 @@ import {TextService} from '../../services/text.service';
 import {PricingTableComponent} from '../../Components/pricing-table/pricing-table.component';
 import {getShiatsuPricingTableData} from '../../shared/data/pricing';
 import {ButtonFaqComponent} from '../../Components/button-faq/button-faq.component';
+import {PopInDirective} from '../../shared/directives/pop-in.directive';
 
 // Start of professional Shiatsu practice (1 May 2009)
 const PRACTICE_START = new Date(2009, 4, 1);
@@ -31,7 +32,7 @@ function fullYearsSince(start: Date): number {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [TextPipe, ContentCardComponent, QuoteStripComponent, QuoteStripSimpleComponent, PricingTableComponent, ButtonFaqComponent, RouterLink],
+  imports: [PopInDirective, TextPipe, ContentCardComponent, QuoteStripComponent, QuoteStripSimpleComponent, PricingTableComponent, ButtonFaqComponent, RouterLink],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

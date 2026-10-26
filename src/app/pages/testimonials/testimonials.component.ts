@@ -9,11 +9,12 @@ import {SeoService} from '../../services/seo.service';
 import {EPages} from '../../services/navigation-link.service';
 import {T} from '../../shared/constants/text.tokens';
 import {TextPipe} from '../../pipes/text.pipe';
+import {PopInDirective} from '../../shared/directives/pop-in.directive';
 
 @Component({
   selector: 'app-testimonials.component',
   standalone: true,
-  imports: [CommonModule, ContentCardComponent, QuoteStripComponent, TextPipe],
+  imports: [PopInDirective, CommonModule, ContentCardComponent, QuoteStripComponent, TextPipe],
   templateUrl: './testimonials.component.html',
   styleUrls: ['./testimonials.component.scss'],
 })
