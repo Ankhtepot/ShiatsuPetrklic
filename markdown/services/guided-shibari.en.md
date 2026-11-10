@@ -6,7 +6,7 @@
 
 Are you used to holding everything together? Knowing what is needed and taking care of it? What if you could allow yourself to stop struggling with life and simply be?
 
-Therapeutic shibari is not about performance or enduring something.
+Guided shibari is not about performance or enduring something.
 
 First, we create a space together where your boundaries are clear and respected. Only then do the ropes come in - slowly, with attention to what you need.
 
