@@ -85,13 +85,13 @@ export class ServicesComponent implements OnInit, AfterViewInit {
 
   sections = computed<DanceTantraSection[]>(() => [
     {
-      id: 'therapeutic-shibari',
+      id: 'guided-shibari',
       icon: 'bi-link-45deg',
-      label: this.textService.get(T.tanec_tantra_nav_therapeutic_shibari),
+      label: this.textService.get(T.tanec_tantra_nav_guided_shibari),
       eyebrow: this.textService.get(T.tanec_tantra_section_2_eyebrow),
       title: this.textService.get(T.tanec_tantra_section_2_title),
-      markdownCsPath: '/markdown/services/therapeutic-shibari.cs.md',
-      markdownEnPath: '/markdown/services/therapeutic-shibari.en.md',
+      markdownCsPath: '/markdown/services/guided-shibari.cs.md',
+      markdownEnPath: '/markdown/services/guided-shibari.en.md',
       pricingData: this.shibariPricingData()
     },
     {

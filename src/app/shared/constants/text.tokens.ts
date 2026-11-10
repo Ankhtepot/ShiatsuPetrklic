@@ -123,7 +123,7 @@ export enum T {
   tanec_tantra_nav_dancing = 'tanec_tantra_nav_dancing',
   tanec_tantra_nav_dearmouring = 'tanec_tantra_nav_dearmouring',
   tanec_tantra_nav_tantric_massages = 'tanec_tantra_nav_tantric_massages',
-  tanec_tantra_nav_therapeutic_shibari = 'tanec_tantra_nav_therapeutic_shibari',
+  tanec_tantra_nav_guided_shibari = 'tanec_tantra_nav_guided_shibari',
   tanec_tantra_page_eyebrow = 'tanec_tantra_page_eyebrow',
   tanec_tantra_page_heading = 'tanec_tantra_page_heading',
   tanec_tantra_page_intro_1 = 'tanec_tantra_page_intro_1',

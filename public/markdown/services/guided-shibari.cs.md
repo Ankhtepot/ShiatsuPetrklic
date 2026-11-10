@@ -6,7 +6,7 @@
 
 Jsi zvyklá držet všechny věci pohromadě? Vědět co je kdy potřeba a postarat se o to? Co kdyby sis mohla dovolit přestat zápasit se životem a jen být?
 
-V terapeutickém shibari nejde o výkon ani o to něco vydržet.
+V prožitkovém vázání nejde o výkon ani o to něco vydržet.
 
 Nejdřív společně vytvoříme prostor kde jsou tvoje hranice jasné a respektované. Teprve pak přijdou provazy – pomalu, s pozorností na to, co potřebuješ.
 
