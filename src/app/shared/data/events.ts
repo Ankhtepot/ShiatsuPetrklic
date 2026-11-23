@@ -227,4 +227,37 @@ const events: EventData[] = [
     markdownCZContentPath: '',
     markdownENContentPath: '',
   },
+  {
+    id: 'TV-6',
+    titleCs: 'Tantrický Večer',
+    descriptionCs: 'Tato akce je zaměřená na vědomé setkávání a lidské propojení v bezpečném a respektujícím prostoru. Nabízí příležitost vnímat blízkost, dotek a intimitu s důrazem na vlastní hranice a svobodu projevu.\n' +
+      '\n' +
+      'Nejedná se o workshop ani výuku, ale o otevřený večer, kde každý může být sám sebou a zvolit si svou míru zapojení. Důležitá je důvěra, autenticita a respekt – nic není povinné, nic se neočekává. Jen prostor pro skutečné lidské spojení.',
+    date: new Date('2026-12-16T18:00:00'),
+    location: 'Bad Reputation Studio, Brno, Česká republika',
+    titleEn: '',
+    descriptionEn: '',
+    imageUrl: 'images/events/tantric_circle.webp',
+    miniatureUrl: 'images/events/miniatures/tantric_circle.webp',
+    postEventTextCs: "Večer proběhl v příjemné atmosféře, sešla se úžasná skupina lidí v pozornosti a respektu k sobě navzájem. Bylo to krásné setkání a věřím, že přání účastníků byly naplněny. Děkuji všem za účast, byli jste skvělí!",
+    postEventTextEn: undefined,
+    contentItems: [
+      {
+        contentType: EContentItem.Text,
+        textCs: 'Více informací o akci a přihlášky najdete na stránkách Studia Bad Reputation.',
+        textEn: undefined,
+      } as ContentItemText,
+      {
+        contentType: EContentItem.Hyperlink,
+        url: 'https://badreputation.cz/akce/info/tantricke-setkani-941',
+        labelCs: 'Klikněte na odkaz níže pro více informací a přihlášení:',
+        labelEn: undefined,
+        urlTextCs: 'Tantrické setkání - Bad Reputation Studio',
+        urlTextEn: undefined,
+      } as ContentItemHyperlink,
+    ],
+    showsMarkdown: false,
+    markdownCZContentPath: '',
+    markdownENContentPath: '',
+  },
 ];
